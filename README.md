@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 ## Getting Started
 
 First, run the development server:
@@ -35,7 +32,3 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-=======
-# Mzxit (Pty) Ltd.
-Welcome to the official GitHub repository of Mzxit (Pty) Ltd. We are a forward-thinking technology company dedicated to providing innovative solutions to enhance business operations and streamline processes.
->>>>>>> 8f4c20d3f85fd259abf88f726e316c7af0e0416d
