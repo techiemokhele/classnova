@@ -3,3 +3,9 @@ export interface CustomButtonProps {
   onClick: () => void;
   text: string;
 }
+
+export interface SocialButtonProps {
+    icon?: React.ReactElement;
+  onClick: () => void;
+  text: string;
+}

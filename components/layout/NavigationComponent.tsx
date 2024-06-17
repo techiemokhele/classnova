@@ -8,10 +8,10 @@ import { FaUser } from "react-icons/fa6";
 
 const links = [
   { href: "/shop", label: "Shop" },
-  { href: "/services", label: "Our Services" },
-  { href: "/about-us", label: "About Us" },
-  { href: "/blog", label: "Our Blog" },
-  { href: "/contact-us", label: "Contact Us" },
+  { href: "/company/services", label: "Our Services" },
+  { href: "/company/about-us", label: "About Us" },
+  { href: "/company/blog", label: "Our Blog" },
+  { href: "/help/contact-us", label: "Contact Us" },
 ];
 
 const NavigationComponent = () => {
