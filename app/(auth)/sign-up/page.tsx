@@ -1,7 +1,7 @@
-const SignUpPage = () => {
-  return (
-    <div>SignUpPage</div>
-  )
-}
+import ComingSoonComponent from "@/components/sections/ComingSoonComponent";
 
-export default SignUpPage
+const SignUpPage = () => {
+  return <ComingSoonComponent pageName="Sign Up" />;
+};
+
+export default SignUpPage;

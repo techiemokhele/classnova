@@ -1,8 +1,8 @@
-import React from 'react'
+import ComingSoonComponent from '@/components/sections/ComingSoonComponent'
 
 const CartPage = () => {
   return (
-    <div>CartPage</div>
+   <ComingSoonComponent pageName="Your Cart" />
   )
 }
 

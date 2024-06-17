@@ -1,5 +1,7 @@
+import ComingSoonComponent from "@/components/sections/ComingSoonComponent";
+
 const ShopHomePage = () => {
-  return <div>ShopHomePage</div>;
+  return <ComingSoonComponent pageName="Our Shop" />;
 };
 
 export default ShopHomePage;

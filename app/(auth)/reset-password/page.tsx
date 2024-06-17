@@ -1,9 +1,7 @@
-const ResetPasswordPage = () => {
-  return (
-    <div>
-      Reset Password
-    </div>
-  )
-}
+import ComingSoonComponent from "@/components/sections/ComingSoonComponent";
 
-export default ResetPasswordPage
+const ResetPasswordPage = () => {
+  return <ComingSoonComponent pageName="Reset Password" />;
+};
+
+export default ResetPasswordPage;

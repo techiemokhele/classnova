@@ -4,12 +4,13 @@ import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { BsCart4 } from "react-icons/bs";
+import { FaUser } from "react-icons/fa6";
 
 const links = [
   { href: "/shop", label: "Shop" },
-  { href: "/services", label: "Services" },
+  { href: "/services", label: "Our Services" },
   { href: "/about-us", label: "About Us" },
-  { href: "/blog", label: "Blog" },
+  { href: "/blog", label: "Our Blog" },
   { href: "/contact-us", label: "Contact Us" },
 ];
 
@@ -67,8 +68,8 @@ const NavigationComponent = () => {
             ))}
           </div>
 
-          {/* Right section: Cart and Sign In */}
-          <div className="absolute inset-y-0 lg:right-0 right-14 flex items-center space-x-4 ">
+          {/* Right section: Cart and Sign In for desktop */}
+          <div className="hidden lg:flex absolute inset-y-0 right-0 items-center space-x-4">
             <Link href="/cart" passHref>
               <div className="relative cursor-pointer text-white">
                 <BsCart4 className="h-6 w-6" />
@@ -141,12 +142,17 @@ const NavigationComponent = () => {
 
       {/* Mobile menu, show/hide based on menu state. */}
       <div
-        className={`sm:hidden bg-gray-800 fixed top-0 right-0 h-full w-1/2 transform -z-10 ${
+        className={`sm:hidden bg-gray-800 fixed top-0 right-0 h-full w-1/2 transform ${
           isOpen ? "translate-x-0" : "translate-x-full"
         } transition-transform duration-300 ease-in-out`}
       >
         <div className="flex justify-end p-4 pb-10">
-          <button className="text-white focus:outline-none"></button>
+          <button
+            onClick={toggleMenu}
+            className="text-white focus:outline-none"
+          >
+            Close
+          </button>
         </div>
         <div className="px-2 pt-2 pb-3 space-y-1">
           {links.map((link) => (
@@ -167,6 +173,24 @@ const NavigationComponent = () => {
               </span>
             </Link>
           ))}
+        </div>
+
+        {/* Right section: Cart and Sign In for mobile */}
+        <div className="px-4 pt-4 pb-6 space-y-4 border-t border-gray-700">
+          <Link href="/cart" onClick={toggleMenu} passHref>
+            <div className="relative cursor-pointer text-white flex items-center mb-3">
+              <BsCart4 className="h-6 w-6 mr-3" /> Cart
+              <span className="absolute top-1 -right-2 bg-red-500 text-white rounded-full px-2 text-xs">
+                0
+              </span>
+            </div>
+          </Link>
+
+          <Link href="/sign-in" onClick={toggleMenu} passHref>
+            <div className="relative cursor-pointer text-white flex items-center pt-3">
+              <FaUser className="h-6 w-6 mr-3" /> Sign In
+            </div>
+          </Link>
         </div>
       </div>
     </nav>

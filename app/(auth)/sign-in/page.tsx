@@ -1,6 +1,8 @@
+import ComingSoonComponent from "@/components/sections/ComingSoonComponent"
+
 const SignInPage = () => {
   return (
-    <div>SignInPage</div>
+<ComingSoonComponent pageName="Sign In" />
   )
 }
 
