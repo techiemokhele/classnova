@@ -1,9 +1,9 @@
 "use client";
 
-import CustomButtonComponent from "@/components/common/CustomButtonComponent";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { BsCart4 } from "react-icons/bs";
+import { CustomButtonComponent } from "@/components";
 
 export default function HomePage() {
   const router = useRouter();
@@ -13,7 +13,8 @@ export default function HomePage() {
   };
 
   return (
-    <main className="relative flex min-h-screen w-full z-10">
+    <main className="relative flex flex-col min-h-screen w-full z-10">
+      {/* Background Image */}
       <div className="absolute inset-0">
         <Image
           src="/images/web/homeBanner.jpg"
@@ -23,22 +24,37 @@ export default function HomePage() {
           quality={100}
         />
       </div>
+
+      {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
-      <div className="relative z-10 self-center flex flex-col items-center justify-center w-full h-full text-center text-white p-4 md:items-start md:text-start md:w-1/2 md:p-8">
-        <h1 className="text-4xl font-bold mb-4">
-          Mzxit was founded with the goal of connecting local vendors and
-          consumers.
-        </h1>
-        <p className="text-lg mb-6 font-thin text-[14px]">
-          We believe in the potential of community-driven commerce and are
-          committed to building a platform that benefits local businesses and
-          encourages meaningful connections.
-        </p>
-        <CustomButtonComponent
-          icon={<BsCart4 className="h-5 w-5" />}
-          text="Buy Products"
-          onClick={handleButtonClick}
-        />
+
+      {/* Centered Content */}
+      <div className="relative z-10 flex items-center justify-center w-full h-screen p-4">
+        <div className="flex flex-col items-center justify-center text-center text-white w-full md:w-1/2 p-8">
+          <Image
+            src="/logo.jpg"
+            alt="logo"
+            width={1000}
+            height={1000}
+            className="w-[120px] h-[120px] object-contain rounded-full mt-14 mb-6"
+          />
+
+          <h1 className="text-4xl font-bold my-4">
+            Mzxit was founded with the goal of connecting local vendors and
+            consumers.
+          </h1>
+          <p className="text-lg mb-6 font-thin text-[14px]">
+            We believe in the potential of community-driven commerce and are
+            committed to building a platform that benefits local businesses and
+            encourages meaningful connections.
+          </p>
+
+          <CustomButtonComponent
+            icon={<BsCart4 className="h-5 w-5" />}
+            text="Buy Products"
+            onClick={handleButtonClick}
+          />
+        </div>
       </div>
     </main>
   );
