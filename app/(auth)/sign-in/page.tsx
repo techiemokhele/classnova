@@ -18,6 +18,8 @@ const SignInPage = () => {
 
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
+  const [emailError, setEmailError] = useState<string>("");
+  const [passwordError, setPasswordError] = useState<string>("");
   const [rememberMe, setRememberMe] = useState<boolean>(false);
 
   const handleGoogleAuth = () => {
@@ -29,6 +31,15 @@ const SignInPage = () => {
   };
 
   const handleSubmit = () => {
+    if (!email || !password) {
+      setEmailError("Email address is required");
+      setPasswordError("Password is required");
+      return;
+    }
+
+    setEmailError("");
+    setPasswordError("");
+
     const data = {
       email,
       password,
@@ -77,6 +88,9 @@ const SignInPage = () => {
             placeholder="username@company.com"
             label="Email address"
           />
+          {emailError && (
+            <p className="text-red-500 text-[10px]">{emailError}</p>
+          )}
 
           <CustomTextInputComponent
             type="password"
@@ -85,6 +99,9 @@ const SignInPage = () => {
             placeholder="●●●●●●●●"
             label="Password"
           />
+          {passwordError && (
+            <p className="text-red-500 text-[10px]">{passwordError}</p>
+          )}
         </div>
 
         {/* remember me section */}

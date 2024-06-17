@@ -19,6 +19,10 @@ const SignUpPage = () => {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [confirmPassword, setConfirmPassword] = useState<string>("");
+  const [emailError, setEmailError] = useState<string>("");
+  const [passwordError, setPasswordError] = useState<string>("");
+  const [confirmPasswordError, setConfirmPasswordError] = useState<string>("");
+
   const [rememberMe, setRememberMe] = useState<boolean>(false);
 
   const passwordsMatch = password === confirmPassword && password !== "";
@@ -32,6 +36,17 @@ const SignUpPage = () => {
   };
 
   const handleSubmit = () => {
+    if (!email || !password || !confirmPassword) {
+      setEmailError("Email address is required");
+      setPasswordError("Password is required");
+      setConfirmPasswordError("Confirm password is required");
+      return;
+    }
+
+    setEmailError("");
+    setPasswordError("");
+    setConfirmPasswordError("");
+
     const data = {
       email,
       password,
@@ -81,6 +96,9 @@ const SignUpPage = () => {
             placeholder="username@company.com"
             label="Email address"
           />
+          {emailError && (
+            <p className="text-red-500 text-[10px]">{emailError}</p>
+          )}
 
           <CustomTextInputComponent
             type="password"
@@ -89,6 +107,9 @@ const SignUpPage = () => {
             placeholder="●●●●●●●●"
             label="Password"
           />
+          {passwordError && (
+            <p className="text-red-500 text-[10px]">{passwordError}</p>
+          )}
 
           <CustomTextInputComponent
             type="password"
@@ -97,6 +118,9 @@ const SignUpPage = () => {
             placeholder="●●●●●●●●"
             label="Confirm Password"
           />
+          {confirmPasswordError && (
+            <p className="text-red-500 text-[10px]">{confirmPasswordError}</p>
+          )}
 
           {!passwordsMatch && confirmPassword && (
             <p className="text-red-500 text-[10px]">Passwords do not match</p>

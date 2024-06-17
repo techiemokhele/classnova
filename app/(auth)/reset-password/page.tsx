@@ -14,10 +14,21 @@ const ResetPasswordPage = () => {
 
   const [password, setPassword] = useState<string>("");
   const [confirmPassword, setConfirmPassword] = useState<string>("");
+  const [passwordError, setPasswordError] = useState<string>("");
+  const [confirmPasswordError, setConfirmPasswordError] = useState<string>("");
 
   const passwordsMatch = password === confirmPassword && password !== "";
 
   const handleSubmit = () => {
+    if (!password || !confirmPassword) {
+      setPasswordError("New password is required");
+      setConfirmPasswordError("Confirm password is required");
+      return;
+    }
+
+    setPasswordError("");
+    setConfirmPasswordError("");
+
     const data = {
       password,
     };
@@ -47,8 +58,11 @@ const ResetPasswordPage = () => {
             value={password}
             onChange={(text) => setPassword(text)}
             placeholder="●●●●●●●●"
-            label="Password"
+            label="New password"
           />
+          {passwordError && (
+            <p className="text-red-500 text-[10px]">{passwordError}</p>
+          )}
 
           <CustomTextInputComponent
             type="password"
@@ -57,6 +71,9 @@ const ResetPasswordPage = () => {
             placeholder="●●●●●●●●"
             label="Confirm Password"
           />
+          {confirmPasswordError && (
+            <p className="text-red-500 text-[10px]">{confirmPasswordError}</p>
+          )}
 
           {!passwordsMatch && confirmPassword && (
             <p className="text-red-500 text-[10px]">Passwords do not match</p>

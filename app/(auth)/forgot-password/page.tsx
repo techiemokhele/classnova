@@ -13,8 +13,16 @@ const ForgotPasswordPage = () => {
   const router = useRouter();
 
   const [email, setEmail] = useState<string>("");
+  const [error, setError] = useState<string>("");
 
   const handleSubmit = () => {
+    if (!email) {
+      setError("Email address is required");
+      return;
+    }
+
+    setError("");
+
     const data = {
       email,
     };
@@ -47,6 +55,7 @@ const ForgotPasswordPage = () => {
             placeholder="username@company.com"
             label="Email address"
           />
+          {error && <p className="text-red-500 text-[10px]">{error}</p>}
         </div>
 
         {/* submit section */}

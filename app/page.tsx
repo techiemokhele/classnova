@@ -36,7 +36,7 @@ export default function HomePage() {
             alt="logo"
             width={1000}
             height={1000}
-            className="w-[120px] h-[120px] object-contain rounded-full mt-14 mb-6"
+            className="w-[100px] h-[100px] object-contain rounded-full mt-6 mb-4"
           />
 
           <h1 className="text-4xl font-bold my-4">
