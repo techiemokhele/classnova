@@ -1,7 +1,7 @@
-import React from "react";
+import ComingSoonComponent from "@/components/sections/ComingSoonComponent";
 
 const AboutUSPage = () => {
-  return <div>About Us</div>;
+  return <ComingSoonComponent pageName="About Us" />;
 };
 
 export default AboutUSPage;

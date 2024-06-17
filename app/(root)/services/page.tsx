@@ -1,7 +1,7 @@
-import React from "react";
+import ComingSoonComponent from "@/components/sections/ComingSoonComponent";
 
 const ServicesPages = () => {
-  return <div></div>;
+  return <ComingSoonComponent pageName="Our Services" />;
 };
 
 export default ServicesPages;

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "../globals.css";
 
+import NavigationComponent from "@/components/layout/NavigationComponent";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -18,5 +20,10 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return <main className={`${inter.className} bg-dark-2`}>{children}</main>;
+  return (
+    <main className={`${inter.className} bg-dark-2`}>
+      <NavigationComponent />
+      {children}
+    </main>
+  );
 }
