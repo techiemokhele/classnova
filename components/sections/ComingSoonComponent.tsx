@@ -12,6 +12,7 @@ const ComingSoonComponent = ({ pageName }: { pageName: string }) => {
           width={1000}
           height={1000}
           className="w-[300px] h-[300px]"
+          priority={true}
         />
       </div>
 
