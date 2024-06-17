@@ -1,7 +1,7 @@
-import React from "react";
+import ComingSoonComponent from "@/components/sections/ComingSoonComponent";
 
 const BlogHomePage = () => {
-  return <div>Blog Home Page</div>;
+  return <ComingSoonComponent pageName="Our Blog" />;
 };
 
 export default BlogHomePage;
