@@ -3,8 +3,6 @@ import { Roboto } from "next/font/google";
 
 import "./globals.css";
 
-import NavigationComponent from "@/components/common/NavigationComponent";
-
 const roboto = Roboto({ subsets: ["latin"], weight: ["300", "500", "900"] });
 
 export const metadata: Metadata = {
@@ -23,10 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${roboto.className} bg-dark-2`}>
-        <NavigationComponent />
-        {children}
-      </body>
+      <body className={`${roboto.className} bg-dark-2`}>{children}</body>
     </html>
   );
 }
