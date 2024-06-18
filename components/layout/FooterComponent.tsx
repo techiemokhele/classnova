@@ -7,6 +7,11 @@ const links = {
     { href: "/resources/join", label: "Become a member" },
     { href: "/resources/feedback", label: "Feedback" },
     { href: "/resources/promo-codes", label: "Promo Codes" },
+    { href: "/resources/terms-of-service", label: "Terms of service" },
+    {
+      href: "/resources/privacy-and-cookie",
+      label: "Privacy & Cookie Policy",
+    },
   ],
   help: [
     { href: "/help/order-status", label: "Order status" },
@@ -173,23 +178,6 @@ const FooterComponent = () => {
         <p className="text-gray-300 text-sm">
           &copy; 2024 Mzxit (Pty) Ltd. All rights reserved
         </p>
-        <div className="flex justify-center space-x-4 mt-2">
-          <Link href="/policies/terms-of-use">
-            <span className="text-gray-300 hover:text-white text-sm">
-              Terms of use
-            </span>
-          </Link>
-          <Link href="/policies/terms-of-sale">
-            <span className="text-gray-300 hover:text-white text-sm">
-              Terms of sale
-            </span>
-          </Link>
-          <Link href="/policies/privacy-and-cookie">
-            <span className="text-gray-300 hover:text-white text-sm">
-              Privacy & Cookie Policy
-            </span>
-          </Link>
-        </div>
       </div>
     </footer>
   );
