@@ -44,6 +44,7 @@ const FooterComponent = () => {
               width={1000}
               height={1000}
               className={"w-[50px] h-[50px] object-contain rounded-full"}
+              loading="lazy"
             />
 
             <p className="text-sm text-white font-thin">
@@ -114,6 +115,7 @@ const FooterComponent = () => {
               width={1000}
               height={1000}
               className={"w-[50px] h-[50px] object-contain rounded-full"}
+              loading="lazy"
             />
 
             <p className="text-sm text-white font-thin">

@@ -10,6 +10,10 @@ import FooterComponent from "./layout/FooterComponent";
 //section components
 import StarRatingComponent from "./sections/StarRatingComponent";
 import TestimonialAuthComponent from "./sections/TestimonialAuthComponent";
+import BannerComponent from "./sections/BannerComponent";
+import CompanyMetricsComponent from "./sections/AboutUs/CompanyMetricsComponent";
+import AboutOurStoryComponent from "./sections/AboutUs/AboutOurStoryComponent";
+import OurAchievementsComponent from "./sections/AboutUs/OurAchievementsComponent";
 
 export {
   CustomButtonComponent,
@@ -19,4 +23,8 @@ export {
   FooterComponent,
   StarRatingComponent,
   TestimonialAuthComponent,
+  BannerComponent,
+  CompanyMetricsComponent,
+  AboutOurStoryComponent,
+  OurAchievementsComponent,
 };
