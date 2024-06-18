@@ -21,7 +21,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${roboto.className} bg-dark-2`}>{children}</body>
+      <body
+        className={`${roboto.className} bg-dark-2`}
+        suppressHydrationWarning={true}
+      >
+        {children}
+      </body>
     </html>
   );
 }
