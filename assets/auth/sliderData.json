@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "avatar": "/images/web/users/avator1.jpg",
+    "username": "Jessica Robertson",
+    "position": "CEO @ Khona Consultants",
+    "rating": 4.5,
+    "statement": "All the products I wanted in one place and at such a low price too. For a shopper like me, that is a dream come true."
+  },
+  {
+    "id": 2,
+    "avatar": "/images/web/users/avator2.jpg",
+    "username": "Mfundo Shongwe",
+    "position": "Senior Markter @ Jumpers",
+    "rating": 3,
+    "statement": "ClassNova provides an unparalleled shopping experience. The variety and quality of products available make it my go-to platform for all my needs."
+  },
+  {
+    "id": 3,
+    "avatar": "/images/web/users/avator3.jpg",
+    "username": "Chris Naidoo",
+    "position": "Marketing Manager @ TrendyCo",
+    "rating": 5,
+    "statement": "Shopping on ClassNova is always a pleasure. The user-friendly interface and excellent customer service keep me coming back for more."
+  }
+]
