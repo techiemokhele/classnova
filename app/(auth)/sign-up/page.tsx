@@ -143,7 +143,7 @@ const SignUpPage = () => {
 
           <p
             onClick={() => router.push("/forgot-password")}
-            className="text-teal-500 text-xs font-bold underline cursor-pointer"
+            className="text-teal-1 text-xs font-bold underline cursor-pointer"
           >
             Forgot Password?
           </p>
@@ -156,7 +156,7 @@ const SignUpPage = () => {
             Already have an account?{" "}
             <span
               onClick={() => router.push("/sign-in")}
-              className="text-teal-500 font-bold underline mr-2 cursor-pointer"
+              className="text-teal-1 font-bold underline mr-2 cursor-pointer"
             >
               Sign in
             </span>

@@ -45,7 +45,7 @@ const NavigationComponent = () => {
 
   return (
     <nav
-      className={`fixed w-full z-10 ${
+      className={`fixed w-full z-20 ${
         scrolled ? "bg-gray-800" : "bg-transparent"
       } transition-colors duration-300`}
     >
@@ -69,7 +69,7 @@ const NavigationComponent = () => {
           </div>
 
           {/* Right section: Cart and Sign In for desktop */}
-          <div className="hidden lg:flex absolute inset-y-0 right-0 items-center space-x-4">
+          <div className="hidden lg:flex md:flex absolute inset-y-0 right-0 items-center space-x-4">
             <Link href="/cart" passHref>
               <div className="relative cursor-pointer text-white">
                 <BsCart4 className="h-6 w-6" />
@@ -89,9 +89,9 @@ const NavigationComponent = () => {
           {/* Logo */}
           <Link href="/" passHref>
             <img
-              className="flex-shrink-0 h-8 w-auto rounded-full absolute left-4 bottom-4"
-              src="/logo.jpg"
-              alt="Mzxit Logo"
+              className="flex-shrink-0 h-[40px] w-auto rounded-full absolute left-4 bottom-4"
+              src="/icons/logo-white-transparent.png"
+              alt="ClassNova-Logo"
             />
           </Link>
 

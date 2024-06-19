@@ -40,7 +40,8 @@ const TermsOfServicePage = () => {
           <p className="mb-4">
             <strong>Company</strong> (referred to as either &quot;the
             Company&quot;, &quot;We&quot;, &quot;Us&quot; or &quot;Our&quot; in
-            this Agreement) refers to Mzxit (Pty) Ltd., Cape Town, South Africa.
+            this Agreement) refers to ClassNova (Pty) Ltd., Cape Town, South
+            Africa.
           </p>
         </li>
         <li>
@@ -80,13 +81,14 @@ const TermsOfServicePage = () => {
         </li>
         <li>
           <p className="mb-4">
-            <strong>Website</strong> refers to Mzxit (Pty) Ltd., accessible from{" "}
+            <strong>Website</strong> refers to ClassNova (Pty) Ltd., accessible
+            from{" "}
             <a
-              href="https://mzxit.vercel.app"
+              href="https://ClassNova.vercel.app"
               rel="external nofollow noopener"
               target="_blank"
             >
-              https://mzxit.vercel.app
+              https://ClassNova.vercel.app
             </a>
           </p>
         </li>
@@ -306,11 +308,11 @@ const TermsOfServicePage = () => {
         <li>
           By visiting this page on our website:{" "}
           <a
-            href="https://mzxit.vercel.app/contact-us"
+            href="https://ClassNova.vercel.app/contact-us"
             rel="external nofollow noopener"
             target="_blank"
           >
-            https://mzxit.vercel.app/contact-us
+            https://ClassNova.vercel.app/contact-us
           </a>
         </li>
       </ul>
