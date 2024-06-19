@@ -56,12 +56,12 @@ const FooterComponent = () => {
 
           {/* Resources */}
           <div className="hidden md:block">
-            <h3 className="text-lg font-semibold mb-4 mt-3">Resources</h3>
+            <h3 className="text-lg font-semibold mb-2 mt-3">Resources</h3>
             <ul>
               {links.resources.map((link) => (
                 <li key={link.href}>
                   <Link href={link.href}>
-                    <span className="text-gray-300 hover:text-white font-thin text-sm">
+                    <span className="text-gray-300 hover:text-white font-thin text-[12px]">
                       {link.label}
                     </span>
                   </Link>
@@ -72,12 +72,12 @@ const FooterComponent = () => {
 
           {/* Help */}
           <div className="hidden md:block">
-            <h3 className="text-lg font-semibold mb-4 mt-3">Help</h3>
+            <h3 className="text-lg font-semibold mb-2 mt-3">Help</h3>
             <ul>
               {links.help.map((link) => (
                 <li key={link.href}>
                   <Link href={link.href}>
-                    <span className="text-gray-300 hover:text-white font-thin text-sm">
+                    <span className="text-gray-300 hover:text-white font-thin text-[12px]">
                       {link.label}
                     </span>
                   </Link>
@@ -88,12 +88,12 @@ const FooterComponent = () => {
 
           {/* Company */}
           <div className="hidden md:block">
-            <h3 className="text-lg font-semibold mb-4 mt-3">Company</h3>
+            <h3 className="text-lg font-semibold mb-2 mt-3">Company</h3>
             <ul>
               {links.company.map((link) => (
                 <li key={link.href}>
                   <Link href={link.href}>
-                    <span className="text-gray-300 hover:text-white font-thin text-sm">
+                    <span className="text-gray-300 hover:text-white font-thin text-[12px]">
                       {link.label}
                     </span>
                   </Link>
@@ -132,7 +132,7 @@ const FooterComponent = () => {
               {links.resources.map((link) => (
                 <li key={link.href}>
                   <Link href={link.href}>
-                    <span className="text-gray-300 hover:text-white font-thin text-sm">
+                    <span className="text-gray-300 hover:text-white font-thin text-[12px]">
                       {link.label}
                     </span>
                   </Link>
@@ -148,7 +148,7 @@ const FooterComponent = () => {
               {links.help.map((link) => (
                 <li key={link.href}>
                   <Link href={link.href}>
-                    <span className="text-gray-300 hover:text-white font-thin text-sm">
+                    <span className="text-gray-300 hover:text-white font-thin text-[12px]">
                       {link.label}
                     </span>
                   </Link>
@@ -164,7 +164,7 @@ const FooterComponent = () => {
               {links.company.map((link) => (
                 <li key={link.href}>
                   <Link href={link.href}>
-                    <span className="text-gray-300 hover:text-white font-thin text-sm">
+                    <span className="text-gray-300 hover:text-white font-thin text-[12px]">
                       {link.label}
                     </span>
                   </Link>
@@ -177,7 +177,7 @@ const FooterComponent = () => {
 
       {/* Bottom footer */}
       <div className="bg-gray-700 py-4 text-center">
-        <p className="text-gray-300 text-sm">
+        <p className="text-gray-300 text-[10px]">
           &copy; 2024 ClassNova (Pty) Ltd. All rights reserved
         </p>
       </div>
