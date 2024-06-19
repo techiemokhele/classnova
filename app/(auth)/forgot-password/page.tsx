@@ -65,7 +65,7 @@ const ForgotPasswordPage = () => {
             Do you remember your password?{" "}
             <span
               onClick={() => router.push("/sign-in")}
-              className="text-teal-500 font-bold underline mr-2 cursor-pointer"
+              className="text-teal-1 font-bold underline mr-2 cursor-pointer"
             >
               Sign in
             </span>

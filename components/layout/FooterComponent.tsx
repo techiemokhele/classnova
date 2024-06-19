@@ -37,17 +37,17 @@ const FooterComponent = () => {
       <div className="container mx-auto lg:py-8 pt-3 pb-8 px-4">
         <div className="grid grid-cols-4 gap-8">
           {/* Company synopsis */}
-          <div className="hidden md:block flex-col space-y-3 items-center">
+          <div className="hidden md:block flex-col space-y-3 items-start">
             <Image
-              src="/logo.jpg"
+              src="/icons/logo-white-transparent.png"
               alt="logo"
               width={1000}
               height={1000}
-              className={"w-[50px] h-[50px] object-contain rounded-full"}
+              className={"w-full h-[40px] object-contain"}
               loading="lazy"
             />
 
-            <p className="text-sm text-white font-thin">
+            <p className="text-[12px] text-white font-thin">
               We believe in the potential of community-driven commerce and are
               committed to building a platform that benefits local businesses
               and encourages meaningful connections.
@@ -110,18 +110,18 @@ const FooterComponent = () => {
           {/* Company synopsis */}
           <div className="flex flex-col space-y-3">
             <Image
-              src="/logo.jpg"
+              src="/icons/logo-white-transparent.png"
               alt="logo"
               width={1000}
               height={1000}
-              className={"w-[50px] h-[50px] object-contain rounded-full"}
+              className={"w-full h-[40px] object-contain self-start"}
               loading="lazy"
             />
 
-            <p className="text-sm text-white font-thin">
+            <p className="text-sm text-white font-thin text-center">
               We believe in the potential of community-driven commerce and are
-              committed to building a platform that benefits local businesses
-              and encourages meaningful connections.
+              committed to building a platform that benefits consumers and
+              encourages meaningful connections.
             </p>
           </div>
 
@@ -178,7 +178,7 @@ const FooterComponent = () => {
       {/* Bottom footer */}
       <div className="bg-gray-700 py-4 text-center">
         <p className="text-gray-300 text-sm">
-          &copy; 2024 Mzxit (Pty) Ltd. All rights reserved
+          &copy; 2024 ClassNova (Pty) Ltd. All rights reserved
         </p>
       </div>
     </footer>

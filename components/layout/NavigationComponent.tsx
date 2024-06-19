@@ -89,9 +89,9 @@ const NavigationComponent = () => {
           {/* Logo */}
           <Link href="/" passHref>
             <img
-              className="flex-shrink-0 h-8 w-auto rounded-full absolute left-4 bottom-4"
-              src="/logo.jpg"
-              alt="Mzxit Logo"
+              className="flex-shrink-0 h-[40px] w-auto rounded-full absolute left-4 bottom-4"
+              src="/icons/logo-white-transparent.png"
+              alt="ClassNova-Logo"
             />
           </Link>
 

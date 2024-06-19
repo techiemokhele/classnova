@@ -14,9 +14,9 @@ export default function HomePage() {
   return (
     <BannerComponent
       backgroundImage="/images/web/homeBanner.jpg"
-      logo="/logo.jpg"
-      title="Mzxit was founded with the goal of connecting local vendors and consumers."
-      description="We believe in the potential of community-driven commerce and are committed to building a platform that benefits local businesses and encourages meaningful connections."
+      logo="/icons/logo-white-transparent.png"
+      title="A seamless and engaging e-commerce store for consumers."
+      description="We believe in the potential of community-driven commerce and are committed to building a platform that benefits consumers and encourages meaningful connections."
       buttonIcon={<BsCart4 className="h-5 w-5" />}
       buttonText="Buy Products"
       onClick={handleButtonClick}

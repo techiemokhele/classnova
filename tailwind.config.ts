@@ -41,6 +41,9 @@ const config: Config = {
         yellow: {
           1: "#F9A90E",
         },
+        teal: {
+          1: "#398378",
+        },
       },
       text: {
         xs: "0.75rem",

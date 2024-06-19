@@ -14,6 +14,7 @@ import BannerComponent from "./sections/BannerComponent";
 import CompanyMetricsComponent from "./sections/AboutUs/CompanyMetricsComponent";
 import AboutOurStoryComponent from "./sections/AboutUs/AboutOurStoryComponent";
 import OurAchievementsComponent from "./sections/AboutUs/OurAchievementsComponent";
+import MeetTheTeamComponent from "./sections/AboutUs/MeetTheTeamComponent";
 
 export {
   CustomButtonComponent,
@@ -27,4 +28,5 @@ export {
   CompanyMetricsComponent,
   AboutOurStoryComponent,
   OurAchievementsComponent,
+  MeetTheTeamComponent,
 };

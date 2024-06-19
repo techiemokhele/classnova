@@ -5,6 +5,7 @@ import {
   AboutOurStoryComponent,
   BannerComponent,
   CompanyMetricsComponent,
+  MeetTheTeamComponent,
   OurAchievementsComponent,
 } from "@/components";
 
@@ -19,8 +20,8 @@ const AboutUSPage = () => {
     <div className="flex flex-col">
       <BannerComponent
         backgroundImage="/images/web/aboutBanner.jpg"
-        title="Empowering Local Commerce with Mzxit"
-        description="At Mzxit, we are passionate about supporting small businesses, fostering local entrepreneurship, and providing consumers with unique and high-quality products from their own neighborhoods."
+        title="Empowering E-Commerce"
+        description="At ClassNova, we are passionate about offering consumers unique and high-quality products from their own neighborhoods."
         buttonText="Contact us"
         onClick={handleNavigation}
       />
@@ -30,6 +31,8 @@ const AboutUSPage = () => {
       <AboutOurStoryComponent />
 
       <OurAchievementsComponent />
+
+      <MeetTheTeamComponent />
     </div>
   );
 };
