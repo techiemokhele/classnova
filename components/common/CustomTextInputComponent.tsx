@@ -83,7 +83,7 @@ const CustomTextInputComponent = ({
             {showError ? (
               <FaTimes className="text-red-500 pt-2" />
             ) : (
-              <FaCheck className="text-teal-500 pt-2" />
+              <FaCheck className="text-teal-1 pt-2" />
             )}
           </div>
         )}

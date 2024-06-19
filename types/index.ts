@@ -1,3 +1,13 @@
+export interface BannerComponentProps {
+  backgroundImage: string;
+  logo?: string;
+  title: string;
+  buttonText?: string;
+  buttonIcon?: React.ReactElement;
+  description: string;
+  onClick: () => void;
+}
+
 export interface CustomButtonProps {
   icon?: React.ReactElement;
   onClick: () => void;
@@ -19,5 +29,5 @@ export interface TextInputProps {
 }
 
 export interface StarRatingProps {
-  rating: number
+  rating: number;
 }
