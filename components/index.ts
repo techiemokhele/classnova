@@ -2,6 +2,7 @@
 import CustomButtonComponent from "./common/CustomButtonComponent";
 import CustomSocialAuthButtonComponent from "./common/CustomSocialAuthButtonComponent";
 import CustomTextInputComponent from "./common/CustomTextInputComponent";
+import CustomModalComponent from "./common/CustomModalComponent";
 
 //layout components
 import NavigationComponent from "./layout/NavigationComponent";
@@ -20,6 +21,7 @@ export {
   CustomButtonComponent,
   CustomSocialAuthButtonComponent,
   CustomTextInputComponent,
+  CustomModalComponent,
   NavigationComponent,
   FooterComponent,
   StarRatingComponent,
