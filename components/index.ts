@@ -2,12 +2,15 @@
 import CustomButtonComponent from "./common/CustomButtonComponent";
 import CustomSocialAuthButtonComponent from "./common/CustomSocialAuthButtonComponent";
 import CustomTextInputComponent from "./common/CustomTextInputComponent";
+import CustomModalComponent from "./common/CustomModalComponent";
 
 //layout components
 import NavigationComponent from "./layout/NavigationComponent";
 import FooterComponent from "./layout/FooterComponent";
 
 //section components
+import ReviewsAnalyticsComponent from "./sections/ReviewsAnalyticsComponent";
+import ReviewsDisplayerComponent from "./sections/ReviewsDisplayerComponent";
 import StarRatingComponent from "./sections/StarRatingComponent";
 import TestimonialAuthComponent from "./sections/TestimonialAuthComponent";
 import BannerComponent from "./sections/BannerComponent";
@@ -20,8 +23,11 @@ export {
   CustomButtonComponent,
   CustomSocialAuthButtonComponent,
   CustomTextInputComponent,
+  CustomModalComponent,
   NavigationComponent,
   FooterComponent,
+  ReviewsAnalyticsComponent,
+  ReviewsDisplayerComponent,
   StarRatingComponent,
   TestimonialAuthComponent,
   BannerComponent,

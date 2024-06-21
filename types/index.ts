@@ -1,3 +1,5 @@
+import React, { ReactElement, ReactNode } from "react";
+
 export interface BannerComponentProps {
   backgroundImage: string;
   logo?: string;
@@ -25,9 +27,15 @@ export interface TextInputProps {
   onChange: (value: string) => void;
   placeholder: string;
   type: "tel" | "password" | "text" | "email";
-  label: string;
+  label: string | ReactElement;
 }
 
 export interface StarRatingProps {
-  rating: number;
+  rating: number | any;
+}
+
+export interface ModalComponentProps {
+  show: boolean;
+  onClose: () => void;
+  children: ReactNode;
 }
