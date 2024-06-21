@@ -9,6 +9,8 @@ import NavigationComponent from "./layout/NavigationComponent";
 import FooterComponent from "./layout/FooterComponent";
 
 //section components
+import ReviewsAnalyticsComponent from "./sections/ReviewsAnalyticsComponent";
+import ReviewsDisplayerComponent from "./sections/ReviewsDisplayerComponent";
 import StarRatingComponent from "./sections/StarRatingComponent";
 import TestimonialAuthComponent from "./sections/TestimonialAuthComponent";
 import BannerComponent from "./sections/BannerComponent";
@@ -24,6 +26,8 @@ export {
   CustomModalComponent,
   NavigationComponent,
   FooterComponent,
+  ReviewsAnalyticsComponent,
+  ReviewsDisplayerComponent,
   StarRatingComponent,
   TestimonialAuthComponent,
   BannerComponent,

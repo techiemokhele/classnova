@@ -31,7 +31,7 @@ export interface TextInputProps {
 }
 
 export interface StarRatingProps {
-  rating: number;
+  rating: number | any;
 }
 
 export interface ModalComponentProps {

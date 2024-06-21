@@ -4,22 +4,22 @@ import Image from "next/image";
 
 const links = {
   resources: [
+    { href: "/resources/people-reviews", label: "Reviews" },
     { href: "/resources/join", label: "Become a member" },
-    { href: "/resources/feedback", label: "Feedback" },
     { href: "/resources/promo-codes", label: "Promo Codes" },
     { href: "/resources/terms-of-service", label: "Terms of service" },
     {
       href: "/resources/privacy-and-cookie",
-      label: "Privacy & Cookie Policy",
+      label: "Privacy & cookie policy",
     },
   ],
   help: [
     { href: "/help/order-status", label: "Order status" },
-    { href: "/help/shipping-delivery", label: "Shipping & Delivery" },
+    { href: "/help/shipping-delivery", label: "Shipping & delivery" },
     { href: "/help/returns", label: "Returns" },
     { href: "/help/payment-options", label: "Payment options" },
     { href: "/help/contact-us", label: "Contact us" },
-    { href: "/help/reviews", label: "Reviews" },
+    { href: "/help/add-review", label: "Add review" },
   ],
   company: [
     { href: "/company/about-us", label: "About us" },

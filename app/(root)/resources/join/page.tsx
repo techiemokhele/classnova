@@ -79,7 +79,7 @@ const JoinPage = () => {
       <div className="relative flex flex-col h-[100vh] md:h-[100vh] lg:h-[100vh] w-full">
         <video
           className="absolute top-0 left-0 w-full h-full object-fill"
-          src="/video/members.mp4"
+          src="/video/member2.mp4"
           autoPlay
           loop
           muted
