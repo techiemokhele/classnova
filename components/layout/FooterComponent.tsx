@@ -25,8 +25,6 @@ const links = {
     { href: "/company/about-us", label: "About us" },
     { href: "/company/blog", label: "Our Blog" },
     { href: "/company/careers", label: "Careers" },
-    { href: "/company/investors", label: "Investors" },
-    { href: "/company/purpose", label: "Purpose" },
   ],
 };
 

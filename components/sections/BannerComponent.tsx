@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { BsCart4 } from "react-icons/bs";
 
 import { BannerComponentProps } from "@/types";
 import CustomButtonComponent from "../common/CustomButtonComponent";
@@ -14,6 +13,7 @@ const BannerComponent = ({
   buttonIcon,
   description,
   onClick,
+  otherLayout,
 }: BannerComponentProps) => {
   return (
     <section className="relative flex flex-col min-h-screen w-full">
@@ -33,8 +33,14 @@ const BannerComponent = ({
       <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
 
       {/* Centered Content */}
-      <div className="relative z-10 flex items-center justify-center w-full h-screen p-4">
-        <div className="flex flex-col items-center justify-center text-center text-white w-full md:w-1/2 p-1">
+      <div
+        className={`relative z-10 flex w-full h-screen p-4 ${
+          otherLayout
+            ? "items-center justify-start w-full "
+            : "items-center justify-center "
+        }`}
+      >
+        <div className="flex flex-col items-center justify-center text-center text-white w-full  p-1">
           {logo && (
             <Image
               src={logo}

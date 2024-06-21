@@ -8,6 +8,7 @@ export interface BannerComponentProps {
   buttonIcon?: React.ReactElement;
   description: string;
   onClick: () => void;
+  otherLayout?: boolean;
 }
 
 export interface CustomButtonProps {
