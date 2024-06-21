@@ -33,7 +33,7 @@ const OurAchievementsComponent = () => {
               className="w-[80px] h-[80px] object-cover"
               loading="lazy"
             />
-            <h1 className="text-white font-bold text-m md:text-2xl lg:text-2xl py-2">
+            <h1 className="text-white font-bold text-center text-m md:text-2xl lg:text-2xl py-2">
               {item.company}
             </h1>
             <p className="text-white font-medium text-[8px] lg:text-[10px] text-center px-2">
