@@ -2,6 +2,7 @@
 import CustomButtonComponent from "./common/CustomButtonComponent";
 import CustomSocialAuthButtonComponent from "./common/CustomSocialAuthButtonComponent";
 import CustomTextInputComponent from "./common/CustomTextInputComponent";
+import OrSeparatorComponent from "./common/OrSeparatorComponent";
 import CustomModalComponent from "./common/CustomModalComponent";
 
 //layout components
@@ -24,6 +25,7 @@ export {
   CustomButtonComponent,
   CustomSocialAuthButtonComponent,
   CustomTextInputComponent,
+  OrSeparatorComponent,
   CustomModalComponent,
   NavigationComponent,
   FooterComponent,

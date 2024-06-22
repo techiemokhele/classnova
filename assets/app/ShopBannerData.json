@@ -1,32 +1,32 @@
 [
   {
-    "isVideo": false,
-    "url": "/images/web/shop/slider6.jpg",
+    "isVideo": true,
+    "url": "https://videos.pexels.com/video-files/6766332/6766332-uhd_2560_1440_25fps.mp4",
     "text": "See our clothing range"
   },
   {
     "isVideo": true,
-    "url": "/video/sliderVideo4.mp4",
+    "url": "https://videos.pexels.com/video-files/8720759/8720759-uhd_2732_1440_25fps.mp4",
     "text": "See our gadget range"
   },
   {
     "isVideo": true,
-    "url": "/video/sliderVideo3.mp4",
+    "url": "https://videos.pexels.com/video-files/4727768/4727768-hd_1920_1080_30fps.mp4",
     "text": "See our hardware range"
   },
   {
-    "isVideo": false,
-    "url": "/images/web/shop/slider5.jpg",
+    "isVideo": true,
+    "url": "https://videos.pexels.com/video-files/5866263/5866263-uhd_2560_1440_25fps.mp4",
     "text": "See our food range"
   },
   {
     "isVideo": true,
-    "url": "/video/sliderVideo2.mp4",
+    "url": "https://videos.pexels.com/video-files/5210527/5210527-hd_1920_1080_25fps.mp4",
     "text": "See our cosmetic range"
   },
   {
     "isVideo": true,
-    "url": "/video/sliderVideo.mp4",
+    "url": "https://videos.pexels.com/video-files/9218078/9218078-hd_1920_1080_30fps.mp4",
     "text": "See our jewellery range"
   }
 ]

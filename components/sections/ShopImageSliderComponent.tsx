@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -8,10 +8,35 @@ import Image from "next/image";
 
 import ShopBannerData from "../../assets/app/ShopBannerData.json";
 
-const images = ShopBannerData;
+interface ImageData {
+  url: string;
+  text: string;
+  isVideo?: boolean;
+}
 
-const ShopImageSliderComponent = ({ onClick }: { onClick?: () => void }) => {
+interface ShopSliderProps {
+  images: ImageData[];
+}
+
+const images: ImageData[] = ShopBannerData as ImageData[];
+
+const preloadImages = () => {
+  images.forEach((image) => {
+    if (!image.isVideo) {
+      const img = new window.Image();
+      img.src = image.url;
+    }
+  });
+};
+
+const ShopImageSliderComponent: React.FC<{ onClick?: () => void }> = ({
+  onClick,
+}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    preloadImages();
+  }, []);
 
   const settings = {
     dots: true,
@@ -37,12 +62,12 @@ const ShopImageSliderComponent = ({ onClick }: { onClick?: () => void }) => {
   };
 
   return (
-    <section className="relative w-full h-[30vh] md:h-[60vh] lg:h-[65vh]">
+    <section className="relative w-full h-[40vh] md:h-[60vh] lg:h-[65vh]">
       <Slider {...settings}>
         {images.map((image, index) => (
           <div
             key={index}
-            className="relative w-full h-[34vh] md:h-[60vh] lg:h-[65vh]"
+            className="relative w-full h-[40vh] md:h-[60vh] lg:h-[65vh]"
           >
             {image.isVideo ? (
               <video
@@ -66,7 +91,7 @@ const ShopImageSliderComponent = ({ onClick }: { onClick?: () => void }) => {
             )}
             <div
               onClick={onClick}
-              className="absolute  cursor-pointer inset-0 flex items-center justify-center"
+              className="absolute cursor-pointer inset-0 flex items-center justify-center"
             >
               <span className="bg-teal-500 text-white text-[12px] font-normal p-2 rounded-xl">
                 {image.text}
