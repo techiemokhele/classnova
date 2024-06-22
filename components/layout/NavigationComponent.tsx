@@ -6,6 +6,8 @@ import Link from "next/link";
 import { BsCart4 } from "react-icons/bs";
 import { FaUser } from "react-icons/fa6";
 
+import { useCart } from "@/context/CartContext";
+
 const links = [
   { href: "/shop", label: "Shop" },
   { href: "/company/services", label: "Our Services" },
@@ -19,6 +21,7 @@ const NavigationComponent = () => {
   const [mounted, setMounted] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+  const { getTotalQuantity } = useCart(); 
 
   useEffect(() => {
     setMounted(true);
@@ -74,7 +77,7 @@ const NavigationComponent = () => {
               <div className="relative cursor-pointer text-white">
                 <BsCart4 className="h-6 w-6" />
                 <span className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full px-2 text-xs">
-                  0
+                  {getTotalQuantity()}
                 </span>
               </div>
             </Link>
@@ -181,7 +184,7 @@ const NavigationComponent = () => {
             <div className="relative cursor-pointer text-white flex items-center mb-3">
               <BsCart4 className="h-6 w-6 mr-3" /> Cart
               <span className="absolute top-1 -right-2 bg-red-500 text-white rounded-full px-2 text-xs">
-                0
+                {getTotalQuantity()}
               </span>
             </div>
           </Link>

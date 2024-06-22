@@ -6,7 +6,7 @@ const OrSeparatorComponent = ({
   bigText: boolean;
 }) => {
   return (
-    <div className="relative flex py-3 px-6 items-center">
+    <div className={`items-center relative flex ${bigText ? "py-10" : "py-3 px-6 "}`}>
       <div className="flex-grow border-t border-gray-400"></div>
       <span
         className={`flex-shrink mx-4 text-gray-400 ${

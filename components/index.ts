@@ -12,7 +12,6 @@ import FooterComponent from "./layout/FooterComponent";
 //section components
 import ReviewsAnalyticsComponent from "./sections/ReviewsAnalyticsComponent";
 import ReviewsDisplayerComponent from "./sections/ReviewsDisplayerComponent";
-import ShopImageSliderComponent from "./sections/ShopImageSliderComponent";
 import StarRatingComponent from "./sections/StarRatingComponent";
 import TestimonialAuthComponent from "./sections/TestimonialAuthComponent";
 import BannerComponent from "./sections/BannerComponent";
@@ -20,6 +19,10 @@ import CompanyMetricsComponent from "./sections/AboutUs/CompanyMetricsComponent"
 import AboutOurStoryComponent from "./sections/AboutUs/AboutOurStoryComponent";
 import OurAchievementsComponent from "./sections/AboutUs/OurAchievementsComponent";
 import MeetTheTeamComponent from "./sections/AboutUs/MeetTheTeamComponent";
+
+//shop components
+import ShopImageSliderComponent from "./sections/shop/ShopImageSliderComponent";
+import ProductTrendingSliderComponent from "./sections/shop/ProductTrendingSliderComponent";
 
 export {
   CustomButtonComponent,
@@ -31,7 +34,6 @@ export {
   FooterComponent,
   ReviewsAnalyticsComponent,
   ReviewsDisplayerComponent,
-  ShopImageSliderComponent,
   StarRatingComponent,
   TestimonialAuthComponent,
   BannerComponent,
@@ -39,4 +41,6 @@ export {
   AboutOurStoryComponent,
   OurAchievementsComponent,
   MeetTheTeamComponent,
+  ShopImageSliderComponent,
+  ProductTrendingSliderComponent,
 };

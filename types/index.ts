@@ -40,3 +40,49 @@ export interface ModalComponentProps {
   onClose: () => void;
   children: ReactNode;
 }
+
+export interface Product {
+  id: number;
+  productImage: string;
+  productName: string;
+  productDescription: string;
+  productSku: string;
+  productCategory: string;
+  productPrice: number;
+  newArrival: boolean;
+  bestSeller: boolean;
+  topProduct: boolean;
+  discount: number;
+  productRating: number;
+  productReviews: number;
+}
+
+export interface CartItem {
+  id: number;
+  productImage: string;
+  productName: string;
+  productDescription: string;
+  productSku: string;
+  productCategory: string;
+  productPrice: number;
+  newArrival: boolean;
+  bestSeller: boolean;
+  topProduct: boolean;
+  discount: number;
+  productRating: number;
+  quantity: number;
+}
+
+export interface CartContextType {
+  cart: CartItem[];
+  addToCart: (item: CartItem) => void;
+  removeFromCart: (id: number) => void;
+  getTotal: () => number;
+  getTotalQuantity: () => number;
+}
+
+export interface ProductItemProp {
+  itemNumber: number;
+  filterByCategory?: boolean;
+  ratingFilter?: boolean;
+}
