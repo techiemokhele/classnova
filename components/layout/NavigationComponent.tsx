@@ -70,7 +70,7 @@ const NavigationComponent = () => {
 
           {/* Right section: Cart and Sign In for desktop */}
           <div className="hidden lg:flex md:flex absolute inset-y-0 right-0 items-center space-x-4">
-            <Link href="/cart" passHref>
+            <Link href="/shop/cart" passHref>
               <div className="relative cursor-pointer text-white">
                 <BsCart4 className="h-6 w-6" />
                 <span className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full px-2 text-xs">
@@ -177,7 +177,7 @@ const NavigationComponent = () => {
 
         {/* Right section: Cart and Sign In for mobile */}
         <div className="px-4 pt-4 pb-6 space-y-4 border-t border-gray-700">
-          <Link href="/cart" onClick={toggleMenu} passHref>
+          <Link href="/shop/cart" onClick={toggleMenu} passHref>
             <div className="relative cursor-pointer text-white flex items-center mb-3">
               <BsCart4 className="h-6 w-6 mr-3" /> Cart
               <span className="absolute top-1 -right-2 bg-red-500 text-white rounded-full px-2 text-xs">

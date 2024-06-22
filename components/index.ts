@@ -11,6 +11,7 @@ import FooterComponent from "./layout/FooterComponent";
 //section components
 import ReviewsAnalyticsComponent from "./sections/ReviewsAnalyticsComponent";
 import ReviewsDisplayerComponent from "./sections/ReviewsDisplayerComponent";
+import ShopImageSliderComponent from "./sections/ShopImageSliderComponent";
 import StarRatingComponent from "./sections/StarRatingComponent";
 import TestimonialAuthComponent from "./sections/TestimonialAuthComponent";
 import BannerComponent from "./sections/BannerComponent";
@@ -28,6 +29,7 @@ export {
   FooterComponent,
   ReviewsAnalyticsComponent,
   ReviewsDisplayerComponent,
+  ShopImageSliderComponent,
   StarRatingComponent,
   TestimonialAuthComponent,
   BannerComponent,

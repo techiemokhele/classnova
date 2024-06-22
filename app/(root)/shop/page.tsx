@@ -1,7 +1,17 @@
-import ComingSoonComponent from "@/components/sections/ComingSoonComponent";
+"use client";
+
+import { ShopImageSliderComponent } from "@/components";
 
 const ShopHomePage = () => {
-  return <ComingSoonComponent pageName="Our Shop" />;
+  const handleShowSliderImages = () => {
+    console.log("handleShowSliderImages");
+  };
+
+  return (
+    <div className="flex flex-col pt-16 pb-6">
+      <ShopImageSliderComponent onClick={handleShowSliderImages} />
+    </div>
+  );
 };
 
 export default ShopHomePage;

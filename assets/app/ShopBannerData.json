@@ -1,0 +1,32 @@
+[
+  {
+    "isVideo": false,
+    "url": "/images/web/shop/slider6.jpg",
+    "text": "See our clothing range"
+  },
+  {
+    "isVideo": true,
+    "url": "/video/sliderVideo4.mp4",
+    "text": "See our gadget range"
+  },
+  {
+    "isVideo": true,
+    "url": "/video/sliderVideo3.mp4",
+    "text": "See our hardware range"
+  },
+  {
+    "isVideo": false,
+    "url": "/images/web/shop/slider5.jpg",
+    "text": "See our food range"
+  },
+  {
+    "isVideo": true,
+    "url": "/video/sliderVideo2.mp4",
+    "text": "See our cosmetic range"
+  },
+  {
+    "isVideo": true,
+    "url": "/video/sliderVideo.mp4",
+    "text": "See our jewellery range"
+  }
+]
