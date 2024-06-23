@@ -2,11 +2,18 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
+import { BsCart4 } from "react-icons/bs";
 
 import { useProductContext } from "@/context/ProductContext";
 import { useCart } from "@/context/CartContext";
 import { Product } from "@/types";
-import { NoResultsFoundComponent } from "@/components";
+import {
+  NoResultsFoundComponent,
+  StarRatingComponent,
+  CustomButtonComponent,
+} from "@/components";
+import { formatDecimalNumber } from "@/libs/utils";
 
 const ProductDetailPage = ({ params }: { params: { slug: string } }) => {
   const { products } = useProductContext();
@@ -52,32 +59,108 @@ const ProductDetailPage = ({ params }: { params: { slug: string } }) => {
   };
 
   return (
-    <div className="container mx-auto pt-16 pb-6">
-      <div className="bg-gray-800 rounded-lg overflow-hidden shadow-md p-6">
+    <div className="container mx-auto pt-20 pb-6 flex flex-col  w-full">
+      <div className="flex flex-col md:flex-row lg:flex-row justify-between space-y-4 md:space-y-0 lg:space-y-0 space-x-0 md:space-x-4 lg:space-x-4">
+        <div className="w-full md:w-1/2 lg:w-1/2 h-[300px]  md:h-[450px] lg:h-[450px] overflow-hidden">
+          <Image
+            priority
+            src={product.productImage}
+            alt={product.productName}
+            width={1300}
+            height={1300}
+            className="w-full h-full object-cover transition-transform duration-300 ease-in-out transform hover:scale-110"
+          />
+        </div>
 
-        <p className="text-lg font-semibold text-white">
-          {product.productName}
-        </p>
-        <p className="text-[10px] font-thin text-white">
-          {product.productDescription}
-        </p>
-        <p className="text-md text-white text-[14px]">
-          R{product.productPrice.toFixed(2)}
-        </p>
+        <div className="w-full md:w-1/2 lg:w-1/2 h-[450px] bg-gray-800 rounded-xl py-2 px-4">
+          <h1 className="text-3xl text-white font-semibold">
+            {product.productName}
+          </h1>
 
-        <button
-          onClick={handleAddToCart}
-          className="mt-2 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600"
-        >
-          Add to Cart
-        </button>
+          <div className="flex flex-row pt-2 pb-6 space-x-2">
+            <StarRatingComponent rating={product.productRating} />
+            <p className="text-white text-[10px] font-thin">
+              ({formatDecimalNumber(product.productReviews)} user reviews)
+            </p>
+          </div>
 
-        <button
-          onClick={() => router.back()}
-          className="mt-2 ml-2 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600"
-        >
-          Back to Products
-        </button>
+          <div className="flex flex-row justify-between pb-4">
+            <p className="text-teal-500 text-xl font-bold ">
+              R{formatDecimalNumber(product.productPrice)}
+            </p>
+
+            <p className="text-white text-[10px] font-semibold px-2 rounded-none bg-teal-500 items-center flex uppercase">
+              {product.productCategory}
+            </p>
+          </div>
+
+          <p className="text-white text-l font-bold pb-2">
+            {product.productDescription}
+          </p>
+
+          <p className="text-white text-[12px] font-thin">
+            Culpa ex dolore incididunt nulla adipisicing in pariatur ea commodo
+            non. Voluptate ut cillum aute aliquip anim mollit. Labore culpa
+            veniam velit exercitation aliqua eu anim cupidatat ipsum fugiat amet
+            sunt voluptate. Eiusmod duis velit fugiat irure nisi. Exercitation
+            et anim voluptate do in occaecat dolore exercitation.
+          </p>
+
+          <div className="flex flex-row py-6 justify-between">
+            <CustomButtonComponent
+              icon={<BsCart4 className="h-5 w-5" />}
+              text="Add to cart"
+              onClick={handleAddToCart}
+            />
+
+            <CustomButtonComponent
+              icon={<BsCart4 className="h-5 w-5" />}
+              text="Shop more"
+              onClick={handleAddToCart}
+            />
+          </div>
+
+          <div className="flex flex-col w-full h-[50px] justify-center items-center">
+            <Image
+              priority
+              src={"/images/web/shop/payment.png"}
+              alt="payment-icons"
+              width={1300}
+              height={1300}
+              className="w-full h-full object-cover transition-transform duration-300 ease-in-out transform hover:scale-110"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div className="flex flex-row wf-full py-8 space-x-4">
+        <div className="flex flex-col w-1/2 space-y-2">
+          <h4 className="text-white text-l font-bold uppercase">Description</h4>
+
+          <p className="text-white text-[10px] font-thin">
+            Fugiat culpa ea laboris nostrud fugiat non deserunt reprehenderit ut
+            fugiat consectetur duis culpa laborum. Sit irure cillum Lorem
+            consectetur sunt qui. Velit nulla magna sunt nostrud velit tempor
+            duis qui deserunt duis non et officia. Minim reprehenderit excepteur
+            est qui aliqua incididunt velit qui. Nostrud occaecat excepteur ut
+            consequat consequat. Adipisicing mollit enim voluptate ad ipsum
+            ipsum occaecat.
+          </p>
+        </div>
+
+        <div className="flex flex-col w-1/2 space-y-2">
+          <h4 className="text-white text-l font-bold uppercase">Shipping</h4>
+
+          <p className="text-white text-[10px] font-thin">
+            Fugiat culpa ea laboris nostrud fugiat non deserunt reprehenderit ut
+            fugiat consectetur duis culpa laborum. Sit irure cillum Lorem
+            consectetur sunt qui. Velit nulla magna sunt nostrud velit tempor
+            duis qui deserunt duis non et officia. Minim reprehenderit excepteur
+            est qui aliqua incididunt velit qui. Nostrud occaecat excepteur ut
+            consequat consequat. Adipisicing mollit enim voluptate ad ipsum
+            ipsum occaecat.
+          </p>
+        </div>
       </div>
     </div>
   );
