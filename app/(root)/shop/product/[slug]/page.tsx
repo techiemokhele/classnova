@@ -141,15 +141,11 @@ const ProductDetailPage = ({ params }: { params: { slug: string } }) => {
 
       <ProductDescriptionComponent />
 
-      <div className="flex-grow border-t border-gray-400 flex my-4"></div>
-
       <RelatedProductsComponent
         currentProduct={product}
         text="Related Products"
         filterType="category-rating"
       />
-
-      <div className="flex-grow border-t border-gray-400 flex my-4"></div>
 
       <RelatedProductsComponent
         currentProduct={product}

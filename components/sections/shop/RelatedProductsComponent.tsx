@@ -6,7 +6,7 @@ import { BsCart4 } from "react-icons/bs";
 
 import { useProductContext } from "@/context/ProductContext";
 import { useCart } from "@/context/CartContext";
-import { Product } from "@/types";
+import { Product, CartItem } from "@/types";
 import { StarRatingComponent, CustomButtonComponent } from "@/components";
 import { formatDecimalNumber } from "@/libs/utils";
 import { useRouter } from "next/navigation";
@@ -50,7 +50,8 @@ const RelatedProductsComponent = ({
   if (relatedProducts.length === 0) return null;
 
   const handleAddToCart = (product: Product) => {
-    addToCart(product);
+    const cartItem: CartItem = { ...product, quantity: 1 };
+    addToCart(cartItem);
   };
 
   const navigateToProductDetail = (slug: string) => {
@@ -58,41 +59,52 @@ const RelatedProductsComponent = ({
   };
 
   return (
-    <div className="mt-4 w-full">
-      <h2 className="text-2xl text-white font-bold mb-2">{text}</h2>
-      <div className="flex flex-wrap ">
-        {relatedProducts.slice(0, 6).map((product, index) => (
+    <div className="w-full">
+      <div className="flex-grow border-t border-gray-400 flex my-4"></div>
+
+      <h2 className="text-2xl text-white font-bold my-2">{text}</h2>
+      <div className="flex flex-wrap">
+        {relatedProducts.slice(0, 3).map((product, index) => (
           <div
             key={product.id}
-            className={`w-full sm:w-1/2 md:w-1/3 lg:w-1/3 p-2 ${
-              index >= 6 ? "hidden" : ""
-            }`}
+            className={`w-full sm:w-1/2 md:w-1/3 lg:w-1/3 p-2`}
           >
-            <div className="bg-gray-800 rounded-xl p-4">
+            <div className="bg-gray-800 rounded-xl pb-4 p-0">
               <Image
                 src={product.productImage}
                 alt={product.productName}
-                width={500}
-                height={500}
-                className="w-full h-[200px] object-cover rounded-md"
+                width={1000}
+                height={1000}
+                className="w-full h-[180px] object-cover rounded-md pb-2 px-0"
               />
+
+              <div className="flex justify-between items-end my-2 px-2">
+                <StarRatingComponent rating={product.productRating} />
+                <p className="text-white text-[12px] font-bold">
+                  R{formatDecimalNumber(product.productPrice)}
+                </p>
+              </div>
+
               <h3
                 onClick={() =>
                   product.slug && navigateToProductDetail(product.slug)
                 }
-                className="text-xl text-white font-semibold mt-4 cursor-pointer"
+                className="text-md text-white font-semibold cursor-pointer px-2"
               >
                 {product.productName}
               </h3>
-              <StarRatingComponent rating={product.productRating} />
-              <p className="text-teal-500 text-lg font-bold my-2">
-                R{formatDecimalNumber(product.productPrice)}
+
+              <p className="text-white text-[10px] font-thin px-2">
+                {product.productDescription}
               </p>
-              <CustomButtonComponent
-                icon={<BsCart4 className="h-5 w-5" />}
-                text="Add to cart"
-                onClick={() => handleAddToCart(product)}
-              />
+
+              <div className="flex flex-row w-full pt-4 px-2">
+                <CustomButtonComponent
+                  icon={<BsCart4 className="h-5 w-5" />}
+                  text="Add to cart"
+                  onClick={() => handleAddToCart(product)}
+                />
+              </div>
             </div>
           </div>
         ))}
