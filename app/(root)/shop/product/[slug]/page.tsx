@@ -12,6 +12,7 @@ import {
   NoResultsFoundComponent,
   StarRatingComponent,
   CustomButtonComponent,
+  ProductDescriptionComponent,
 } from "@/components";
 import { formatDecimalNumber } from "@/libs/utils";
 
@@ -58,6 +59,10 @@ const ProductDetailPage = ({ params }: { params: { slug: string } }) => {
     });
   };
 
+  const gotoCart = () => {
+    router.push("/shop/cart");
+  };
+
   return (
     <div className="container mx-auto pt-20 pb-6 flex flex-col  w-full">
       <div className="flex flex-col md:flex-row lg:flex-row justify-between space-y-4 md:space-y-0 lg:space-y-0 space-x-0 md:space-x-4 lg:space-x-4">
@@ -94,6 +99,10 @@ const ProductDetailPage = ({ params }: { params: { slug: string } }) => {
             </p>
           </div>
 
+          <p className="text-white text-[10px] font-thin pb-2">
+            SKU: {product.productSku}
+          </p>
+
           <p className="text-white text-l font-bold pb-2">
             {product.productDescription}
           </p>
@@ -113,11 +122,7 @@ const ProductDetailPage = ({ params }: { params: { slug: string } }) => {
               onClick={handleAddToCart}
             />
 
-            <CustomButtonComponent
-              icon={<BsCart4 className="h-5 w-5" />}
-              text="Shop more"
-              onClick={handleAddToCart}
-            />
+            <CustomButtonComponent text="Go to cart" onClick={gotoCart} />
           </div>
 
           <div className="flex flex-col w-full h-[50px] justify-center items-center">
@@ -133,35 +138,7 @@ const ProductDetailPage = ({ params }: { params: { slug: string } }) => {
         </div>
       </div>
 
-      <div className="flex flex-row wf-full py-8 space-x-4">
-        <div className="flex flex-col w-1/2 space-y-2">
-          <h4 className="text-white text-l font-bold uppercase">Description</h4>
-
-          <p className="text-white text-[10px] font-thin">
-            Fugiat culpa ea laboris nostrud fugiat non deserunt reprehenderit ut
-            fugiat consectetur duis culpa laborum. Sit irure cillum Lorem
-            consectetur sunt qui. Velit nulla magna sunt nostrud velit tempor
-            duis qui deserunt duis non et officia. Minim reprehenderit excepteur
-            est qui aliqua incididunt velit qui. Nostrud occaecat excepteur ut
-            consequat consequat. Adipisicing mollit enim voluptate ad ipsum
-            ipsum occaecat.
-          </p>
-        </div>
-
-        <div className="flex flex-col w-1/2 space-y-2">
-          <h4 className="text-white text-l font-bold uppercase">Shipping</h4>
-
-          <p className="text-white text-[10px] font-thin">
-            Fugiat culpa ea laboris nostrud fugiat non deserunt reprehenderit ut
-            fugiat consectetur duis culpa laborum. Sit irure cillum Lorem
-            consectetur sunt qui. Velit nulla magna sunt nostrud velit tempor
-            duis qui deserunt duis non et officia. Minim reprehenderit excepteur
-            est qui aliqua incididunt velit qui. Nostrud occaecat excepteur ut
-            consequat consequat. Adipisicing mollit enim voluptate ad ipsum
-            ipsum occaecat.
-          </p>
-        </div>
-      </div>
+      <ProductDescriptionComponent />
     </div>
   );
 };

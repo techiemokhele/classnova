@@ -3,7 +3,13 @@
 import { useCart, CartItem } from "@/context/CartContext";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import { NoResultsFoundComponent } from "@/components";
+import { BsCart4 } from "react-icons/bs";
+
+import {
+  CustomButtonComponent,
+  NoResultsFoundComponent,
+  ProductDescriptionComponent,
+} from "@/components";
 import { formatDecimalNumber } from "@/libs/utils";
 
 const deliveryAmount = 20;
@@ -29,6 +35,10 @@ const CartPage = () => {
 
   let overallTotal = getTotal() + deliveryAmount;
 
+  const handleCheckout = () => {
+    router.push("/shop/checkout");
+  };
+
   return (
     <div className="container mx-auto pt-16 pb-6">
       <h1 className="text-2xl text-white font-bold mb-6">Your Cart</h1>
@@ -38,9 +48,22 @@ const CartPage = () => {
         <div className="w-full md:w-[70%] lg:w-[70%] flex flex-col bg-gray-600 rounded-md py-4 px-2">
           {cart.map((item) => (
             <div key={item.id} className="flex flex-col mb-4">
-              <p className="text-white font-bold text-xl pb-2">
-                {item.productName}
-              </p>
+              <div className="flex flex-row justify-between">
+                <div>
+                  <p className="text-white font-bold text-xl pb-2">
+                    {item.productName}
+                  </p>
+                </div>
+
+                <div>
+                  <p className="text-white text-[10px] font-thin pb-2">
+                    SKU: {item.productSku}
+                  </p>
+                  <p className="text-white font-thin text-[10px]">
+                    {item.productCategory} category
+                  </p>
+                </div>
+              </div>
 
               <div className="flex flex-row justify-between w-full pt-4 space-x-4">
                 <div className="w-[20%] justify-start items-center">
@@ -57,9 +80,7 @@ const CartPage = () => {
                   <p className="text-white text-[10px] font-semibold">
                     {item.productDescription}
                   </p>
-                  <p className="text-white font-thin text-[10px]">
-                    {item.productCategory} category
-                  </p>
+
                   <p className="text-white text-[10px] font-thin pt-2">
                     Enim exercitation pariatur dolor duis. Adipisicing anim duis
                     consectetur id. Duis nisi adipisicing ullamco exercitation
@@ -94,13 +115,15 @@ const CartPage = () => {
                 </div>
               </div>
 
-              <div className="flex-grow border-t border-gray-400 flex mt-4"></div>
+              {cart.length > 1 && (
+                <div className="flex-grow border-t border-gray-400 flex mt-4"></div>
+              )}
             </div>
           ))}
         </div>
 
         {/* Order Summary Section */}
-        <div className="w-full md:w-[30%] lg:w-[30%] min-h-[200px] flex flex-col bg-gray-800 rounded-md py-4 px-4">
+        <div className="w-full md:w-[30%] lg:w-[30%] max-h-[350px] flex flex-col bg-gray-800 rounded-md py-4 px-4">
           <p className="text-white text-l font- pb-6">Order Summary</p>
 
           {cart.map((item) => (
@@ -155,8 +178,27 @@ const CartPage = () => {
               R{formatDecimalNumber(overallTotal)}
             </p>
           </div>
+
+          <Image
+            priority
+            src={"/images/web/shop/payment.png"}
+            alt="payment-icons"
+            width={1300}
+            height={1300}
+            className="w-full h-full object-cover transition-transform duration-300 ease-in-out transform hover:scale-110"
+          />
+
+          <div className="flex justify-center items-center pt-2">
+            <CustomButtonComponent
+              icon={<BsCart4 className="h-5 w-5" />}
+              text="Proceed to checkout"
+              onClick={handleCheckout}
+            />
+          </div>
         </div>
       </div>
+
+      <ProductDescriptionComponent />
     </div>
   );
 };

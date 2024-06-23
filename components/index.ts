@@ -23,6 +23,7 @@ import MeetTheTeamComponent from "./sections/AboutUs/MeetTheTeamComponent";
 //shop components
 import ShopImageSliderComponent from "./sections/shop/ShopImageSliderComponent";
 import ProductCardComponent from "./sections/shop/ProductCardComponent";
+import ProductDescriptionComponent from "./sections/shop/ProductDescriptionComponent";
 import NoResultsFoundComponent from "./sections/NoResultsFoundComponent";
 
 export {
@@ -44,5 +45,6 @@ export {
   MeetTheTeamComponent,
   ShopImageSliderComponent,
   ProductCardComponent,
+  ProductDescriptionComponent,
   NoResultsFoundComponent,
 };
