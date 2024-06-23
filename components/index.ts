@@ -22,7 +22,8 @@ import MeetTheTeamComponent from "./sections/AboutUs/MeetTheTeamComponent";
 
 //shop components
 import ShopImageSliderComponent from "./sections/shop/ShopImageSliderComponent";
-import ProductTrendingSliderComponent from "./sections/shop/ProductTrendingSliderComponent";
+import ProductCardComponent from "./sections/shop/ProductCardComponent";
+import NoResultsFoundComponent from "./sections/NoResultsFoundComponent";
 
 export {
   CustomButtonComponent,
@@ -42,5 +43,6 @@ export {
   OurAchievementsComponent,
   MeetTheTeamComponent,
   ShopImageSliderComponent,
-  ProductTrendingSliderComponent,
+  ProductCardComponent,
+  NoResultsFoundComponent,
 };

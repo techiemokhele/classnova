@@ -3,13 +3,25 @@
 import { useCart, CartItem } from "@/context/CartContext";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
+import { NoResultsFoundComponent } from "@/components";
 
 const CartPage = () => {
   const { cart, addToCart, removeFromCart, getTotal } = useCart<CartItem>();
   const router = useRouter();
 
+  const handleButtonClick = () => {
+    router.push("/shop");
+  };
+
   if (cart.length === 0) {
-    return <p>Your cart is empty</p>;
+    return (
+      <NoResultsFoundComponent
+        button
+        onClick={handleButtonClick}
+        title="No Products Found"
+        message="Shop for products and add them to your cart to see them appear here"
+      />
+    );
   }
 
   return (

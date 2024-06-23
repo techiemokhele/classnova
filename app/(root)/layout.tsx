@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "../globals.css";
 
+import { ProductProvider } from "@/context/ProductContext";
 import { CartProvider } from "@/context/CartContext";
 import { FooterComponent, NavigationComponent } from "@/components";
 
@@ -22,12 +23,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <CartProvider>
-      <main className={`${inter.className} bg-dark-2`}>
-        <NavigationComponent />
-        {children}
-        <FooterComponent />
-      </main>
-    </CartProvider>
+    <ProductProvider>
+      <CartProvider>
+        <main className={`${inter.className} bg-dark-2`}>
+          <NavigationComponent />
+          {children}
+          <FooterComponent />
+        </main>
+      </CartProvider>
+    </ProductProvider>
   );
 }

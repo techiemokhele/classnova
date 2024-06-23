@@ -1,31 +1,56 @@
 "use client";
 
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { Product } from "@/types";
 import {
   OrSeparatorComponent,
-  ProductTrendingSliderComponent,
+  ProductCardComponent,
   ShopImageSliderComponent,
-} from "@/components";
+} from "@/components/";
+
+import productData from "../../../assets/app/TrendingProducts.json";
+import { generateSlug } from "@/libs/utils";
+
+const products: Product[] = productData.map((product) => ({
+  ...product,
+  slug: generateSlug(product.productName),
+}));
 
 const ShopHomePage = () => {
-  const handleShowSliderImages = () => {
-    console.log("handleShowSliderImages");
+  const [filteredProducts, setFilteredProducts] = useState<Product[]>(products);
+  const router = useRouter();
+
+  const handleFilteredProducts = (filtered: Product[]) => {
+    setFilteredProducts(filtered);
   };
 
   return (
     <div className="flex flex-col pt-16 pb-6">
-      <ShopImageSliderComponent onClick={handleShowSliderImages} />
+      <ShopImageSliderComponent />
 
       <OrSeparatorComponent text="Trending this Week" bigText={true} />
-
-      <ProductTrendingSliderComponent itemNumber={3} />
+      <ProductCardComponent products={products} itemNumber={6} />
 
       <OrSeparatorComponent text="Shop by Category" bigText={true} />
-
-      <ProductTrendingSliderComponent itemNumber={6} filterByCategory={true} />
+      <ProductCardComponent
+        products={products.filter(
+          (product) =>
+            product.productCategory === "clothing" ||
+            product.productCategory === "gadget" ||
+            product.productCategory === "jewellery" ||
+            product.productCategory === "food" ||
+            product.productCategory === "hardware" ||
+            product.productCategory === "cosmetics"
+        )}
+        itemNumber={6}
+      />
 
       <OrSeparatorComponent text="Buyers All Time Products" bigText={true} />
-
-      <ProductTrendingSliderComponent itemNumber={9} ratingFilter={true} />
+      <ProductCardComponent
+        products={products.filter((product) => product.productRating > 4.5)}
+        itemNumber={6}
+      />
     </div>
   );
 };

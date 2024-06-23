@@ -10,7 +10,7 @@ import { useCart } from "@/context/CartContext";
 
 const links = [
   { href: "/shop", label: "Shop" },
-  { href: "/company/services", label: "Our Services" },
+  { href: "/shop/products-list", label: "Our Products" },
   { href: "/company/about-us", label: "About Us" },
   { href: "/company/blog", label: "Our Blog" },
   { href: "/help/contact-us", label: "Contact Us" },
@@ -21,7 +21,7 @@ const NavigationComponent = () => {
   const [mounted, setMounted] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
-  const { getTotalQuantity } = useCart(); 
+  const { getTotalQuantity } = useCart();
 
   useEffect(() => {
     setMounted(true);

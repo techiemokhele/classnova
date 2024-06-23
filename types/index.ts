@@ -55,6 +55,7 @@ export interface Product {
   discount: number;
   productRating: number;
   productReviews: number;
+  slug?: string;
 }
 
 export interface CartItem {
@@ -71,6 +72,7 @@ export interface CartItem {
   discount: number;
   productRating: number;
   quantity: number;
+  slug?: string;
 }
 
 export interface CartContextType {
@@ -83,6 +85,7 @@ export interface CartContextType {
 
 export interface ProductItemProp {
   itemNumber: number;
-  filterByCategory?: boolean;
+  filterByCategory?: string;
   ratingFilter?: boolean;
+  onFilterChange?: (filtered: Product[]) => void;
 }

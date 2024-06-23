@@ -86,7 +86,7 @@ const ShopImageSliderComponent: React.FC<{ onClick?: () => void }> = ({
                 height={1300}
                 quality={100}
                 className="w-full h-full object-cover"
-                loading="lazy"
+               priority
               />
             )}
             <div

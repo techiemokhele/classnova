@@ -1,9 +1,7 @@
-import ComingSoonComponent from '@/components/sections/ComingSoonComponent'
+import ComingSoonComponent from "@/components/sections/ComingSoonComponent";
 
 const CheckoutPage = () => {
-  return (
-   <ComingSoonComponent pageName="Your Cart" />
-  )
-}
+  return <ComingSoonComponent pageName="Your Checkout" />;
+};
 
-export default CheckoutPage
+export default CheckoutPage;
