@@ -13,6 +13,7 @@ import {
   StarRatingComponent,
   CustomButtonComponent,
   ProductDescriptionComponent,
+  RelatedProductsComponent,
 } from "@/components";
 import { formatDecimalNumber } from "@/libs/utils";
 
@@ -77,7 +78,7 @@ const ProductDetailPage = ({ params }: { params: { slug: string } }) => {
           />
         </div>
 
-        <div className="w-full md:w-1/2 lg:w-1/2 h-[450px] bg-gray-800 rounded-xl py-2 px-4">
+        <div className="w-full md:w-1/2 lg:w-1/2 h-auto bg-gray-800 rounded-xl py-2 px-4">
           <h1 className="text-3xl text-white font-semibold">
             {product.productName}
           </h1>
@@ -139,6 +140,22 @@ const ProductDetailPage = ({ params }: { params: { slug: string } }) => {
       </div>
 
       <ProductDescriptionComponent />
+
+      <div className="flex-grow border-t border-gray-400 flex my-4"></div>
+
+      <RelatedProductsComponent
+        currentProduct={product}
+        text="Related Products"
+        filterType="category-rating"
+      />
+
+      <div className="flex-grow border-t border-gray-400 flex my-4"></div>
+
+      <RelatedProductsComponent
+        currentProduct={product}
+        text="Products you may like"
+        filterType="rating"
+      />
     </div>
   );
 };

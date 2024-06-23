@@ -24,6 +24,7 @@ import MeetTheTeamComponent from "./sections/AboutUs/MeetTheTeamComponent";
 import ShopImageSliderComponent from "./sections/shop/ShopImageSliderComponent";
 import ProductCardComponent from "./sections/shop/ProductCardComponent";
 import ProductDescriptionComponent from "./sections/shop/ProductDescriptionComponent";
+import RelatedProductsComponent from "./sections/shop/RelatedProductsComponent";
 import NoResultsFoundComponent from "./sections/NoResultsFoundComponent";
 
 export {
@@ -46,5 +47,6 @@ export {
   ShopImageSliderComponent,
   ProductCardComponent,
   ProductDescriptionComponent,
+  RelatedProductsComponent,
   NoResultsFoundComponent,
 };

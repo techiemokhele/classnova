@@ -103,7 +103,7 @@ const FooterComponent = () => {
 
       {/* Mobile footer */}
       <div className="container mx-auto pb-8 pt-0 px-4 sm:hidden">
-        <div className="grid grid-cols-1 gap-8">
+        <div className="grid grid-cols-2 gap-3">
           {/* Company synopsis */}
           <div className="flex flex-col space-y-3">
             <Image
@@ -111,11 +111,11 @@ const FooterComponent = () => {
               alt="logo"
               width={1000}
               height={1000}
-              className={"w-full h-[40px] object-contain self-start"}
+              className={"w-full h-[40px] object-contain"}
               loading="lazy"
             />
 
-            <p className="text-sm text-white font-thin text-center">
+            <p className="text-[12px] text-white font-thin text-start">
               We believe in the potential of community-driven commerce and are
               committed to building a platform that benefits consumers and
               encourages meaningful connections.

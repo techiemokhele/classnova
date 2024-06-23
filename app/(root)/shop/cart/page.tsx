@@ -22,6 +22,10 @@ const CartPage = () => {
     router.push("/shop");
   };
 
+  const navigateToProductDetail = (slug: string) => {
+    router.push(`/shop/product/${slug}`);
+  };
+
   if (cart.length === 0) {
     return (
       <NoResultsFoundComponent
@@ -49,8 +53,12 @@ const CartPage = () => {
           {cart.map((item) => (
             <div key={item.id} className="flex flex-col mb-4">
               <div className="flex flex-row justify-between">
-                <div>
-                  <p className="text-white font-bold text-xl pb-2">
+                <div
+                  onClick={() =>
+                    item.slug && navigateToProductDetail(item.slug)
+                  }
+                >
+                  <p className="text-white font-bold text-xl pb-2 cursor-pointer">
                     {item.productName}
                   </p>
                 </div>
@@ -65,7 +73,7 @@ const CartPage = () => {
                 </div>
               </div>
 
-              <div className="flex flex-row justify-between w-full pt-4 space-x-4">
+              <div className="flex flex-row justify-between w-full pt-4">
                 <div className="w-[20%] justify-start items-center">
                   <Image
                     src={item.productImage}
@@ -76,7 +84,7 @@ const CartPage = () => {
                   />
                 </div>
 
-                <div className="w-[78%] justify-start items-center">
+                <div className="w-[78%] justify-start items-center px-2">
                   <p className="text-white text-[10px] font-semibold">
                     {item.productDescription}
                   </p>
@@ -123,7 +131,7 @@ const CartPage = () => {
         </div>
 
         {/* Order Summary Section */}
-        <div className="w-full md:w-[30%] lg:w-[30%] max-h-[350px] flex flex-col bg-gray-800 rounded-md py-4 px-4">
+        <div className="w-full md:w-[30%] lg:w-[30%] flex flex-col bg-gray-800 rounded-md py-4 px-4">
           <p className="text-white text-l font- pb-6">Order Summary</p>
 
           {cart.map((item) => (
@@ -185,7 +193,7 @@ const CartPage = () => {
             alt="payment-icons"
             width={1300}
             height={1300}
-            className="w-full h-full object-cover transition-transform duration-300 ease-in-out transform hover:scale-110"
+            className="w-full h-[40px] object-contain transition-transform duration-300 ease-in-out transform hover:scale-110"
           />
 
           <div className="flex justify-center items-center pt-2">

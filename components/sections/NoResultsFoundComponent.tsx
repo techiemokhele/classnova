@@ -19,7 +19,7 @@ const NoResultsFoundComponent = ({
 
       <div className="flex justify-center items-center my-3">
         <Image
-          src="/images/web/shop/empty-cart.webp"
+          src="/images/web/empty-cart.webp"
           alt="no-result-image"
           width={1000}
           height={1000}

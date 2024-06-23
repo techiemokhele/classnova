@@ -15,7 +15,7 @@ const productsData: Product[] = productData.map((product) => ({
   slug: generateSlug(product.productName),
 }));
 
-const ITEMS_PER_PAGE = 12;
+const ITEMS_PER_PAGE = 24;
 
 const ProductListPage = () => {
   const router = useRouter();
