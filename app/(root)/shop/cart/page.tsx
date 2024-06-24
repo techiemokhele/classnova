@@ -39,13 +39,20 @@ const CartPage = () => {
 
   let overallTotal = getTotal() + deliveryAmount;
 
-  const handleCheckout = () => {
+const handleCheckout = () => {
+    const checkoutData = {
+      cart,
+      overallTotal,
+    };
+
+    sessionStorage.setItem('checkoutData', JSON.stringify(checkoutData));
+
     router.push("/shop/checkout");
   };
 
   return (
     <div className="container mx-auto pt-16 pb-6">
-      <h1 className="text-2xl text-white font-bold mb-6">Your Cart</h1>
+      <h1 className="text-3xl text-white font-bold mb-6">Your Cart</h1>
 
       <div className="flex flex-col md:flex-row lg:flex-row justify-between space-x-0 md:space-x-4 lg:space-x-4 space-y-4 md:space-y-0 lg:space-y-0">
         {/* Product items Section */}
