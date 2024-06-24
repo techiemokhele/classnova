@@ -1,10 +1,11 @@
 "use client";
 
-import { useCart, CartItem } from "@/context/CartContext";
+import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { BsCart4 } from "react-icons/bs";
 
+import { useCart, CartItem } from "@/context/CartContext";
 import {
   CustomButtonComponent,
   NoResultsFoundComponent,
@@ -17,6 +18,10 @@ const deliveryAmount = 20;
 const CartPage = () => {
   const { cart, addToCart, removeFromCart, getTotal } = useCart<CartItem>();
   const router = useRouter();
+
+    const [currentPage, setCurrentPage] = useState(0);
+  const itemsPerPage = 3;
+  const totalPages = Math.ceil(cart.length / itemsPerPage);
 
   const handleButtonClick = () => {
     router.push("/shop");
@@ -35,7 +40,16 @@ const CartPage = () => {
         message="Shop for products and add them to your cart to see them appear here"
       />
     );
+    
   }
+
+  const nextPage = () => {
+    setCurrentPage((prevPage) => prevPage + 1);
+  };
+
+  const prevPage = () => {
+    setCurrentPage((prevPage) => prevPage - 1);
+  };
 
   let overallTotal = getTotal() + deliveryAmount;
 

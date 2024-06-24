@@ -89,3 +89,10 @@ export interface ProductItemProp {
   ratingFilter?: boolean;
   onFilterChange?: (filtered: Product[]) => void;
 }
+
+export interface DetailProductComponentProps {
+  cart: CartItem[];
+  subtotal: number;
+  total: number;
+  deliveryAmount: number;
+}

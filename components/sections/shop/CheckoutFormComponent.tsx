@@ -6,7 +6,6 @@ import { useState } from "react";
 
 const CheckoutFormComponent = () => {
   const [email, setEmail] = useState<string>("");
-  const [rememberMe, setRememberMe] = useState<string>("");
   const [firstName, setFirstName] = useState<string>("");
   const [lastName, setLastName] = useState<string>("");
   const [country, setCountry] = useState<string>("");
@@ -19,7 +18,6 @@ const CheckoutFormComponent = () => {
   const handleToPayment = () => {
     const data = {
       email,
-      rememberMe,
       firstName,
       lastName,
       country,
@@ -31,6 +29,16 @@ const CheckoutFormComponent = () => {
     };
 
     console.log("captured data: ", data);
+
+    setEmail("");
+    setFirstName("");
+    setLastName("");
+    setCountry("");
+    setAddress("");
+    setTown("");
+    setProvince("");
+    setPostCode("");
+    setShippingMethod("");
   };
 
   return (
@@ -58,14 +66,14 @@ const CheckoutFormComponent = () => {
             type="text"
             value={firstName}
             onChange={(text) => setFirstName(text)}
-            placeholder="example"
+            placeholder="John"
             label="First name"
           />
           <CustomTextInputComponent
             type="text"
             value={lastName}
             onChange={(text) => setLastName(text)}
-            placeholder="example"
+            placeholder="Doe"
             label="Last name"
           />
         </div>
@@ -75,7 +83,7 @@ const CheckoutFormComponent = () => {
             type="text"
             value={country}
             onChange={(text) => setCountry(text)}
-            placeholder="example"
+            placeholder="South Africa"
             label="Country"
           />
         </div>
@@ -85,7 +93,7 @@ const CheckoutFormComponent = () => {
             type="text"
             value={address}
             onChange={(text) => setAddress(text)}
-            placeholder="example"
+            placeholder="55 Street Avenue"
             label="Address"
           />
         </div>
@@ -95,7 +103,7 @@ const CheckoutFormComponent = () => {
             type="text"
             value={town}
             onChange={(text) => setTown(text)}
-            placeholder="example"
+            placeholder="Midrand"
             label="Town"
           />
 
@@ -103,7 +111,7 @@ const CheckoutFormComponent = () => {
             type="text"
             value={province}
             onChange={(text) => setProvince(text)}
-            placeholder="example"
+            placeholder="GP"
             label="Province"
           />
 
@@ -111,7 +119,7 @@ const CheckoutFormComponent = () => {
             type="text"
             value={postCode}
             onChange={(text) => setPostCode(text)}
-            placeholder="example"
+            placeholder="1678"
             label="Postcode"
           />
         </div>
@@ -128,20 +136,6 @@ const CheckoutFormComponent = () => {
             <div className="w-1/2 flex flex-col items-start">
               <h1 className="text-white text-[20px] font-semibold">
                 Transit Team
-              </h1>
-              <p className="text-white text-[8px] font-thin">
-                Your shipment will arrive within 2-3 days
-              </p>
-            </div>
-            <div className="w-1/2 flex flex-row space-x-2 justify-end">
-              <p className="text-white text-[10px] font-thin">R20.00</p>
-            </div>
-          </div>
-
-          <div className="flex flex-row jusitfy-between items-center">
-            <div className="w-1/2 flex flex-col items-start">
-              <h1 className="text-white text-[20px] font-semibold">
-                Express Transit
               </h1>
               <p className="text-white text-[8px] font-thin">
                 Your shipment will arrive within 2-3 days
