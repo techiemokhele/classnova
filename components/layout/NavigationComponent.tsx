@@ -6,9 +6,11 @@ import Link from "next/link";
 import { BsCart4 } from "react-icons/bs";
 import { FaUser } from "react-icons/fa6";
 
+import { useCart } from "@/context/CartContext";
+
 const links = [
   { href: "/shop", label: "Shop" },
-  { href: "/company/services", label: "Our Services" },
+  { href: "/shop/products-list", label: "Our Products" },
   { href: "/company/about-us", label: "About Us" },
   { href: "/company/blog", label: "Our Blog" },
   { href: "/help/contact-us", label: "Contact Us" },
@@ -19,6 +21,7 @@ const NavigationComponent = () => {
   const [mounted, setMounted] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+  const { getTotalQuantity } = useCart();
 
   useEffect(() => {
     setMounted(true);
@@ -70,11 +73,11 @@ const NavigationComponent = () => {
 
           {/* Right section: Cart and Sign In for desktop */}
           <div className="hidden lg:flex md:flex absolute inset-y-0 right-0 items-center space-x-4">
-            <Link href="/cart" passHref>
+            <Link href="/shop/cart" passHref>
               <div className="relative cursor-pointer text-white">
                 <BsCart4 className="h-6 w-6" />
                 <span className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full px-2 text-xs">
-                  0
+                  {getTotalQuantity()}
                 </span>
               </div>
             </Link>
@@ -177,11 +180,11 @@ const NavigationComponent = () => {
 
         {/* Right section: Cart and Sign In for mobile */}
         <div className="px-4 pt-4 pb-6 space-y-4 border-t border-gray-700">
-          <Link href="/cart" onClick={toggleMenu} passHref>
+          <Link href="/shop/cart" onClick={toggleMenu} passHref>
             <div className="relative cursor-pointer text-white flex items-center mb-3">
               <BsCart4 className="h-6 w-6 mr-3" /> Cart
               <span className="absolute top-1 -right-2 bg-red-500 text-white rounded-full px-2 text-xs">
-                0
+                {getTotalQuantity()}
               </span>
             </div>
           </Link>
