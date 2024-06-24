@@ -2,6 +2,7 @@
 import CustomButtonComponent from "./common/CustomButtonComponent";
 import CustomSocialAuthButtonComponent from "./common/CustomSocialAuthButtonComponent";
 import CustomTextInputComponent from "./common/CustomTextInputComponent";
+import OrSeparatorComponent from "./common/OrSeparatorComponent";
 import CustomModalComponent from "./common/CustomModalComponent";
 
 //layout components
@@ -19,10 +20,21 @@ import AboutOurStoryComponent from "./sections/AboutUs/AboutOurStoryComponent";
 import OurAchievementsComponent from "./sections/AboutUs/OurAchievementsComponent";
 import MeetTheTeamComponent from "./sections/AboutUs/MeetTheTeamComponent";
 
+//shop components
+import ShopImageSliderComponent from "./sections/shop/ShopImageSliderComponent";
+import ShopAdBannerComponent from "./sections/shop/ShopAdBannerComponent";
+import CheckoutFormComponent from "./sections/shop/CheckoutFormComponent";
+import DetailProductComponent from "./sections/shop/DetailProductComponent";
+import ProductCardComponent from "./sections/shop/ProductCardComponent";
+import ProductDescriptionComponent from "./sections/shop/ProductDescriptionComponent";
+import RelatedProductsComponent from "./sections/shop/RelatedProductsComponent";
+import NoResultsFoundComponent from "./sections/NoResultsFoundComponent";
+
 export {
   CustomButtonComponent,
   CustomSocialAuthButtonComponent,
   CustomTextInputComponent,
+  OrSeparatorComponent,
   CustomModalComponent,
   NavigationComponent,
   FooterComponent,
@@ -35,4 +47,12 @@ export {
   AboutOurStoryComponent,
   OurAchievementsComponent,
   MeetTheTeamComponent,
+  ShopImageSliderComponent,
+  ShopAdBannerComponent,
+  CheckoutFormComponent,
+  DetailProductComponent,
+  ProductCardComponent,
+  ProductDescriptionComponent,
+  RelatedProductsComponent,
+  NoResultsFoundComponent,
 };

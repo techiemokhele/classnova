@@ -10,6 +10,7 @@ const CustomTextInputComponent = ({
   placeholder,
   label,
   type,
+  search,
 }: TextInputProps) => {
   const [isFocused, setIsFocused] = useState(false);
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
@@ -78,7 +79,7 @@ const CustomTextInputComponent = ({
             )}
           </div>
         )}
-        {value && type !== "password" && (
+        {value && type !== "password" && search === false && (
           <div className="absolute right-2 top-2">
             {showError ? (
               <FaTimes className="text-red-500 pt-2" />
