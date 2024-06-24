@@ -22,6 +22,7 @@ import MeetTheTeamComponent from "./sections/AboutUs/MeetTheTeamComponent";
 
 //shop components
 import ShopImageSliderComponent from "./sections/shop/ShopImageSliderComponent";
+import ShopAdBannerComponent from "./sections/shop/ShopAdBannerComponent";
 import CheckoutFormComponent from "./sections/shop/CheckoutFormComponent";
 import DetailProductComponent from "./sections/shop/DetailProductComponent";
 import ProductCardComponent from "./sections/shop/ProductCardComponent";
@@ -47,6 +48,7 @@ export {
   OurAchievementsComponent,
   MeetTheTeamComponent,
   ShopImageSliderComponent,
+  ShopAdBannerComponent,
   CheckoutFormComponent,
   DetailProductComponent,
   ProductCardComponent,

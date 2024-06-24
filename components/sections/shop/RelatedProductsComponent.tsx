@@ -67,7 +67,7 @@ const RelatedProductsComponent = ({
         {relatedProducts.slice(0, 3).map((product, index) => (
           <div
             key={product.id}
-            className={`w-full sm:w-1/2 md:w-1/3 lg:w-1/3 p-2`}
+            className="flex flex-col w-1/2 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 p-2 sm:p-3 md:p-4"
           >
             <div className="bg-gray-800 rounded-xl pb-4 p-0">
               <Image

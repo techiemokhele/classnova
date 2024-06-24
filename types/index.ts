@@ -29,6 +29,7 @@ export interface TextInputProps {
   placeholder: string;
   type: "tel" | "password" | "text" | "email";
   label?: string | ReactElement;
+  search?: boolean;
 }
 
 export interface StarRatingProps {
@@ -95,4 +96,11 @@ export interface DetailProductComponentProps {
   subtotal: number;
   total: number;
   deliveryAmount: number;
+}
+
+export interface ShopBannerProps {
+  discountText: string;
+  extraText?: string;
+  bannerImage: string;
+  otherLayout: boolean;
 }
