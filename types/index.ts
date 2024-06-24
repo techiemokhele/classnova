@@ -28,7 +28,7 @@ export interface TextInputProps {
   onChange: (value: string) => void;
   placeholder: string;
   type: "tel" | "password" | "text" | "email";
-  label: string | ReactElement;
+  label?: string | ReactElement;
 }
 
 export interface StarRatingProps {

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
@@ -8,7 +8,11 @@ import productData from "../../../../assets/app/TrendingProducts.json";
 import { useCart } from "@/context/CartContext";
 import { Product } from "@/types";
 import { generateSlug, formatDecimalNumber } from "@/libs/utils";
-import { NoResultsFoundComponent, CustomButtonComponent } from "@/components";
+import {
+  NoResultsFoundComponent,
+  CustomButtonComponent,
+  CustomTextInputComponent,
+} from "@/components";
 
 const productsData: Product[] = productData.map((product) => ({
   ...product,
@@ -22,13 +26,25 @@ const ProductListPage = () => {
   const { addToCart } = useCart();
 
   const [currentPage, setCurrentPage] = useState(1);
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [searchQuery, setSearchQuery] = useState<string>("");
 
-  const totalPages = Math.ceil(productsData.length / ITEMS_PER_PAGE);
+  const uniqueCategories = Array.from(
+    new Set(productsData.map((product) => product.productCategory))
+  );
+
+  const filteredProducts = selectedCategory
+    ? productsData.filter(
+        (product) => product.productCategory === selectedCategory
+      )
+    : productsData;
+
+  const totalPages = Math.ceil(filteredProducts.length / ITEMS_PER_PAGE);
 
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
   const endIndex = startIndex + ITEMS_PER_PAGE;
 
-  const products = productsData.slice(startIndex, endIndex);
+  const products = filteredProducts.slice(startIndex, endIndex);
 
   const handleAddToCart = (product: Product) => {
     addToCart({
@@ -57,17 +73,69 @@ const ProductListPage = () => {
     setCurrentPage(pageNumber);
   };
 
+  const filterProductsByCategory = (category: string) => {
+    setSelectedCategory(category === selectedCategory ? null : category);
+  };
+
+  const showAllProducts = () => {
+    setSelectedCategory(null);
+  };
+
   const handleButtonClick = () => {
     router.push("/shop");
   };
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
-  }, [currentPage]);
+  }, [currentPage, selectedCategory]);
 
   return (
     <div className="container mx-auto pt-16 pb-6">
-      <div className="flex flex-wrap">
+      {/* search and sort section */}
+      <div className="flex flex-row w-full justify-between">
+        <div className="w-1/2 justify-start">
+          <div className="flex flex-wrap justify-center pt-6 space-y-1">
+            <button
+              key="all"
+              className={`mx-1 px-2 py-1 rounded-md text-[12px] font-thin ${
+                selectedCategory === null
+                  ? "bg-teal-500 text-white"
+                  : "bg-gray-800 text-white"
+              } hover:bg-gray-700 focus:outline-none focus:bg-gray-700`}
+              onClick={showAllProducts}
+            >
+              All
+            </button>
+            {uniqueCategories.map((category, index) => (
+              <button
+                key={index}
+                className={`mx-1 px-2 py-1 rounded-md text-[12px] font-thin ${
+                  category === selectedCategory
+                    ? "bg-teal-500 text-white"
+                    : "bg-gray-800 text-white"
+                } hover:bg-gray-700 focus:outline-none focus:bg-gray-700`}
+                onClick={() => filterProductsByCategory(category)}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <div className="flex w-1/2 justify-center items-center">
+          <CustomTextInputComponent
+            type="text"
+            placeholder="Search products..."
+            value={searchQuery}
+            onChange={(text) => setSearchQuery(text)}
+          />
+
+          {/* sort (price and a - z)*/}
+        </div>
+      </div>
+
+      {/* items list section*/}
+      <div className="flex flex-wrap mt-4">
         {products.length > 0 ? (
           products.map((product) => (
             <div
@@ -76,7 +144,7 @@ const ProductListPage = () => {
             >
               <div className="bg-gray-800 rounded-lg overflow-hidden shadow-md pb-2">
                 <div className="relative w-full h-40 sm:h-48 md:h-56 lg:h-64 xl:h-64">
-                  <div className="absolute top-2 left-2 bg-white text-black px-2 py-1 text-xs font-semibold rounded z-10 uppercase">
+                  <div className="absolute top-2 left-2 bg-white text-black px-2 py-1 text-xs font-semibold rounded z-10">
                     {product.productCategory}
                   </div>
                   <Image
@@ -87,6 +155,9 @@ const ProductListPage = () => {
                     quality={100}
                     className="w-full h-full object-cover"
                     priority
+                    onClick={() =>
+                      product.slug && navigateToProductDetail(product.slug)
+                    }
                   />
                 </div>
 
@@ -125,6 +196,7 @@ const ProductListPage = () => {
         )}
       </div>
 
+      {/* pagination section*/}
       {totalPages > 1 && (
         <div className="flex justify-center mt-6">
           {[...Array(totalPages)].map((_, index) => (
