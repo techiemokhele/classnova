@@ -40,7 +40,7 @@ const CustomTextInputComponent = ({
     if (type === "email") {
       return "Enter a valid email format";
     } else if (type === "tel") {
-      return "Enter a valid phone number";
+      return "Invalid number";
     } else if (type === "password") {
       return "Password must be at least 8 characters";
     } else if (type === "text") {

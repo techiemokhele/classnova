@@ -30,25 +30,29 @@ const ShopHomePage = () => {
       <ShopImageSliderComponent />
 
       <OrSeparatorComponent text="Trending this Week" bigText={true} />
-      <ProductCardComponent products={products} itemNumber={6} />
+      <ProductCardComponent
+        products={products
+          .filter(
+            (product) => product.newArrival && product.productReviews > 20
+          )
+          .reverse()}
+        itemNumber={6}
+      />
 
       <OrSeparatorComponent text="Shop by Category" bigText={true} />
       <ProductCardComponent
-        products={products.filter(
-          (product) =>
-            product.productCategory === "clothing" ||
-            product.productCategory === "gadget" ||
-            product.productCategory === "jewellery" ||
-            product.productCategory === "food" ||
-            product.productCategory === "hardware" ||
-            product.productCategory === "cosmetics"
-        )}
+        products={products.filter((product) => product.productRating >= 4)}
         itemNumber={6}
       />
 
       <OrSeparatorComponent text="Buyers All Time Products" bigText={true} />
       <ProductCardComponent
-        products={products.filter((product) => product.productRating > 4.5)}
+        products={products
+          .filter(
+            (product) =>
+              product.productRating > 4.5 && product.productReviews > 100
+          )
+          .reverse()}
         itemNumber={6}
       />
     </div>

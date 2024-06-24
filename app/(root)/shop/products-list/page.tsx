@@ -128,6 +128,14 @@ const ProductListPage = () => {
     setCurrentPage(1);
   }, [searchQuery, selectedCategory]);
 
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const category = urlParams.get("category");
+    if (category) {
+      setSelectedCategory(category);
+    }
+  }, []);
+
   return (
     <div className="pt-20 pb-6">
       {/*shop banner*/}

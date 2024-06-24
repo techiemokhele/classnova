@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import { BsCart4 } from "react-icons/bs";
 
 import { useCart, CartItem } from "@/context/CartContext";
 import {
@@ -214,12 +213,11 @@ const handleCheckout = () => {
             alt="payment-icons"
             width={1300}
             height={1300}
-            className="w-full h-[40px] object-contain transition-transform duration-300 ease-in-out transform hover:scale-110"
+            className="w-full h-[40px] object-contain"
           />
 
           <div className="flex justify-center items-center pt-2">
             <CustomButtonComponent
-              icon={<BsCart4 className="h-5 w-5" />}
               text="Proceed to checkout"
               onClick={handleCheckout}
             />

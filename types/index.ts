@@ -104,3 +104,10 @@ export interface ShopBannerProps {
   bannerImage: string;
   otherLayout: boolean;
 }
+
+export interface ImageData {
+  url: string;
+  text: string;
+  isVideo?: boolean;
+  category: string;
+}

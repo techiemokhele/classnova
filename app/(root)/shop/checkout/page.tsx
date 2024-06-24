@@ -1,27 +1,62 @@
 "use client";
 
-import React from "react";
-import { CheckoutFormComponent, DetailProductComponent } from "@/components";
+import React, { useState } from "react";
+import {
+  CheckoutFormComponent,
+  DetailProductComponent,
+  PaymentFormComponent,
+} from "@/components";
 import { useCart } from "@/context/CartContext";
+import { IoArrowBackCircle } from "react-icons/io5";
+import { useRouter } from "next/navigation";
 
 const CheckoutPage = () => {
+  const router = useRouter();
+
   const { cart, getTotal } = useCart();
   const deliveryAmount = 20;
   const subtotal = getTotal();
   const total = subtotal + deliveryAmount;
+  const [isPaymentStep, setIsPaymentStep] = useState(false);
+
+  const handleToPayment = () => {
+    setIsPaymentStep(true);
+  };
+
+  const handleNavigation = () => {
+    router.push("/shop/cart")
+  }
 
   return (
     <div className="container mx-auto pt-16 pb-6">
       <div className="flex flex-col md:flex-row lg:flex-row justify-between">
         <div className="flex flex-row w-full md:w-1/2 lg:w-1/2 justify-between">
-          <h1 className="text-3xl text-white font-bold mb-6">Checkout</h1>
+          <h1 className="text-3xl text-white font-bold mb-6 flex flex-row items-center">
+            {isPaymentStep ? (
+              <div onClick={() => setIsPaymentStep(false)}>
+                <IoArrowBackCircle className="text-teal-500 size-8 mr-2" />
+              </div>
+            ) : !isPaymentStep ? (
+              <div onClick={handleNavigation}>
+                <IoArrowBackCircle className="text-teal-500 size-8 mr-2" />
+              </div>
+            ) : (
+              ""
+            )}
+            Checkout
+          </h1>
         </div>
 
         <div className="flex flex-row w-full md:w-1/2 lg:w-1/2 justify-center md:justify-end lg:justify-end">
           <div className="flex flex-row space-x-4 items-end justify-center">
-            <div className="flex flex-col">
-              <div className="flex-grow border-t border-gray-400 flex my-2"></div>
-              <h3 className="text-white text-[14px] font-thin">
+            <div
+              className={`flex flex-col ${
+                !isPaymentStep
+                  ? "border-t-2 border-teal-500"
+                  : "border-t-2 border-teal-700"
+              } flex my-2 border-t-2`}
+            >
+              <h3 className="text-white text-[10px] font-thin">
                 Shipping Information
               </h3>
               <p className="text-white text-[8px] font-thin">
@@ -29,9 +64,14 @@ const CheckoutPage = () => {
               </p>
             </div>
 
-            <div className="flex flex-col">
-              <div className="flex-grow border-t border-gray-400 flex my-2"></div>
-              <h3 className="text-white text-[14px] font-thin">Payment</h3>
+            <div
+              className={`flex flex-col ${
+                isPaymentStep
+                  ? "border-t-2 border-teal-500"
+                  : "border-t border-gray-400"
+              } flex my-2`}
+            >
+              <h3 className="text-white text-[10px] font-thin">Payment</h3>
               <p className="text-white text-[8px] font-thin">
                 Finish your order & choose your payment
               </p>
@@ -40,9 +80,15 @@ const CheckoutPage = () => {
         </div>
       </div>
 
-      <div className="flex flex-col md:flex-row lg:flex-row justify-between w-full mt-6 space-x-4">
+      <div className="flex flex-row justify-between w-full mt-6 space-x-4 space-y-0">
         <div className="w-full md:w-1/2 lg:w-1/2 flex flex-col">
-          <CheckoutFormComponent />
+          {!isPaymentStep ? (
+            <CheckoutFormComponent onContinueToPayment={handleToPayment} />
+          ) : (
+            <>
+              <PaymentFormComponent />
+            </>
+          )}
         </div>
 
         <div className="w-full md:w-1/2 lg:w-1/2 flex flex-col">

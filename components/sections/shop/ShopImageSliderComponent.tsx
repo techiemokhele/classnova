@@ -7,12 +7,8 @@ import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
 
 import ShopBannerData from "../../../assets/app/ShopBannerData.json";
-
-interface ImageData {
-  url: string;
-  text: string;
-  isVideo?: boolean;
-}
+import { ImageData } from "@/types";
+import { useRouter } from "next/navigation";
 
 interface ShopSliderProps {
   images: ImageData[];
@@ -29,9 +25,8 @@ const preloadImages = () => {
   });
 };
 
-const ShopImageSliderComponent: React.FC<{ onClick?: () => void }> = ({
-  onClick,
-}) => {
+const ShopImageSliderComponent = () => {
+  const router = useRouter();
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -86,14 +81,14 @@ const ShopImageSliderComponent: React.FC<{ onClick?: () => void }> = ({
                 height={1300}
                 quality={100}
                 className="w-full h-full object-cover"
-               priority
+                priority
               />
             )}
-            <div
-              onClick={onClick}
-              className="absolute cursor-pointer inset-0 flex items-center justify-center"
-            >
-              <span className="bg-teal-500 text-white text-[12px] font-normal p-2 rounded-xl">
+            <div className="absolute cursor-pointer inset-0 flex items-center justify-center z-10">
+              <span
+                onClick={() => router.push("/shop/products-list")}
+                className="bg-teal-500 text-white text-[12px] font-normal p-2 rounded-xl"
+              >
                 {image.text}
               </span>
             </div>
