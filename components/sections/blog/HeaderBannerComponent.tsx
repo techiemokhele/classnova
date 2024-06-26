@@ -1,6 +1,6 @@
 const HeaderBlogBannerComponent = () => {
   return (
-    <div className="flex flex-col justify-center items-center w-full py-16">
+    <section className="flex flex-col justify-center items-center w-full py-16">
       <div className="flex justify-center items-center py-2 px-2 rounded-full border-teal-500 border-2 hover:bg-teal-500">
         <p className="text-white text-[12px] font-thin">Blog and insight</p>
       </div>
@@ -14,7 +14,7 @@ const HeaderBlogBannerComponent = () => {
         Fostering innovation, disclosing trade secrets, and equipping companies
         with creative ideas and tactics.
       </p>
-    </div>
+    </section>
   );
 };
 

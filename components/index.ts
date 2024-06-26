@@ -34,6 +34,8 @@ import NoResultsFoundComponent from "./sections/NoResultsFoundComponent";
 
 //blog components
 import HeaderBlogBannerComponent from "./sections/blog/HeaderBannerComponent";
+import BlogListContentComponent from "./sections/blog/BlogListContentComponent";
+import SidebarBlogComponent from "./sections/blog/SidebarBlogComponent";
 
 export {
   CustomButtonComponent,
@@ -63,4 +65,6 @@ export {
   RelatedProductsComponent,
   NoResultsFoundComponent,
   HeaderBlogBannerComponent,
+  BlogListContentComponent,
+  SidebarBlogComponent,
 };
