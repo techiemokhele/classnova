@@ -2,6 +2,7 @@
 import CustomButtonComponent from "./common/CustomButtonComponent";
 import CustomSocialAuthButtonComponent from "./common/CustomSocialAuthButtonComponent";
 import CustomTextInputComponent from "./common/CustomTextInputComponent";
+import CustomTextAreaInputComponent from "./common/CustomTextAreaInputComponent";
 import OrSeparatorComponent from "./common/OrSeparatorComponent";
 import CustomModalComponent from "./common/CustomModalComponent";
 
@@ -35,6 +36,7 @@ export {
   CustomButtonComponent,
   CustomSocialAuthButtonComponent,
   CustomTextInputComponent,
+  CustomTextAreaInputComponent,
   OrSeparatorComponent,
   CustomModalComponent,
   NavigationComponent,
