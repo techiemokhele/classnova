@@ -4,7 +4,7 @@ import CustomTextInputComponent from "@/components/common/CustomTextInputCompone
 import CustomButtonComponent from "@/components/common/CustomButtonComponent";
 import { useState } from "react";
 
-const CheckoutFormComponent = () => {
+const CheckoutFormComponent = ({ onContinueToPayment }) => {
   const [email, setEmail] = useState<string>("");
   const [firstName, setFirstName] = useState<string>("");
   const [lastName, setLastName] = useState<string>("");
@@ -30,15 +30,8 @@ const CheckoutFormComponent = () => {
 
     console.log("captured data: ", data);
 
-    setEmail("");
-    setFirstName("");
-    setLastName("");
-    setCountry("");
-    setAddress("");
-    setTown("");
-    setProvince("");
-    setPostCode("");
-    setShippingMethod("");
+    // Call the parent function to go to payment step
+    onContinueToPayment();
   };
 
   return (
@@ -116,7 +109,7 @@ const CheckoutFormComponent = () => {
           />
 
           <CustomTextInputComponent
-            type="text"
+            type="tel"
             value={postCode}
             onChange={(text) => setPostCode(text)}
             placeholder="1678"

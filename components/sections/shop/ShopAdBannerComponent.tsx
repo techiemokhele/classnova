@@ -6,17 +6,22 @@ const ShopAdBannerComponent = ({
   extraText,
   bannerImage,
   otherLayout,
+  bigBanner,
 }: ShopBannerProps) => {
   return (
-    <section className="relative flex flex-col h-[120px] w-full p-6">
+    <section
+      className={`relative flex flex-col w-full p-6 ${
+        bigBanner ? "h-[160px]" : " h-[120px]"
+      }`}
+    >
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
           src={bannerImage}
           alt="banner-image"
-          width={1000}
-          height={1000}
-          className="w-full h-full object-cover"
+          width={1300}
+          height={1300}
+          className="w-full h-full object-fill"
           loading="lazy"
         />
       </div>
@@ -34,7 +39,7 @@ const ShopAdBannerComponent = ({
       >
         <div className="flex flex-col items-start justify-start text-center text-white w-full  p-1">
           <h1 className="text-4xl font-bold my-4">{discountText}</h1>
-          <p className="text-lg mb-6 font-thin text-[14px]">{extraText}</p>
+          <p className="text-lg mb-6 font-thin text-[12px]">{extraText}</p>
         </div>
       </div>
     </section>

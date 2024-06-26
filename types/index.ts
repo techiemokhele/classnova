@@ -103,4 +103,12 @@ export interface ShopBannerProps {
   extraText?: string;
   bannerImage: string;
   otherLayout: boolean;
+  bigBanner?: boolean;
+}
+
+export interface ImageData {
+  url: string;
+  text: string;
+  isVideo?: boolean;
+  category: string;
 }
