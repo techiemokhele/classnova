@@ -32,6 +32,9 @@ import ProductDescriptionComponent from "./sections/shop/ProductDescriptionCompo
 import RelatedProductsComponent from "./sections/shop/RelatedProductsComponent";
 import NoResultsFoundComponent from "./sections/NoResultsFoundComponent";
 
+//blog components
+import HeaderBlogBannerComponent from "./sections/blog/HeaderBannerComponent";
+
 export {
   CustomButtonComponent,
   CustomSocialAuthButtonComponent,
@@ -59,4 +62,5 @@ export {
   ProductDescriptionComponent,
   RelatedProductsComponent,
   NoResultsFoundComponent,
+  HeaderBlogBannerComponent,
 };
