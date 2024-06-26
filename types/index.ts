@@ -32,6 +32,15 @@ export interface TextInputProps {
   search?: boolean;
 }
 
+export interface TextAreaProps {
+  value: string;
+  onChange: (value: string) => void;
+  placeholder?: string;
+  label?: string;
+  type?: string;
+  rows?: number;
+}
+
 export interface StarRatingProps {
   rating: number | any;
 }

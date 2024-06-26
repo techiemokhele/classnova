@@ -46,7 +46,7 @@ const ReviewsDisplayerComponent = ({
               loading="lazy"
             />
             <div className="flex flex-col">
-              <h3 className="text-white text-xl font-bold">
+              <h3 className="text-white text-m font-bold">
                 {item.firstName} {item.lastName}
               </h3>
               <p className="text-white text-[10px] font-thin">
