@@ -14,6 +14,7 @@ import {
   CustomButtonComponent,
   ProductDescriptionComponent,
   RelatedProductsComponent,
+  ShopAdBannerComponent,
 } from "@/components";
 import { formatDecimalNumber } from "@/libs/utils";
 
@@ -66,7 +67,17 @@ const ProductDetailPage = ({ params }: { params: { slug: string } }) => {
 
   return (
     <div className="container mx-auto pt-20 pb-6 flex flex-col  w-full">
-      <div className="flex flex-col md:flex-row lg:flex-row justify-between space-y-4 md:space-y-0 lg:space-y-0 space-x-0 md:space-x-4 lg:space-x-4">
+      <ShopAdBannerComponent
+        discountText="Welcome20"
+        extraText="Get 20% off using this promo code"
+        bannerImage={
+          "https://images.unsplash.com/photo-1664262283662-40cc80a2cb6e?w=300&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHByb2R1Y3QlMjB0ZWFsfGVufDB8fDB8fHww"
+        }
+        otherLayout={false}
+        bigBanner={false}
+      />
+
+      <div className="pt-6 flex flex-col md:flex-row lg:flex-row justify-between space-y-4 md:space-y-0 lg:space-y-0 space-x-0 md:space-x-4 lg:space-x-4">
         <div className="w-full md:w-1/2 lg:w-1/2 h-[300px]  md:h-[450px] lg:h-[450px] overflow-hidden">
           <Image
             priority

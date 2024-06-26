@@ -9,6 +9,7 @@ import {
   CustomButtonComponent,
   NoResultsFoundComponent,
   ProductDescriptionComponent,
+  ShopAdBannerComponent,
 } from "@/components";
 import { formatDecimalNumber } from "@/libs/utils";
 
@@ -18,7 +19,7 @@ const CartPage = () => {
   const { cart, addToCart, removeFromCart, getTotal } = useCart<CartItem>();
   const router = useRouter();
 
-    const [currentPage, setCurrentPage] = useState(0);
+  const [currentPage, setCurrentPage] = useState(0);
   const itemsPerPage = 3;
   const totalPages = Math.ceil(cart.length / itemsPerPage);
 
@@ -39,7 +40,6 @@ const CartPage = () => {
         message="Shop for products and add them to your cart to see them appear here"
       />
     );
-    
   }
 
   const nextPage = () => {
@@ -52,13 +52,13 @@ const CartPage = () => {
 
   let overallTotal = getTotal() + deliveryAmount;
 
-const handleCheckout = () => {
+  const handleCheckout = () => {
     const checkoutData = {
       cart,
       overallTotal,
     };
 
-    sessionStorage.setItem('checkoutData', JSON.stringify(checkoutData));
+    sessionStorage.setItem("checkoutData", JSON.stringify(checkoutData));
 
     router.push("/shop/checkout");
   };
@@ -213,7 +213,7 @@ const handleCheckout = () => {
             alt="payment-icons"
             width={1300}
             height={1300}
-            className="w-full h-[40px] object-contain"
+            className="w-full h-[px] object-contain"
           />
 
           <div className="flex justify-center items-center pt-2">
@@ -226,6 +226,16 @@ const handleCheckout = () => {
       </div>
 
       <ProductDescriptionComponent />
+
+      <ShopAdBannerComponent
+        discountText="Welcome20"
+        extraText="Get 20% off using this promo code"
+        bannerImage={
+          "https://images.unsplash.com/photo-1664262283662-40cc80a2cb6e?w=300&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHByb2R1Y3QlMjB0ZWFsfGVufDB8fDB8fHww"
+        }
+        otherLayout={false}
+        bigBanner={false}
+      />
     </div>
   );
 };
