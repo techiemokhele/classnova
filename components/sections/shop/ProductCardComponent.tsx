@@ -44,7 +44,7 @@ const ProductCardComponent = ({ products, itemNumber }: Props) => {
       {products.slice(0, itemNumber).map((product) => (
         <div
           key={product.id}
-          className="flex flex-col w-full sm:w-1/2 md:w-1/3 lg:w-1/3 xl:w-1/3 p-4"
+          className="flex flex-col w-1/2 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 p-4"
         >
           <div className="bg-gray-800 rounded-lg overflow-hidden shadow-md pb-2">
             <div className="relative w-full h-40 sm:h-48 md:h-56 lg:h-64 xl:h-64">
@@ -62,20 +62,22 @@ const ProductCardComponent = ({ products, itemNumber }: Props) => {
               />
             </div>
 
-            <div className="p-4">
+            <div className="py-4 px-2">
               <p
                 className="text-lg font-semibold text-white cursor-pointer"
                 onClick={() =>
                   product.slug && navigateToProductDetail(product.slug)
                 }
               >
-                {product.productName}
+                {product.newArrival && product.productReviews > 20
+                  ? `🔥 ${product.productName}`
+                  : product.productName}
               </p>
               <p className="text-[10px] font-thin text-white">
                 {product.productDescription}
               </p>
               <div className="flex justify-between items-center mt-4">
-                <p className="text-md text-white text-[14px]">
+                <p className="text-[12px] text-white">
                   R{formatDecimalNumber(product.productPrice)}
                 </p>
                 <CustomButtonComponent

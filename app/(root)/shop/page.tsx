@@ -6,6 +6,7 @@ import { Product } from "@/types";
 import {
   OrSeparatorComponent,
   ProductCardComponent,
+  ShopAdBannerComponent,
   ShopImageSliderComponent,
 } from "@/components/";
 
@@ -30,25 +31,39 @@ const ShopHomePage = () => {
       <ShopImageSliderComponent />
 
       <OrSeparatorComponent text="Trending this Week" bigText={true} />
-      <ProductCardComponent products={products} itemNumber={6} />
-
-      <OrSeparatorComponent text="Shop by Category" bigText={true} />
       <ProductCardComponent
-        products={products.filter(
-          (product) =>
-            product.productCategory === "clothing" ||
-            product.productCategory === "gadget" ||
-            product.productCategory === "jewellery" ||
-            product.productCategory === "food" ||
-            product.productCategory === "hardware" ||
-            product.productCategory === "cosmetics"
-        )}
+        products={products
+          .filter(
+            (product) => product.newArrival && product.productReviews > 20
+          )
+          .reverse()}
+        itemNumber={6}
+      />
+      <OrSeparatorComponent text="Shop by Category" bigText={true} />
+      {/*shop banner*/}
+      <ShopAdBannerComponent
+        discountText="Welcome20"
+        extraText="Get 20% off using this promo code"
+        bannerImage={
+          "https://images.unsplash.com/photo-1664262283662-40cc80a2cb6e?w=300&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHByb2R1Y3QlMjB0ZWFsfGVufDB8fDB8fHww"
+        }
+        otherLayout={false}
+        bigBanner
+      />
+
+      <ProductCardComponent
+        products={products.filter((product) => product.productRating >= 4)}
         itemNumber={6}
       />
 
       <OrSeparatorComponent text="Buyers All Time Products" bigText={true} />
       <ProductCardComponent
-        products={products.filter((product) => product.productRating > 4.5)}
+        products={products
+          .filter(
+            (product) =>
+              product.productRating > 4.5 && product.productReviews > 100
+          )
+          .reverse()}
         itemNumber={6}
       />
     </div>

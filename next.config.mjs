@@ -1,7 +1,24 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-        domains: ['images.pexels.com', "example.com", "media.takealot.com"],
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'images.pexels.com',
+            },
+            {
+                protocol: 'https',
+                hostname: 'example.com',
+            },
+            {
+                protocol: 'https',
+                hostname: 'media.takealot.com',
+            },
+            {
+                protocol: 'https',
+                hostname: 'images.unsplash.com',
+            },
+        ],
     },
     async headers() {
         return [
