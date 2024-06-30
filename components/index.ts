@@ -36,6 +36,7 @@ import NoResultsFoundComponent from "./sections/NoResultsFoundComponent";
 import HeaderBlogBannerComponent from "./sections/blog/HeaderBannerComponent";
 import BlogListContentComponent from "./sections/blog/BlogListContentComponent";
 import SidebarBlogComponent from "./sections/blog/SidebarBlogComponent";
+import BlogPostBannerComponent from "./sections/blog/BlogPostBannerComponent";
 
 export {
   CustomButtonComponent,
@@ -67,4 +68,5 @@ export {
   HeaderBlogBannerComponent,
   BlogListContentComponent,
   SidebarBlogComponent,
+  BlogPostBannerComponent,
 };

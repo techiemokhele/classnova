@@ -10,7 +10,8 @@
     "blogReadTime": 2,
     "blogTag": ["E-Commerce", "Art"],
     "blogCategory": ["Art", "Business"],
-    "createdAt": "2024-06-26"
+    "createdAt": "2024-06-26",
+    "slug": "the-art-of-e-commerce-transforming-online-art-sales"
   },
   {
     "id": 2,
@@ -23,7 +24,8 @@
     "blogReadTime": 3,
     "blogTag": ["E-Commerce", "Artisans"],
     "blogCategory": ["Business", "Crafts"],
-    "createdAt": "2024-06-27"
+    "createdAt": "2024-06-27",
+      "slug": "maximizing-sales-e-commerce-strategies-for-artisans"
   },
   {
     "id": 3,
@@ -36,7 +38,8 @@
     "blogReadTime": 4,
     "blogTag": ["Marketing", "Art"],
     "blogCategory": ["Art", "Marketing"],
-    "createdAt": "2024-06-28"
+    "createdAt": "2024-06-28",
+      "slug": "innovative-marketing-promoting-art-online"
   },
   {
     "id": 4,
@@ -49,7 +52,8 @@
     "blogReadTime": 3,
     "blogTag": ["E-Commerce", "Platforms"],
     "blogCategory": ["Art", "Business"],
-    "createdAt": "2024-06-29"
+    "createdAt": "2024-06-29",
+    "slug": "e-commerce-platforms-choosing-the-right-one-for-your-art"
   },
   {
     "id": 5,
@@ -62,7 +66,8 @@
     "blogReadTime": 4,
     "blogTag": ["Trends", "Art"],
     "blogCategory": ["Art", "Technology"],
-    "createdAt": "2024-06-30"
+    "createdAt": "2024-06-30",
+      "slug": "the-future-of-art-sale-trends-in-e-commerce"
   },
   {
     "id": 6,
@@ -75,6 +80,7 @@
     "blogReadTime": 3,
     "blogTag": ["Branding", "Art"],
     "blogCategory": ["Art", "Marketing"],
-    "createdAt": "2024-07-01"
+    "createdAt": "2024-07-01",
+    "slug": "building-an-online-art-brand-tips-for-success"
   }
 ]

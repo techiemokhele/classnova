@@ -1,9 +1,17 @@
-import Image from "next/image";
-import { MdArrowOutward } from "react-icons/md";
+"use client";
 
+import Image from "next/image";
+import { useRouter } from "next/navigation";
+import { MdArrowOutward } from "react-icons/md";
 import blogData from "../../../assets/app/blogData.json";
 
 const BlogListContentComponent = () => {
+  const router = useRouter();
+
+  const handleNavigation = (slug: string) => {
+    router.push(`/company/blog/${slug}`);
+  };
+
   return (
     <div className="flex flex-wrap w-full gap-6">
       {blogData.map((item) => (
@@ -18,7 +26,8 @@ const BlogListContentComponent = () => {
               alt={item.blogTitle}
               width={1000}
               height={1000}
-              className="w-full h-[250px] md:h-[200px] lg:h-[180px] object-cover"
+              className="w-full h-[250px] md:h-[200px] lg:h-[180px] object-cover cursor-pointer"
+              onClick={() => handleNavigation(item.slug)}
             />
 
             {/* excerpt and description section */}
@@ -30,7 +39,10 @@ const BlogListContentComponent = () => {
                   </h2>
                 </div>
 
-                <div className="w-[10%] h-4 p-1 flex justify-center items-center border-2 border-teal-500 hover:bg-teal-500 rounded-md cursor-pointer">
+                <div
+                  onClick={() => handleNavigation(item.slug)}
+                  className="w-[10%] h-4 p-1 flex justify-center items-center border-2 border-teal-500 hover:bg-teal-500 rounded-md cursor-pointer"
+                >
                   <MdArrowOutward className="text-white size-6" />
                 </div>
               </div>
