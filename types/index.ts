@@ -121,3 +121,22 @@ export interface ImageData {
   isVideo?: boolean;
   category: string;
 }
+
+export type BlogDataItemProps = {
+  id: number;
+  author: string;
+  authorImage: string;
+  blogImage: string;
+  blogTitle: string;
+  blogExcerpt: string;
+  blogDetails: string;
+  blogReadTime: number;
+  blogTag: string[];
+  blogCategory: string[];
+  createdAt: string;
+  slug: string;
+};
+
+export type BlogDataParams = {
+  slug: string;
+};

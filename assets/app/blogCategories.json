@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "categoryName": "Art"
+    },
+        {
+        "id": 2,
+        "categoryName": "Business"
+    },
+        {
+          "id": 3,
+          "categoryName": "Crafts"
+        },
+            {
+              "id": 4,
+              "categoryName": "Marketing"
+            },
+                {
+        "id": 5,
+        "categoryName": "Technology"
+    }
+]

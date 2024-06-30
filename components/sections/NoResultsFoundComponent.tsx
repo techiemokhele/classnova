@@ -21,12 +21,12 @@ const NoResultsFoundComponent = ({
 
       <div className="flex justify-center items-center my-3">
         <Image
+          priority
           src="/images/web/empty-cart.webp"
           alt="no-result-image"
           width={1000}
           height={1000}
           className="w-[200px] h-[200px] md:w-[300px] md:h-[300px] lg:w-[300px] lg:h-[300px]"
-          loading="lazy"
         />
       </div>
 

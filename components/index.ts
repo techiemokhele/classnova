@@ -32,6 +32,14 @@ import ProductDescriptionComponent from "./sections/shop/ProductDescriptionCompo
 import RelatedProductsComponent from "./sections/shop/RelatedProductsComponent";
 import NoResultsFoundComponent from "./sections/NoResultsFoundComponent";
 
+//blog components
+import HeaderBlogBannerComponent from "./sections/blog/HeaderBannerComponent";
+import BlogListContentComponent from "./sections/blog/BlogListContentComponent";
+import SidebarBlogComponent from "./sections/blog/SidebarBlogComponent";
+import BlogPostBannerComponent from "./sections/blog/BlogPostBannerComponent";
+import BlogDescriptionComponent from "./sections/blog/BlogDescriptionComponent";
+import BlogRelatedStoriesComponent from "./sections/blog/BlogRelatedStoriesComponent";
+
 export {
   CustomButtonComponent,
   CustomSocialAuthButtonComponent,
@@ -59,4 +67,10 @@ export {
   ProductDescriptionComponent,
   RelatedProductsComponent,
   NoResultsFoundComponent,
+  HeaderBlogBannerComponent,
+  BlogListContentComponent,
+  SidebarBlogComponent,
+  BlogPostBannerComponent,
+  BlogDescriptionComponent,
+  BlogRelatedStoriesComponent,
 };
