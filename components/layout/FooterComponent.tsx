@@ -22,7 +22,7 @@ const links = {
   ],
   company: [
     { href: "/company/about-us", label: "About us" },
-    { href: "/company/blog", label: "Our Blog" },
+    { href: "/company/blog-list", label: "Our Blog" },
     { href: "/company/careers", label: "Careers" },
   ],
 };
