@@ -30,7 +30,7 @@ const BlogRelatedStoriesComponent = ({
             currentBlog.blogCategory.includes(category)
           )
       );
-      setRelatedBlogs(relatedPosts.slice(0, 5));
+      setRelatedBlogs(relatedPosts.slice(0, 3));
     }
   }, [params.slug]);
 
@@ -60,13 +60,27 @@ const BlogRelatedStoriesComponent = ({
               className="w-[100px] h-[40px] md:w-[100px] lg:w-[40px] object-cover self-center"
             />
 
-            <div className="flex flex-col-reverse justify-center items-start lg:justify-start lg:items-start">
+            <div className="flex flex-col justify-center items-start lg:justify-start lg:items-start">
               <p
                 onClick={() => handleNavigation(blog.slug)}
                 className="text-[12px] font-bold text-white line-clamp-1 md:line-clamp-1 lg:line-clamp-2 cursor-pointer"
               >
                 {blog.blogTitle}
               </p>
+              <div className="flex flex-row space-x-1 justify-center place-items-center">
+                <Image
+                  priority
+                  src={blog.authorImage}
+                  alt={blog.blogTitle}
+                  height={1000}
+                  width={1000}
+                  className="w-[20px] h-[20px] md:w-[10px] md:h-[10px] object-cover self-center rounded-full"
+                />
+                <p className="text-white text-[10px] font-thin">
+                  - {blog.author} - {blog.createdAt} - {blog.blogReadTime} min
+                  Reads
+                </p>
+              </div>
               <p className="text-[10px] text-gray-300 line-clamp-1 md:line-clamp-1 lg:line-clamp-1">
                 {blog.blogExcerpt}
               </p>
