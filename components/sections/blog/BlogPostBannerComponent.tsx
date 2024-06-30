@@ -31,13 +31,13 @@ const BlogPostBannerComponent = ({ params }: { params: BlogDataParams }) => {
   return (
     <section className="flex flex-col-reverse md:flex-row lg:flex-row w-full space-x-0 md:space-x-1 lg:space-x-4">
       {/* text section */}
-      <div className="flex flex-col w-full md:w-1/2 lg:w-1/2 justify-center items-star p-4">
+      <div className="flex flex-col w-full md:w-1/2 lg:w-1/2 justify-center items-start px-6 py-4">
         <h1 className="text-white text-3xl leading-none font-semibold pb-4">
           {blog.blogTitle}
         </h1>
         <p className="text-white text-[10px]">{blog.blogExcerpt}</p>
 
-        <div className="flex flex-row justify-between pt-6 md:pt-10 lg:pt-10">
+        <div className="flex flex-row w-full justify-between pt-6 md:pt-10 lg:pt-10">
           <div className="flex flex-row w-full space-x-4 justify-center items-center">
             <Image
               priority
@@ -76,7 +76,7 @@ const BlogPostBannerComponent = ({ params }: { params: BlogDataParams }) => {
       </div>
 
       {/* image section */}
-      <div className="flex flex-col w-full md:w-1/2 lg:w-1/2">
+      <div className="flex flex-col w-full md:w-1/2 lg:w-1/2 md:h-[300px] lg:h-[400px]">
         <Image
           priority
           src={blog.blogImage}

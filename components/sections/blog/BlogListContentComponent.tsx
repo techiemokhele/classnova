@@ -41,7 +41,7 @@ const BlogListContentComponent = () => {
 
                 <div
                   onClick={() => handleNavigation(item.slug)}
-                  className="w-[10%] h-4 p-1 flex justify-center items-center border-2 border-teal-500 hover:bg-teal-500 rounded-md cursor-pointer"
+                  className="flex h-6 w-6 md:h-4 md:w-4 lg:h-4 lg:w-4 justify-center items-center border-2 border-teal-500 hover:bg-teal-500 rounded-full cursor-pointer"
                 >
                   <MdArrowOutward className="text-white size-6" />
                 </div>
