@@ -20,12 +20,13 @@ const BannerComponent = ({
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
+          priority
           src={backgroundImage}
           alt="banner-image"
-          layout="fill"
-          objectFit="cover"
+          width={1500}
+          height={1500}
           quality={100}
-          loading="lazy"
+          className="w-full h-full object-cover"
         />
       </div>
 
@@ -43,12 +44,13 @@ const BannerComponent = ({
         <div className="flex flex-col items-center justify-center text-center text-white w-full  p-1">
           {logo && (
             <Image
+              priority
               src={logo}
               alt="logo"
               width={1000}
               height={1000}
+              quality={100}
               className="w-[100px] h-[100px] object-contain rounded-full mt-6 mb-4"
-              loading="lazy"
             />
           )}
 

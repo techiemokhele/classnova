@@ -1,0 +1,164 @@
+[
+  {
+    "id": 1,
+    "jobTitle": "UI Designer",
+    "location": "remote",
+    "salary": "43000",
+    "paymentRecurrence": "per-month",
+    "level": "senior",
+    "jobOverview": [
+      "Design user interfaces",
+      "Collaborate with design and dev teams",
+      "Improve user satisfaction"
+    ],
+    "responsibilities": [
+      "Create UI designs",
+      "Conduct user research",
+      "Collaborate with team members"
+    ],
+    "requirements": [
+      "4+ years of UI design experience",
+      "Proficiency in design tools",
+      "Excellent communication skills"
+    ],
+    "jobDescription": "We are looking for a Senior UI Designer to design user interfaces and improve user satisfaction. In this role, you will create UI designs, conduct user research, and collaborate with team members. The ideal candidate should have at least 4 years of experience in UI design, proficiency in design tools, and excellent communication skills. This is a remote position with a competitive monthly salary. You will work closely with our design and development teams to ensure the best possible user experience. Join us and help create engaging and intuitive interfaces for our users.",
+    "createdAt": "2024-06-03",
+    "closingDate": "2024-07-03",
+    "slug": "ui-designer"
+  },
+  {
+    "id": 2,
+    "jobTitle": "UX Designer",
+    "location": "remote",
+    "salary": "34500",
+    "paymentRecurrence": "per-month",
+    "level": "senior",
+    "jobOverview": [
+      "Design user experiences",
+      "Conduct user research",
+      "Collaborate with design and dev teams"
+    ],
+    "responsibilities": [
+      "Create wireframes",
+      "Design user flows",
+      "Conduct usability testing"
+    ],
+    "requirements": [
+      "5+ years of UX design experience",
+      "Strong research skills",
+      "Excellent communication skills"
+    ],
+    "jobDescription": "We are seeking a Senior UX Designer to design user experiences and improve user satisfaction. In this role, you will create wireframes, design user flows, and conduct usability testing. The ideal candidate should have at least 5 years of experience in UX design, strong research skills, and excellent communication skills. This is a remote position with a competitive monthly salary. You will collaborate closely with our design and development teams to ensure the best possible user experience. Join us and help create engaging and intuitive interfaces for our users.",
+    "createdAt": "2024-06-04",
+    "closingDate": "2024-07-04",
+    "slug": "ux-designer"
+  },
+  {
+    "id": 3,
+    "jobTitle": "Graphic Designer",
+    "location": "remote",
+    "salary": "53500",
+    "paymentRecurrence": "per-month",
+    "level": "mid",
+    "jobOverview": [
+      "Create visual content",
+      "Collaborate with marketing team",
+      "Design for various media"
+    ],
+    "responsibilities": [
+      "Design graphics",
+      "Create marketing materials",
+      "Work with brand guidelines"
+    ],
+    "requirements": [
+      "3+ years of graphic design experience",
+      "Proficiency in Adobe Creative Suite",
+      "Strong portfolio"
+    ],
+    "jobDescription": "We are looking for a Mid-level Graphic Designer to create visual content and collaborate with our marketing team. In this role, you will design graphics, create marketing materials, and work with brand guidelines. The ideal candidate should have at least 3 years of experience in graphic design, proficiency in Adobe Creative Suite, and a strong portfolio. This is a remote position with a competitive monthly salary. Join us and help create visually appealing content that represents our brand effectively.",
+    "createdAt": "2024-06-05",
+    "closingDate": "2024-07-05",
+    "slug": "graphic-designer"
+  },
+  {
+    "id": 4,
+    "jobTitle": "Visual Designer",
+    "location": "remote",
+    "salary": "23700",
+    "paymentRecurrence": "per-month",
+    "level": "mid",
+    "jobOverview": [
+      "Design visual elements",
+      "Collaborate with product team",
+      "Ensure design consistency"
+    ],
+    "responsibilities": [
+      "Create visual designs",
+      "Develop design systems",
+      "Collaborate with team members"
+    ],
+    "requirements": [
+      "3+ years of visual design experience",
+      "Strong visual design skills",
+      "Attention to detail"
+    ],
+    "jobDescription": "We are seeking a Mid-level Visual Designer to design visual elements and ensure design consistency. In this role, you will create visual designs, develop design systems, and collaborate with team members. The ideal candidate should have at least 3 years of experience in visual design, strong visual design skills, and attention to detail. This is a remote position with a competitive monthly salary. Join us and help create visually appealing designs that enhance user experience and align with our brand.",
+    "createdAt": "2024-06-06",
+    "closingDate": "2024-07-06",
+    "slug": "visual-designer"
+  },
+  {
+    "id": 5,
+    "jobTitle": "Product Designer",
+    "location": "remote",
+    "salary": "65000",
+    "paymentRecurrence": "per-month",
+    "level": "senior",
+    "jobOverview": [
+      "Design product interfaces",
+      "Collaborate with product team",
+      "Improve product usability"
+    ],
+    "responsibilities": [
+      "Create product designs",
+      "Conduct user research",
+      "Work with product managers"
+    ],
+    "requirements": [
+      "5+ years of product design experience",
+      "Strong UX/UI skills",
+      "Excellent communication skills"
+    ],
+    "jobDescription": "We are looking for a Senior Product Designer to design product interfaces and improve product usability. In this role, you will create product designs, conduct user research, and work with product managers. The ideal candidate should have at least 5 years of experience in product design, strong UX/UI skills, and excellent communication skills. This is a remote position with a competitive monthly salary. Join us and help create user-friendly products that meet our users' needs and enhance their experience.",
+    "createdAt": "2024-06-07",
+    "closingDate": "2024-07-07",
+    "slug": "product-designer"
+  },
+  {
+    "id": 6,
+    "jobTitle": "Interaction Designer",
+    "location": "remote",
+    "salary": "34000",
+    "paymentRecurrence": "per-month",
+    "level": "senior",
+    "jobOverview": [
+      "Design interactive user experiences",
+      "Collaborate with design and dev teams",
+      "Improve user satisfaction"
+    ],
+    "responsibilities": [
+      "Create interaction flows",
+      "Design user interactions",
+      "Conduct usability testing"
+    ],
+    "requirements": [
+      "4+ years of interaction design experience",
+      "Strong prototyping skills",
+      "Excellent communication skills"
+    ],
+    "jobDescription": "We are seeking a Senior Interaction Designer to design interactive user experiences and improve user satisfaction. In this role, you will create interaction flows, design user interactions, and conduct usability testing. The ideal candidate should have at least 4 years of experience in interaction design, strong prototyping skills, and excellent communication skills. This is a remote position with a competitive monthly salary. You will collaborate closely with our design and development teams to ensure the best possible user experience. Join us and help create engaging and intuitive interfaces for our users.",
+    "createdAt": "2024-06-08",
+    "closingDate": "2024-07-08",
+    "slug": "interaction-designer"
+  }
+]

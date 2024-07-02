@@ -1,3 +1,11 @@
+import { SiAdobeindesign } from "react-icons/si";
+import { MdDesignServices } from "react-icons/md";
+import { SiMaterialdesignicons } from "react-icons/si";
+import { SiMaterialdesign } from "react-icons/si";
+import { CgDesignmodo } from "react-icons/cg";
+import { SiAffinitydesigner } from "react-icons/si";
+import { SiInteractiondesignfoundation } from "react-icons/si";
+
 export const generateSlug = (productName) => {
     return productName.toLowerCase().replace(/\s+/g, '-');
 };
@@ -20,4 +28,25 @@ export const formatDate = (dateString) => {
 
 export const formatDecimalNumber = (num) => {
     return new Intl.NumberFormat('en-US').format(num);
+};
+
+export const getIconByJobTitle = (jobTitle) => {
+    switch (jobTitle.toLowerCase()) {
+        case "ux designer":
+            return <SiMaterialdesignicons className="text-teal-500 size-5" />;
+        case "ui designer":
+            return <MdDesignServices className="text-teal-500 size-5" />;
+        case "graphic designer":
+            return <SiMaterialdesign className="text-teal-500 size-5" />;
+        case "visual designer":
+            return <CgDesignmodo className="text-teal-500 size-5" />;
+        case "product designer":
+            return <SiAffinitydesigner className="text-teal-500 size-5" />;
+        case "interaction designer":
+            return (
+                <SiInteractiondesignfoundation className="text-teal-500 size-5" />
+            );
+        default:
+            return <SiAdobeindesign className="text-teal-500 size-5" />;
+    }
 };
