@@ -6,7 +6,8 @@ import {
   BannerComponent,
   CustomButtonComponent,
   NoResultsFoundComponent,
-  ApplyFormComponent
+  ApplyFormComponent,
+  CustomModalComponent,
 } from "@/components";
 import careerData from "../../../../../assets/app/careersData.json";
 import { CareerItemParams, CareerItemProps } from "@/types";
@@ -14,7 +15,8 @@ import { formatDecimalNumber } from "@/libs/utils";
 
 const CareerSinglePage = ({ params }: { params: CareerItemParams }) => {
   const [career, setCareer] = useState<CareerItemProps | null>(null);
-  const [showApplyForm, setShowApplyForm] = useState(false);
+    const [showApplyForm, setShowApplyForm] = useState<boolean>(false);
+      const [showSuccessModal, setShowSuccessModal] = useState<boolean>(false);
 
   useEffect(() => {
     const foundCareer = careerData.find(
@@ -25,7 +27,13 @@ const CareerSinglePage = ({ params }: { params: CareerItemParams }) => {
 
   const handleFormSubmit = (applicationData: any) => {
     console.log("Application submitted: ", applicationData);
-    setShowApplyForm(false);
+      setShowApplyForm(false);
+          setShowSuccessModal(true);
+  };
+    
+    
+  const closeSuccessModal = () => {
+    setShowSuccessModal(false);
   };
 
   if (!career) {
@@ -49,7 +57,7 @@ const CareerSinglePage = ({ params }: { params: CareerItemParams }) => {
         />
       </div>
 
-      <div className="flex flex-col px-4 py-8">
+      <div className="flex flex-col px-4 py-8 container mx-auto">
         <div className="w-16 h-5 mb-2 bg-teal-500 rounded-full flex flex-col items-center justify-center">
           <p className="text-white font-semibold text-[10px]">
             {career.location}
@@ -152,7 +160,10 @@ const CareerSinglePage = ({ params }: { params: CareerItemParams }) => {
         </div>
 
         <div className="pt-4">
-          <CustomButtonComponent text="Apply now" onClick={() => setShowApplyForm(true)} />
+          <CustomButtonComponent
+            text="Apply now"
+            onClick={() => setShowApplyForm(true)}
+          />
         </div>
       </div>
 
@@ -162,6 +173,31 @@ const CareerSinglePage = ({ params }: { params: CareerItemParams }) => {
           onClose={() => setShowApplyForm(false)}
           onSubmit={handleFormSubmit}
         />
+      )}
+
+      {/* Success Modal */}
+      {showSuccessModal && (
+        <CustomModalComponent
+          show={showSuccessModal}
+          onClose={closeSuccessModal}
+        >
+          <div className="flex flex-col items-center justify-center space-y-4">
+            <img
+              src="/images/web/confetti.webp"
+              alt="Confetti"
+              className="w-24 h-24"
+            />
+            <div className="flex flex-col space-y-2 justify-center items-center">
+              <h2 className="text-2xl font-bold text-white">
+                Application Sent Successfully!
+              </h2>
+              <p className="text[12px] text-white text-center">
+                Thank you for applying. Please check your email for application
+                progress.
+              </p>
+            </div>
+          </div>
+        </CustomModalComponent>
       )}
     </div>
   );
