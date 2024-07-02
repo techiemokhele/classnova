@@ -140,3 +140,24 @@ export type BlogDataItemProps = {
 export type BlogDataParams = {
   slug: string;
 };
+
+export type CareerItemProps = {
+  id: number;
+  jobTitle: string;
+  industry: string;
+  location: string;
+  salary: string;
+  paymentRecurrence: string;
+  level: string;
+  jobOverview: string[];
+  responsibilities: string[];
+  requirements: string[];
+  jobDescription: string;
+  createdAt: string;
+  closingDate: string;
+  slug: string;
+};
+
+export type CareerItemParams = {
+  slug: string;
+};

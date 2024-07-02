@@ -1,0 +1,355 @@
+[
+  {
+    "id": 1,
+    "jobTitle": "UI Designer",
+    "location": "remote",
+    "salary": "43000",
+    "paymentRecurrence": "per-month",
+    "level": "senior",
+    "jobOverview": [
+      "Design user interfaces",
+      "Collaborate with design and dev teams",
+      "Improve user satisfaction"
+    ],
+    "responsibilities": [
+      "Create UI designs",
+      "Conduct user research",
+      "Collaborate with team members"
+    ],
+    "requirements": [
+      "4+ years of UI design experience",
+      "Proficiency in design tools",
+      "Excellent communication skills"
+    ],
+    "jobDescription": "We are looking for a Senior UI Designer to design user interfaces and improve user satisfaction. In this role, you will create UI designs, conduct user research, and collaborate with team members. The ideal candidate should have at least 4 years of experience in UI design, proficiency in design tools, and excellent communication skills. This is a remote position with a competitive monthly salary. You will work closely with our design and development teams to ensure the best possible user experience. Join us and help create engaging and intuitive interfaces for our users.",
+    "createdAt": "2024-06-03",
+    "closingDate": "2024-07-03",
+    "slug": "ui-designer"
+  },
+  {
+    "id": 2,
+    "jobTitle": "UX Designer",
+    "location": "remote",
+    "salary": "34500",
+    "paymentRecurrence": "per-month",
+    "level": "senior",
+    "jobOverview": [
+      "Design user experiences",
+      "Conduct user research",
+      "Collaborate with design and dev teams"
+    ],
+    "responsibilities": [
+      "Create wireframes",
+      "Design user flows",
+      "Conduct usability testing"
+    ],
+    "requirements": [
+      "5+ years of UX design experience",
+      "Strong research skills",
+      "Excellent communication skills"
+    ],
+    "jobDescription": "We are seeking a Senior UX Designer to design user experiences and improve user satisfaction. In this role, you will create wireframes, design user flows, and conduct usability testing. The ideal candidate should have at least 5 years of experience in UX design, strong research skills, and excellent communication skills. This is a remote position with a competitive monthly salary. You will collaborate closely with our design and development teams to ensure the best possible user experience. Join us and help create engaging and intuitive interfaces for our users.",
+    "createdAt": "2024-06-04",
+    "closingDate": "2024-07-04",
+    "slug": "ux-designer"
+  },
+  {
+    "id": 3,
+    "jobTitle": "Graphic Designer",
+    "location": "remote",
+    "salary": "53500",
+    "paymentRecurrence": "per-month",
+    "level": "mid",
+    "jobOverview": [
+      "Create visual content",
+      "Collaborate with marketing team",
+      "Design for various media"
+    ],
+    "responsibilities": [
+      "Design graphics",
+      "Create marketing materials",
+      "Work with brand guidelines"
+    ],
+    "requirements": [
+      "3+ years of graphic design experience",
+      "Proficiency in Adobe Creative Suite",
+      "Strong portfolio"
+    ],
+    "jobDescription": "We are looking for a Mid-level Graphic Designer to create visual content and collaborate with our marketing team. In this role, you will design graphics, create marketing materials, and work with brand guidelines. The ideal candidate should have at least 3 years of experience in graphic design, proficiency in Adobe Creative Suite, and a strong portfolio. This is a remote position with a competitive monthly salary. Join us and help create visually appealing content that represents our brand effectively.",
+    "createdAt": "2024-06-05",
+    "closingDate": "2024-07-05",
+    "slug": "graphic-designer"
+  },
+  {
+    "id": 4,
+    "jobTitle": "Visual Designer",
+    "location": "remote",
+    "salary": "23700",
+    "paymentRecurrence": "per-month",
+    "level": "mid",
+    "jobOverview": [
+      "Design visual elements",
+      "Collaborate with product team",
+      "Ensure design consistency"
+    ],
+    "responsibilities": [
+      "Create visual designs",
+      "Develop design systems",
+      "Collaborate with team members"
+    ],
+    "requirements": [
+      "3+ years of visual design experience",
+      "Strong visual design skills",
+      "Attention to detail"
+    ],
+    "jobDescription": "We are seeking a Mid-level Visual Designer to design visual elements and ensure design consistency. In this role, you will create visual designs, develop design systems, and collaborate with team members. The ideal candidate should have at least 3 years of experience in visual design, strong visual design skills, and attention to detail. This is a remote position with a competitive monthly salary. Join us and help create visually appealing designs that enhance user experience and align with our brand.",
+    "createdAt": "2024-06-06",
+    "closingDate": "2024-07-06",
+    "slug": "visual-designer"
+  },
+  {
+    "id": 5,
+    "jobTitle": "Product Designer",
+    "location": "remote",
+    "salary": "65000",
+    "paymentRecurrence": "per-month",
+    "level": "senior",
+    "jobOverview": [
+      "Design product interfaces",
+      "Collaborate with product team",
+      "Improve product usability"
+    ],
+    "responsibilities": [
+      "Create product designs",
+      "Conduct user research",
+      "Work with product managers"
+    ],
+    "requirements": [
+      "5+ years of product design experience",
+      "Strong UX/UI skills",
+      "Excellent communication skills"
+    ],
+    "jobDescription": "We are looking for a Senior Product Designer to design product interfaces and improve product usability. In this role, you will create product designs, conduct user research, and work with product managers. The ideal candidate should have at least 5 years of experience in product design, strong UX/UI skills, and excellent communication skills. This is a remote position with a competitive monthly salary. Join us and help create user-friendly products that meet our users' needs and enhance their experience.",
+    "createdAt": "2024-06-07",
+    "closingDate": "2024-07-07",
+    "slug": "product-designer"
+  },
+  {
+    "id": 6,
+    "jobTitle": "Interaction Designer",
+    "location": "remote",
+    "salary": "34000",
+    "paymentRecurrence": "per-month",
+    "level": "senior",
+    "jobOverview": [
+      "Design interactive user experiences",
+      "Collaborate with design and dev teams",
+      "Improve user satisfaction"
+    ],
+    "responsibilities": [
+      "Create interaction flows",
+      "Design user interactions",
+      "Conduct usability testing"
+    ],
+    "requirements": [
+      "4+ years of interaction design experience",
+      "Strong prototyping skills",
+      "Excellent communication skills"
+    ],
+    "jobDescription": "We are seeking a Senior Interaction Designer to design interactive user experiences and improve user satisfaction. In this role, you will create interaction flows, design user interactions, and conduct usability testing. The ideal candidate should have at least 4 years of experience in interaction design, strong prototyping skills, and excellent communication skills. This is a remote position with a competitive monthly salary. You will collaborate closely with our design and development teams to ensure the best possible user experience. Join us and help create engaging and intuitive interfaces for our users.",
+    "createdAt": "2024-06-08",
+    "closingDate": "2024-07-08",
+    "slug": "interaction-designer"
+  },
+  {
+    "id": 7,
+    "jobTitle": "Frontend Developer",
+    "location": "on-site",
+    "salary": "55000",
+    "paymentRecurrence": "per-month",
+    "level": "mid-level",
+    "jobOverview": [
+      "Develop and maintain web applications",
+      "Collaborate with backend developers",
+      "Ensure high performance and responsiveness"
+    ],
+    "responsibilities": [
+      "Implement new user-facing features",
+      "Optimize applications for speed and scalability",
+      "Collaborate with other team members and stakeholders"
+    ],
+    "requirements": [
+      "3+ years of frontend development experience",
+      "Proficiency in HTML, CSS, and JavaScript",
+      "Experience with React or Angular"
+    ],
+    "jobDescription": "We are seeking a Mid-Level Frontend Developer to develop and maintain our web applications. You will implement new user-facing features, optimize applications for speed and scalability, and collaborate with other team members and stakeholders. The ideal candidate should have at least 3 years of experience in frontend development, proficiency in HTML, CSS, and JavaScript, and experience with React or Angular. This is an on-site position with a competitive monthly salary. Join us to enhance the user experience for our e-commerce platform.",
+    "createdAt": "2024-06-10",
+    "closingDate": "2024-07-10",
+    "slug": "frontend-developer"
+  },
+  {
+    "id": 8,
+    "jobTitle": "Backend Developer",
+    "location": "remote",
+    "salary": "60000",
+    "paymentRecurrence": "per-month",
+    "level": "senior",
+    "jobOverview": [
+      "Develop and maintain server-side applications",
+      "Ensure data security and privacy",
+      "Collaborate with frontend developers"
+    ],
+    "responsibilities": [
+      "Build and maintain APIs",
+      "Optimize database performance",
+      "Implement security and data protection measures"
+    ],
+    "requirements": [
+      "5+ years of backend development experience",
+      "Proficiency in Node.js or Python",
+      "Experience with database management"
+    ],
+    "jobDescription": "We are looking for a Senior Backend Developer to develop and maintain our server-side applications. You will build and maintain APIs, optimize database performance, and implement security and data protection measures. The ideal candidate should have at least 5 years of experience in backend development, proficiency in Node.js or Python, and experience with database management. This is a remote position with a competitive monthly salary. Join our team to ensure the security and efficiency of our e-commerce platform.",
+    "createdAt": "2024-06-15",
+    "closingDate": "2024-07-15",
+    "slug": "backend-developer"
+  },
+  {
+    "id": 9,
+    "jobTitle": "Marketing Specialist",
+    "location": "hybrid",
+    "salary": "48000",
+    "paymentRecurrence": "per-month",
+    "level": "mid-level",
+    "jobOverview": [
+      "Develop marketing strategies",
+      "Manage social media accounts",
+      "Analyze marketing data"
+    ],
+    "responsibilities": [
+      "Create marketing campaigns",
+      "Monitor social media performance",
+      "Analyze and report on campaign effectiveness"
+    ],
+    "requirements": [
+      "3+ years of marketing experience",
+      "Proficiency in social media management tools",
+      "Strong analytical skills"
+    ],
+    "jobDescription": "We are seeking a Mid-Level Marketing Specialist to develop marketing strategies and manage our social media accounts. You will create marketing campaigns, monitor social media performance, and analyze and report on campaign effectiveness. The ideal candidate should have at least 3 years of experience in marketing, proficiency in social media management tools, and strong analytical skills. This is a hybrid position with a competitive monthly salary. Join our team to drive the success of our e-commerce platform.",
+    "createdAt": "2024-06-20",
+    "closingDate": "2024-07-20",
+    "slug": "marketing-specialist"
+  },
+  {
+    "id": 10,
+    "jobTitle": "Product Manager",
+    "location": "remote",
+    "salary": "70000",
+    "paymentRecurrence": "per-month",
+    "level": "senior",
+    "jobOverview": [
+      "Oversee product development",
+      "Coordinate with cross-functional teams",
+      "Define product vision and strategy"
+    ],
+    "responsibilities": [
+      "Manage the product lifecycle",
+      "Conduct market research",
+      "Define product requirements"
+    ],
+    "requirements": [
+      "5+ years of product management experience",
+      "Strong project management skills",
+      "Experience in e-commerce industry"
+    ],
+    "jobDescription": "We are looking for a Senior Product Manager to oversee the development of our products. You will manage the product lifecycle, conduct market research, and define product requirements. The ideal candidate should have at least 5 years of experience in product management, strong project management skills, and experience in the e-commerce industry. This is a remote position with a competitive monthly salary. Join us to shape the future of our e-commerce platform.",
+    "createdAt": "2024-06-25",
+    "closingDate": "2024-07-25",
+    "slug": "product-manager"
+  },
+  {
+    "id": 11,
+    "jobTitle": "Customer Support Representative",
+    "location": "remote",
+    "salary": "35000",
+    "paymentRecurrence": "per-month",
+    "level": "junior",
+    "jobOverview": [
+      "Provide customer support",
+      "Resolve customer issues",
+      "Maintain customer satisfaction"
+    ],
+    "responsibilities": [
+      "Respond to customer inquiries",
+      "Troubleshoot problems",
+      "Ensure timely resolution of issues"
+    ],
+    "requirements": [
+      "1+ years of customer support experience",
+      "Excellent communication skills",
+      "Ability to handle difficult situations"
+    ],
+    "jobDescription": "We are seeking a Junior Customer Support Representative to provide support to our customers. You will respond to customer inquiries, troubleshoot problems, and ensure timely resolution of issues. The ideal candidate should have at least 1 year of experience in customer support, excellent communication skills, and the ability to handle difficult situations. This is a remote position with a competitive monthly salary. Join us to maintain customer satisfaction and support the growth of our e-commerce platform.",
+    "createdAt": "2024-06-30",
+    "closingDate": "2024-07-30",
+    "slug": "customer-support-representative"
+  },
+  {
+  "id": 12,
+  "jobTitle": "Data Analyst",
+  "location": "remote",
+  "salary": "50000",
+  "paymentRecurrence": "per-month",
+  "level": "mid-level",
+  "jobOverview": [
+    "Analyze data to drive business decisions",
+    "Generate reports and dashboards",
+    "Collaborate with cross-functional teams"
+  ],
+  "responsibilities": [
+    "Collect and analyze data from various sources",
+    "Create visualizations to represent data insights",
+    "Provide actionable recommendations based on analysis"
+  ],
+  "requirements": [
+    "3+ years of data analysis experience",
+    "Proficiency in SQL and data visualization tools",
+    "Strong analytical and problem-solving skills"
+  ],
+  "jobDescription": "We are looking for a Mid-Level Data Analyst to analyze data and drive business decisions. You will collect and analyze data from various sources, create visualizations to represent data insights, and provide actionable recommendations based on analysis. The ideal candidate should have at least 3 years of experience in data analysis, proficiency in SQL and data visualization tools, and strong analytical and problem-solving skills. This is a remote position with a competitive monthly salary. Join us to help guide our e-commerce platform with data-driven insights.",
+  "createdAt": "2024-07-01",
+  "closingDate": "2024-08-01",
+  "slug": "data-analyst",
+  "industry": "telecommunication"
+},
+{
+  "id": 13,
+  "jobTitle": "DevOps Engineer",
+  "location": "on-site",
+  "salary": "65000",
+  "paymentRecurrence": "per-month",
+  "level": "senior",
+  "jobOverview": [
+    "Maintain and improve CI/CD pipelines",
+    "Ensure infrastructure reliability",
+    "Collaborate with development and operations teams"
+  ],
+  "responsibilities": [
+    "Manage and optimize cloud infrastructure",
+    "Automate deployment processes",
+    "Monitor system performance and reliability"
+  ],
+  "requirements": [
+    "5+ years of DevOps experience",
+    "Proficiency in cloud platforms (AWS, Azure)",
+    "Strong scripting and automation skills"
+  ],
+  "jobDescription": "We are seeking a Senior DevOps Engineer to maintain and improve our CI/CD pipelines and ensure infrastructure reliability. You will manage and optimize cloud infrastructure, automate deployment processes, and monitor system performance and reliability. The ideal candidate should have at least 5 years of experience in DevOps, proficiency in cloud platforms (AWS, Azure), and strong scripting and automation skills. This is an on-site position with a competitive monthly salary. Join us to enhance the efficiency and reliability of our e-commerce platform's infrastructure.",
+  "createdAt": "2024-07-02",
+  "closingDate": "2024-08-02",
+  "slug": "devops-engineer",
+  "industry": "telecommunication"
+}
+]
