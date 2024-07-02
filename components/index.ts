@@ -21,6 +21,10 @@ import AboutOurStoryComponent from "./sections/AboutUs/AboutOurStoryComponent";
 import OurAchievementsComponent from "./sections/AboutUs/OurAchievementsComponent";
 import MeetTheTeamComponent from "./sections/AboutUs/MeetTheTeamComponent";
 
+//career components
+import ApplyFormComponent from "./sections/career/ApplyFormComponent";
+import CompanyOverviewComponent from "./sections/career/CompanyOverviewComponent";
+
 //shop components
 import ShopImageSliderComponent from "./sections/shop/ShopImageSliderComponent";
 import ShopAdBannerComponent from "./sections/shop/ShopAdBannerComponent";
@@ -58,6 +62,8 @@ export {
   AboutOurStoryComponent,
   OurAchievementsComponent,
   MeetTheTeamComponent,
+  ApplyFormComponent,
+    CompanyOverviewComponent,
   ShopImageSliderComponent,
   ShopAdBannerComponent,
   CheckoutFormComponent,
