@@ -1,22 +1,35 @@
 "use client";
 
+import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { getIconByJobTitle } from "@/libs/utils";
 
 import careerData from "../../../../assets/app/careersData.json";
-import { BannerComponent, CompanyOverviewComponent, CustomButtonComponent } from "@/components";
+import {
+  ApplyFormComponent,
+  BannerComponent,
+  CompanyOverviewComponent,
+  CustomButtonComponent,
+  CustomModalComponent,
+} from "@/components";
 
 const CareersPage = () => {
   const router = useRouter();
-
-
-
-  const handleApplyNavigation = () => {
-    console.log("apply page slug should open");
-  };
+  const [applyFormJob, setApplyFormJob] = useState<string | null>(null);
+  const [showSuccessModal, setShowSuccessModal] = useState<boolean>(false);
 
   const handleViewNavigation = (slug: string) => {
     router.push(`/company/career/${slug}/`);
+  };
+
+  const handleFormSubmit = (applicationData: any) => {
+    console.log("Application submitted: ", applicationData);
+    setApplyFormJob(null);
+    setShowSuccessModal(true);
+  };
+
+  const closeSuccessModal = () => {
+    setShowSuccessModal(false);
   };
 
   return (
@@ -31,7 +44,7 @@ const CareersPage = () => {
       </div>
 
       <div className="flex flex-col mx-auto">
-        <CompanyOverviewComponent/>
+        <CompanyOverviewComponent />
 
         {/* current opening section */}
         <div className="flex flex-row px-6 flex-wrap pb-6">
@@ -74,11 +87,45 @@ const CareersPage = () => {
 
               <CustomButtonComponent
                 text="Apply now"
-                onClick={handleApplyNavigation}
+                onClick={() => setApplyFormJob(item.slug)}
               />
+
+              {/* Show apply form for selected job */}
+              {applyFormJob === item.slug && (
+                <ApplyFormComponent
+                  jobTitle={item.jobTitle}
+                  onClose={() => setApplyFormJob(null)}
+                  onSubmit={handleFormSubmit}
+                />
+              )}
             </div>
           ))}
         </div>
+
+        {/* Success Modal */}
+        {showSuccessModal && (
+          <CustomModalComponent
+            show={showSuccessModal}
+            onClose={closeSuccessModal}
+          >
+            <div className="flex flex-col items-center justify-center space-y-4">
+              <img
+                src="/images/web/confetti.webp"
+                alt="Confetti"
+                className="w-24 h-24"
+              />
+              <div className="flex flex-col space-y-2 justify-center items-center">
+                <h2 className="text-2xl font-bold text-white">
+                  Application Sent Successfully!
+                </h2>
+                <p className="text[12px] text-white text-center">
+                  Thank you for applying. Please check your email for
+                  application progress.
+                </p>
+              </div>
+            </div>
+          </CustomModalComponent>
+        )}
       </div>
     </div>
   );
