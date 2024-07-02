@@ -14,11 +14,11 @@ const CompanyOverviewComponent = () => {
     <section className="container mx-auto flex flex-row flex-wrap pb-8">
       {/* intro section */}
       <div className="flex flex-col py-4">
-        <p className="text-[18px] font-bold text-white">
+        <h1 className="text-3xl font-bold text-white">
           Welcome to ClassNova, where talent meets opportunity!
-        </p>
+        </h1>
 
-        <p className="text-[12px] font-thin text-white">
+        <p className="text-[12px] font-thin text-white py-6">
           At ClassNova, we are passionate about offering consumers unique and
           high-quality products from their own neighborhoods.
         </p>

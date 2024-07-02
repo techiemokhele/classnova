@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { getIconByJobTitle } from "@/libs/utils";
-
 import careerData from "../../../../assets/app/careersData.json";
 import {
   ApplyFormComponent,
@@ -11,12 +10,15 @@ import {
   CompanyOverviewComponent,
   CustomButtonComponent,
   CustomModalComponent,
+  CustomTextInputComponent,
+  NoResultsFoundComponent, // Assuming you have a component for displaying no results
 } from "@/components";
 
 const CareersPage = () => {
   const router = useRouter();
   const [applyFormJob, setApplyFormJob] = useState<string | null>(null);
   const [showSuccessModal, setShowSuccessModal] = useState<boolean>(false);
+  const [search, setSearch] = useState<string>("");
 
   const handleViewNavigation = (slug: string) => {
     router.push(`/company/career/${slug}/`);
@@ -31,6 +33,11 @@ const CareersPage = () => {
   const closeSuccessModal = () => {
     setShowSuccessModal(false);
   };
+
+  // Filter careerData based on search input
+  const filteredCareerData = careerData.filter((item) =>
+    item.jobTitle.toLowerCase().includes(search.toLowerCase())
+  );
 
   return (
     <div className="flex flex-col">
@@ -48,58 +55,87 @@ const CareersPage = () => {
 
         {/* current opening section */}
         <div className="flex flex-row px-6 flex-wrap pb-6">
-          <p className="text-[18px] font-bold text-white">Current Openings</p>
-          <p className="text-[10px] text-white font-thin pb-6">
-            Join our team at ClassNova and unlock your potential with a group of
-            innovators and problem solvers. We're passionate about offering
-            unique, high-quality products from local neighborhoods. Explore our
-            current openings and find your perfect fit at ClassNova!
-          </p>
+          <div className="flex flex-col justify-center items-center container pb-6">
+            <h2 className="text-2xl font-bold text-white">Current Openings</h2>
+            <p className="text-[12px] text-white text-center font-normal pb-6">
+              Join our team at ClassNova and unlock your potential with a group
+              of innovators and problem solvers. We're passionate about offering
+              unique, high-quality products from local neighborhoods. Explore
+              our current openings and find your perfect fit at ClassNova!
+            </p>
 
-          {/* open positions list */}
-          {careerData.map((item) => (
-            <div
-              key={item.id}
-              className="w-1/3 flex flex-col space-y-3 px-2 md:px-4 lg:px-4 pb-6"
-            >
-              <div className="bg-dark-1 h-10 w-10 rounded-md flex justify-center items-center">
-                {getIconByJobTitle(item.jobTitle)}
-              </div>
-
-              <p
-                onClick={() => handleViewNavigation(item.slug)}
-                className="text-white text-[12px] font-bold cursor-pointer"
-              >
-                {item.jobTitle}
-              </p>
-
-              <p
-                onClick={() => handleViewNavigation(item.slug)}
-                className="text-white text-[10px] font-thin line-clamp-2 cursor-pointer"
-              >
-                {item.jobDescription}
-              </p>
-
-              <CustomButtonComponent
-                text="View"
-                onClick={() => handleViewNavigation(item.slug)}
+            {/* search careerData */}
+            <div className="w-1/2">
+              <CustomTextInputComponent
+                search={true}
+                type="text"
+                value={search}
+                onChange={(text) => setSearch(text)}
+                label=""
+                placeholder="Search..."
               />
-
-              <CustomButtonComponent
-                text="Apply now"
-                onClick={() => setApplyFormJob(item.slug)}
-              />
-
-              {/* Show apply form for selected job */}
-              {applyFormJob === item.slug && (
-                <ApplyFormComponent
-                  jobTitle={item.jobTitle}
-                  onClose={() => setApplyFormJob(null)}
-                  onSubmit={handleFormSubmit}
-                />
-              )}
             </div>
-          ))}
+          </div>
+
+          {/* Display filtered or no results */}
+          {filteredCareerData.length > 0 ? (
+            filteredCareerData.map((item) => (
+              <div
+                key={item.id}
+                className="w-1/2 md:w-1/2 lg:w-1/4 flex flex-col pb-6"
+              >
+                <div className=" bg-gray-800 mx-2 flex flex-col space-y-3 px-2 md:px-4 lg:px-4 py-4 rounded-xl">
+                  <div className="flex flex-row justify-between items-center">
+                    <div className="bg-dark-1 h-10 w-10 rounded-md flex justify-center items-center">
+                      {getIconByJobTitle(item.jobTitle)}
+                    </div>
+
+                    <p className="text-white text-[8px] font-normal">
+                      Closing date: {item.closingDate}
+                    </p>
+                  </div>
+
+                  <p
+                    onClick={() => handleViewNavigation(item.slug)}
+                    className="text-white text-[12px] font-bold cursor-pointer line-clamp-1"
+                  >
+                    {item.jobTitle}
+                  </p>
+
+                  <p
+                    onClick={() => handleViewNavigation(item.slug)}
+                    className="text-white text-[10px] font-thin line-clamp-2 cursor-pointer"
+                  >
+                    {item.jobDescription}
+                  </p>
+
+                  <CustomButtonComponent
+                    text="View"
+                    onClick={() => handleViewNavigation(item.slug)}
+                  />
+
+                  <CustomButtonComponent
+                    text="Apply now"
+                    onClick={() => setApplyFormJob(item.slug)}
+                  />
+                </div>
+
+                {/* Show apply form for selected job */}
+                {applyFormJob === item.slug && (
+                  <ApplyFormComponent
+                    jobTitle={item.jobTitle}
+                    onClose={() => setApplyFormJob(null)}
+                    onSubmit={handleFormSubmit}
+                  />
+                )}
+              </div>
+            ))
+          ) : (
+            <NoResultsFoundComponent
+              title="No results found"
+              message="No careers found! Please try again later."
+            />
+          )}
         </div>
 
         {/* Success Modal */}
