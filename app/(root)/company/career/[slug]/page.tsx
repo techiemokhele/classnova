@@ -6,6 +6,7 @@ import {
   BannerComponent,
   CustomButtonComponent,
   NoResultsFoundComponent,
+  ApplyFormComponent
 } from "@/components";
 import careerData from "../../../../../assets/app/careersData.json";
 import { CareerItemParams, CareerItemProps } from "@/types";
@@ -13,6 +14,7 @@ import { formatDecimalNumber } from "@/libs/utils";
 
 const CareerSinglePage = ({ params }: { params: CareerItemParams }) => {
   const [career, setCareer] = useState<CareerItemProps | null>(null);
+  const [showApplyForm, setShowApplyForm] = useState(false);
 
   useEffect(() => {
     const foundCareer = careerData.find(
@@ -20,6 +22,11 @@ const CareerSinglePage = ({ params }: { params: CareerItemParams }) => {
     ) as CareerItemProps | undefined;
     setCareer(foundCareer || null);
   }, [params.slug]);
+
+  const handleFormSubmit = (applicationData: any) => {
+    console.log("Application submitted: ", applicationData);
+    setShowApplyForm(false);
+  };
 
   if (!career) {
     return (
@@ -38,7 +45,7 @@ const CareerSinglePage = ({ params }: { params: CareerItemParams }) => {
           title={`Hey there, ${career.jobTitle}`}
           description="Unlock your potential and join our team of innovators and problem solvers."
           backgroundImage="/images/colleagues/team.jpg"
-          onClick={() => {}}
+          onClick={() => setShowApplyForm(true)}
         />
       </div>
 
@@ -145,9 +152,17 @@ const CareerSinglePage = ({ params }: { params: CareerItemParams }) => {
         </div>
 
         <div className="pt-4">
-          <CustomButtonComponent text="Apply now" onClick={() => {}} />
+          <CustomButtonComponent text="Apply now" onClick={() => setShowApplyForm(true)} />
         </div>
       </div>
+
+      {showApplyForm && (
+        <ApplyFormComponent
+          jobTitle={career.jobTitle}
+          onClose={() => setShowApplyForm(false)}
+          onSubmit={handleFormSubmit}
+        />
+      )}
     </div>
   );
 };

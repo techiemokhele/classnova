@@ -17,10 +17,13 @@ import StarRatingComponent from "./sections/StarRatingComponent";
 import TestimonialAuthComponent from "./sections/TestimonialAuthComponent";
 import BannerComponent from "./sections/BannerComponent";
 import CompanyMetricsComponent from "./sections/AboutUs/CompanyMetricsComponent";
-import CompanyOverviewComponent from "./sections/AboutUs/CompanyOverviewComponent";
 import AboutOurStoryComponent from "./sections/AboutUs/AboutOurStoryComponent";
 import OurAchievementsComponent from "./sections/AboutUs/OurAchievementsComponent";
 import MeetTheTeamComponent from "./sections/AboutUs/MeetTheTeamComponent";
+
+//career components
+import ApplyFormComponent from "./sections/career/ApplyFormComponent";
+import CompanyOverviewComponent from "./sections/career/CompanyOverviewComponent";
 
 //shop components
 import ShopImageSliderComponent from "./sections/shop/ShopImageSliderComponent";
@@ -56,10 +59,11 @@ export {
   TestimonialAuthComponent,
   BannerComponent,
   CompanyMetricsComponent,
-  CompanyOverviewComponent,
   AboutOurStoryComponent,
   OurAchievementsComponent,
   MeetTheTeamComponent,
+  ApplyFormComponent,
+    CompanyOverviewComponent,
   ShopImageSliderComponent,
   ShopAdBannerComponent,
   CheckoutFormComponent,
