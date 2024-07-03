@@ -115,6 +115,22 @@ export interface ShopBannerProps {
   bigBanner?: boolean;
 }
 
+export type OrderProps = {
+  id: number;
+  quantity: number;
+  productId: number;
+  productImage: string;
+  productName: string;
+  productDescription: string;
+  productSku: string;
+  productCategory: string;
+  productPrice: number;
+  orderNumber: string;
+  orderDate: string;
+  deliveryDate: string;
+  status: string;
+};
+
 export interface ImageData {
   url: string;
   text: string;
@@ -161,3 +177,4 @@ export type CareerItemProps = {
 export type CareerItemParams = {
   slug: string;
 };
+
