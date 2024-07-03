@@ -16,7 +16,6 @@ const links = {
     { href: "/help/order-status", label: "Order status" },
     { href: "/help/shipping-delivery", label: "Shipping & delivery" },
     { href: "/help/returns", label: "Returns" },
-    { href: "/help/payment-options", label: "Payment options" },
     { href: "/help/contact-us", label: "Contact us" },
     { href: "/help/add-review", label: "Add review" },
   ],
