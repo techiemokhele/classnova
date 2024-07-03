@@ -11,7 +11,7 @@ import {
   CustomButtonComponent,
   CustomModalComponent,
   CustomTextInputComponent,
-  NoResultsFoundComponent, // Assuming you have a component for displaying no results
+  NoResultsFoundComponent,
 } from "@/components";
 
 const CareersPage = () => {
