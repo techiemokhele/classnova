@@ -30,6 +30,7 @@ import ShopImageSliderComponent from "./sections/shop/ShopImageSliderComponent";
 import ShopAdBannerComponent from "./sections/shop/ShopAdBannerComponent";
 import CheckoutFormComponent from "./sections/shop/CheckoutFormComponent";
 import DetailProductComponent from "./sections/shop/DetailProductComponent";
+import OrderCustomerInfoComponent from "./sections/shop/OrderCustomerInfocomponent";
 import PaymentFormComponent from "./sections/shop/PaymentFormComponent";
 import ProductCardComponent from "./sections/shop/ProductCardComponent";
 import ProductDescriptionComponent from "./sections/shop/ProductDescriptionComponent";
@@ -68,6 +69,7 @@ export {
   ShopAdBannerComponent,
   CheckoutFormComponent,
   DetailProductComponent,
+  OrderCustomerInfoComponent,
   PaymentFormComponent,
   ProductCardComponent,
   ProductDescriptionComponent,
