@@ -131,6 +131,10 @@ export type OrderProps = {
   status: string;
 };
 
+export interface OrderCustomerInfoComponentProps {
+  selectedOrder: OrderProps | null;
+}
+
 export interface ImageData {
   url: string;
   text: string;
@@ -177,4 +181,3 @@ export type CareerItemProps = {
 export type CareerItemParams = {
   slug: string;
 };
-
