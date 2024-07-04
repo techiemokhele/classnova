@@ -161,6 +161,18 @@ export type BlogDataParams = {
   slug: string;
 };
 
+export interface SidebarBlogProps {
+  search: string;
+  setSearch: (text: string) => void;
+  selectedCategory: string | null;
+  setSelectedCategory: (category: string | null) => void;
+}
+
+
+export interface BlogListContentProps {
+  blogs: BlogDataItemProps[];
+}
+
 export type CareerItemProps = {
   id: number;
   jobTitle: string;

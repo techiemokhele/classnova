@@ -1,18 +1,23 @@
 "use client";
 
-import { useState } from "react";
-import { FaRegCircle } from "react-icons/fa";
-import { FaRegDotCircle } from "react-icons/fa";
+import { FaRegCircle, FaRegDotCircle } from "react-icons/fa";
 
-import { CustomTextInputComponent } from "@/components";
+import { SidebarBlogProps } from "@/types";
 import categoryData from "../../../assets/app/blogCategories.json";
+import { CustomTextInputComponent } from "@/components";
 
-const SidebarBlogComponent = () => {
-  const [search, setSearch] = useState<string>("");
-  const [isSelected, setIsSelected] = useState<boolean>(false);
-
-  const handleSelectedCategory = () => {
-    setIsSelected(!isSelected);
+const SidebarBlogComponent = ({
+  search,
+  setSearch,
+  selectedCategory,
+  setSelectedCategory,
+}: SidebarBlogProps) => {
+  const handleCategorySelect = (category: string | null) => {
+    if (category === selectedCategory) {
+      setSelectedCategory(null);
+    } else {
+      setSelectedCategory(category);
+    }
   };
 
   return (
@@ -29,13 +34,22 @@ const SidebarBlogComponent = () => {
       {/* category section */}
       <div className="flex flex-col">
         <p className="text-white text-sm font-bold pb-4">Categories</p>
+        
+        <div
+          onClick={() => handleCategorySelect(null)}
+          className="flex flex-row space-x-2 pb-4 cursor-pointer"
+        >
+          <FaRegCircle className="text-teal-500" />
+          <p className="text-white text-[12px] font-semibold">See All</p>
+        </div>
+
         {categoryData.map((item) => (
           <div
             key={item.id}
-            onClick={handleSelectedCategory}
+            onClick={() => handleCategorySelect(item.categoryName)}
             className="flex flex-row space-x-2 pb-4 cursor-pointer"
           >
-            {isSelected ? (
+            {selectedCategory === item.categoryName ? (
               <FaRegDotCircle className="text-teal-500" />
             ) : (
               <FaRegCircle className="text-teal-500" />

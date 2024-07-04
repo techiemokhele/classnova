@@ -3,9 +3,9 @@
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { MdArrowOutward } from "react-icons/md";
-import blogData from "../../../assets/app/blogData.json";
+import { BlogListContentProps } from "@/types";
 
-const BlogListContentComponent = () => {
+const BlogListContentComponent = ({ blogs }: BlogListContentProps) => {
   const router = useRouter();
 
   const handleNavigation = (slug: string) => {
@@ -14,7 +14,7 @@ const BlogListContentComponent = () => {
 
   return (
     <div className="flex flex-wrap w-full gap-6">
-      {blogData.map((item) => (
+      {blogs.map((item) => (
         <div
           key={item.id}
           className="w-full sm:w-[calc(50%-12px)] md:w-[calc(33.33%-16px)] lg:w-[calc(25%-18px)] pb-4"
@@ -32,6 +32,30 @@ const BlogListContentComponent = () => {
 
             {/* excerpt and description section */}
             <div className="flex flex-col space-y-2 pb-2">
+              {/* author and date section */}
+              <div className="flex flex-row justify-between pb-1">
+                <div className="flex flex-row space-x-2 items-center">
+                  <Image
+                    priority
+                    src={item.authorImage}
+                    alt={item.author}
+                    width={1000}
+                    height={1000}
+                    className="w-[20px] h-[20px] rounded-full object-cover"
+                  />
+                  <p className="text-white text-[8px] font-semibold">
+                    {item.author}
+                  </p>
+                </div>
+
+                <div className="flex justify-end items-center">
+                  <p className="text-white text-[8px] font-thin">
+                    {item.createdAt}
+                  </p>
+                </div>
+              </div>
+
+              {/* title and router section */}
               <div className="flex flex-row justify-between w-full">
                 <div className="w-[90%]">
                   <h2 className="text-m font-bold text-white line-clamp-2">
@@ -47,32 +71,9 @@ const BlogListContentComponent = () => {
                 </div>
               </div>
 
-              <p className="text-[12px] text-gray-300 line-clamp-3">
+              <p className="text-[10px] text-white font-thin line-clamp-3">
                 {item.blogExcerpt}
               </p>
-            </div>
-
-            {/* author and date section */}
-            <div className="flex flex-row justify-between pb-1">
-              <div className="flex flex-row space-x-2">
-                <Image
-                  priority
-                  src={item.authorImage}
-                  alt={item.author}
-                  width={1000}
-                  height={1000}
-                  className="w-[20px] h-[20px] rounded-full object-cover"
-                />
-                <p className="text-white text-[10px] font-semibold">
-                  {item.author}
-                </p>
-              </div>
-
-              <div className="flex justify-end items-center">
-                <p className="text-white text-[10px] font-thin">
-                  {item.createdAt}
-                </p>
-              </div>
             </div>
 
             {/* category section */}
@@ -80,7 +81,7 @@ const BlogListContentComponent = () => {
               {item.blogCategory.map((category) => (
                 <div
                   key={category}
-                  className="flex justify-center items-center py-1 px-3 border-2 border-teal-500 hover:bg-teal-500 rounded-full"
+                  className="flex justify-center items-center px-3 border-2 border-teal-500 hover:bg-teal-500 rounded-full"
                 >
                   <p className="text-white text-[10px] font-semibold">
                     {category}
