@@ -27,7 +27,7 @@ export interface TextInputProps {
   value: string;
   onChange: (value: string) => void;
   placeholder: string;
-  type: "tel" | "password" | "text" | "email";
+  type: "tel" | "password" | "text" | "email" | "number";
   label?: string | ReactElement;
   search?: boolean;
 }
@@ -36,7 +36,7 @@ export interface TextAreaProps {
   value: string;
   onChange: (value: string) => void;
   placeholder?: string;
-  label?: string;
+  label?: string | ReactElement;
   type?: string;
   rows?: number;
 }

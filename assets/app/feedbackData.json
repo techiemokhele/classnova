@@ -98,5 +98,105 @@
     "totalRatings": 16,
     "review": "I had a positive experience with ClassNova. The product descriptions were accurate, and the delivery was prompt.",
     "createdAt": "2024-06-15"
+  },
+  {
+    "id": 11,
+    "userAvatar": "https://images.unsplash.com/photo-1472849676747-48a51c0c30b6?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "firstName": "Sophia",
+    "lastName": "Johnson",
+    "currentRating": "4.8",
+    "totalRatings": 22,
+    "review": "ClassNova offers excellent customer service and high-quality products. Highly recommend!",
+    "createdAt": "2024-06-20"
+  },
+  {
+    "id": 12,
+    "userAvatar": "https://images.unsplash.com/photo-1509868918748-a554ad25f858?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "firstName": "Liam",
+    "lastName": "Brown",
+    "currentRating": "3.9",
+    "totalRatings": 10,
+    "review": "The product range is great, but the delivery took a bit longer than expected.",
+    "createdAt": "2024-06-18"
+  },
+  {
+    "id": 13,
+    "userAvatar": "https://images.unsplash.com/photo-1531727991582-cfd25ce79613?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "firstName": "Emma",
+    "lastName": "Davis",
+    "currentRating": "5.0",
+    "totalRatings": 30,
+    "review": "Fantastic experience! The quality of the items exceeded my expectations.",
+    "createdAt": "2024-06-22"
+  },
+  {
+    "id": 14,
+    "userAvatar": "https://images.unsplash.com/photo-1533108165347-036ec233d7ec?q=80&w=776&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "firstName": "Prince",
+    "lastName": "Wilson",
+    "currentRating": "4.1",
+    "totalRatings": 12,
+    "review": "Good value for money. Will definitely shop again.",
+    "createdAt": "2024-06-25"
+  },
+  {
+    "id": 15,
+    "userAvatar": "https://images.unsplash.com/photo-1530787519640-4b7f97141da8?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "firstName": "Isabella",
+    "lastName": "Moore",
+    "currentRating": "4.7",
+    "totalRatings": 18,
+    "review": "Loved the variety and the eco-friendly options available. Great job, ClassNova!",
+    "createdAt": "2024-06-17"
+  },
+  {
+    "id": 16,
+    "userAvatar": "https://images.unsplash.com/photo-1643804956685-f897d966541b?q=80&w=715&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "firstName": "James",
+    "lastName": "Khumalo",
+    "currentRating": "3.5",
+    "totalRatings": 8,
+    "review": "Decent products, but I had some issues with the packaging.",
+    "createdAt": "2024-06-21"
+  },
+  {
+    "id": 17,
+    "userAvatar": "https://images.unsplash.com/photo-1645620623022-b5b2c1ec5d1c?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "firstName": "Abigail",
+    "lastName": "Mkwanazi",
+    "currentRating": "4.9",
+    "totalRatings": 25,
+    "review": "Excellent quality and fast shipping. Very satisfied!",
+    "createdAt": "2024-06-19"
+  },
+  {
+    "id": 18,
+    "userAvatar": "https://images.unsplash.com/photo-1499996860823-5214fcc65f8f?q=80&w=766&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "firstName": "Logan",
+    "lastName": "Thomas",
+    "currentRating": "4.2",
+    "totalRatings": 14,
+    "review": "ClassNova has a great selection of unique items. Will shop here again.",
+    "createdAt": "2024-06-23"
+  },
+  {
+    "id": 19,
+    "userAvatar": "https://images.unsplash.com/photo-1502163140606-888448ae8cfe?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "firstName": "Mia",
+    "lastName": "Harris",
+    "currentRating": "4.6",
+    "totalRatings": 20,
+    "review": "Amazing experience! The customer support was very helpful.",
+    "createdAt": "2024-06-26"
+  },
+  {
+    "id": 20,
+    "userAvatar": "https://images.unsplash.com/photo-1586078130702-d208859b6223?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "firstName": "Jackie",
+    "lastName": "Martinez",
+    "currentRating": "3.8",
+    "totalRatings": 9,
+    "review": "Good products, but the website can be a bit slow at times.",
+    "createdAt": "2024-06-24"
   }
 ]

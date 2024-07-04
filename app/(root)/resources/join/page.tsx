@@ -200,8 +200,14 @@ const JoinPage = () => {
         show={showSuccessModal}
         onClose={() => setShowSuccessModal(false)}
       >
-        <div className="text-white text-center">
-          <h2 className="text-xl font-bold">Success!</h2>
+        <div className="flex flex-col justify-center items-center text-white text-center">
+          <img
+            src="/images/web/confetti.webp"
+            alt="success-icon"
+            className="w-[80px] h-[80px] rounded-md self-center"
+          />
+
+          <h2 className="text-xl font-bold pt-4 pb-2">Success!</h2>
           <p>Your form has been submitted successfully.</p>
         </div>
       </CustomModalComponent>
