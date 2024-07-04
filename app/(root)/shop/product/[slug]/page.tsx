@@ -144,7 +144,7 @@ const ProductDetailPage = ({ params }: { params: { slug: string } }) => {
               alt="payment-icons"
               width={1300}
               height={1300}
-              className="w-full h-full object-cover transition-transform duration-300 ease-in-out transform hover:scale-110"
+              className="w-1/2 h-full object-cover transition-transform duration-300 ease-in-out transform hover:scale-110"
             />
           </div>
         </div>

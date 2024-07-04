@@ -52,9 +52,9 @@ const ProductDescriptionComponent = () => {
             and need. Our commitment to sustainability means you can shop with
             confidence, knowing that our products are both stylish and
             environmentally friendly. Experience the perfect blend of luxury and
-            functionality with Classnova. Elevate your lifestyle and discover
-            the difference with our premium offerings. Shop now and join the
-            Classnova community for exclusive deals and updates.
+            functionality with Spendio. Elevate your lifestyle and discover the
+            difference with our premium offerings. Shop now and join the Spendio
+            community for exclusive deals and updates.
           </p>
         )}
 

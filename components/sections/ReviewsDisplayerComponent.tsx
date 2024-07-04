@@ -83,11 +83,9 @@ const ReviewsDisplayerComponent = ({
             <button
               key={index}
               onClick={() => handlePageChange(index + 1)}
-              className={`px-4 py-2 rounded-full ${
-                currentPage === index + 1
-                  ? "bg-teal-500 text-white"
-                  : "bg-gray-300 text-black"
-              }`}
+              className={`mx-1 px-4 py-2 rounded-md text-white ${
+                currentPage === index + 1 ? "bg-teal-500" : "bg-gray-800"
+              } hover:bg-gray-700 focus:outline-none focus:bg-gray-700`}
             >
               {index + 1}
             </button>

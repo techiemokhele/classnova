@@ -161,6 +161,26 @@ export type BlogDataParams = {
   slug: string;
 };
 
+export interface SidebarBlogProps {
+  search: string;
+  setSearch: (text: string) => void;
+  selectedCategory: string | null;
+  setSelectedCategory: (category: string | null) => void;
+  selectedTag: string | null;
+  setSelectedTag: (tag: string | null) => void;
+  filterByAuthor: (text: string | null) => void;
+  seeAllAuthor: boolean;
+  setSeeAllAuthor: () => void;
+  seeAllCategories: boolean;
+  setSeeAllCategories: () => void;
+    seeAllTags: boolean;
+    setSeeAllTags: () => void;
+}
+
+export interface BlogListContentProps {
+  blogs: BlogDataItemProps[];
+}
+
 export type CareerItemProps = {
   id: number;
   jobTitle: string;

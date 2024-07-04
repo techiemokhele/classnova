@@ -4,62 +4,62 @@
     "empAvatar": "/images/colleagues/emp1.jpg",
     "empPosition": "Chief Financial Officer",
     "empName": "Claire Henderson",
-    "empDescription": "Oversees ClassNova's financial strategies and operations, ensuring fiscal responsibility and sustainable growth. Claire brings extensive experience in financial management and strategic planning to support ClassNova's mission."
+    "empDescription": "Oversees Spendio's financial strategies and operations, ensuring fiscal responsibility and sustainable growth. Claire brings extensive experience in financial management and strategic planning to support Spendio's mission."
   },
   {
     "id": 2,
     "empAvatar": "/images/colleagues/emp2.jpg",
     "empPosition": "Operations Manager",
     "empName": "Daniel Carter",
-    "empDescription": "Manages daily operations and logistics at ClassNova, optimizing processes to enhance efficiency and customer satisfaction. Daniel's leadership ensures seamless coordination across departments to support business objectives."
+    "empDescription": "Manages daily operations and logistics at Spendio, optimizing processes to enhance efficiency and customer satisfaction. Daniel's leadership ensures seamless coordination across departments to support business objectives."
   },
   {
     "id": 3,
     "empAvatar": "/images/colleagues/emp3.jpg",
     "empPosition": "Creative Director",
     "empName": "Kevin Wong",
-    "empDescription": "Leads ClassNova's creative vision and brand identity, driving innovative design strategies. Emily combines artistic expertise with market insights to create compelling visual experiences for customers."
+    "empDescription": "Leads Spendio's creative vision and brand identity, driving innovative design strategies. Emily combines artistic expertise with market insights to create compelling visual experiences for customers."
   },
   {
     "id": 4,
     "empAvatar": "/images/colleagues/emp4.jpg",
     "empPosition": "Chief Operating Officer",
     "empName": "Gabriel Mokhele",
-    "empDescription": "Oversees ClassNova's daily operations, ensuring efficiency and effectiveness in delivering products and services. Gabriel's strategic leadership and operational expertise drive ClassNova's growth and success."
+    "empDescription": "Oversees Spendio's daily operations, ensuring efficiency and effectiveness in delivering products and services. Gabriel's strategic leadership and operational expertise drive Spendio's growth and success."
   },
   {
     "id": 5,
     "empAvatar": "/images/colleagues/emp5.jpg",
     "empPosition": "Head of Human Resources",
     "empName": "Isabella Smith",
-    "empDescription": "Manages human resources strategies and initiatives, fostering a positive workplace culture at ClassNova. Isabella ensures talent acquisition, development, and employee engagement align with organizational goals."
+    "empDescription": "Manages human resources strategies and initiatives, fostering a positive workplace culture at Spendio. Isabella ensures talent acquisition, development, and employee engagement align with organizational goals."
   },
   {
     "id": 6,
     "empAvatar": "/images/colleagues/emp6.jpg",
     "empPosition": "Supply Chain Manager",
     "empName": "Michael Johnson",
-    "empDescription": "Manages ClassNova's supply chain, optimizing inventory management and logistics to meet customer demand. Michael's expertise ensures seamless product availability and delivery."
+    "empDescription": "Manages Spendio's supply chain, optimizing inventory management and logistics to meet customer demand. Michael's expertise ensures seamless product availability and delivery."
   },
   {
     "id": 7,
     "empAvatar": "/images/colleagues/emp7s.jpg",
     "empPosition": "Quality Assurance Specialist",
     "empName": "Olivia Harrison",
-    "empDescription": "Ensures the quality and reliability of products and services offered by ClassNova. Olivia conducts rigorous testing and implements quality standards to uphold customer satisfaction."
+    "empDescription": "Ensures the quality and reliability of products and services offered by Spendio. Olivia conducts rigorous testing and implements quality standards to uphold customer satisfaction."
   },
   {
     "id": 8,
     "empAvatar": "/images/colleagues/emp8.jpg",
     "empPosition": "Digital Marketing Manager",
     "empName": "Sophia Roberts",
-    "empDescription": "Leads digital marketing strategies to drive brand awareness and customer acquisition for ClassNova. Sophia leverages data-driven insights to optimize campaigns and enhance online presence."
+    "empDescription": "Leads digital marketing strategies to drive brand awareness and customer acquisition for Spendio. Sophia leverages data-driven insights to optimize campaigns and enhance online presence."
   },
   {
     "id": 9,
     "empAvatar": "/images/colleagues/emp9.jpg",
     "empPosition": "Customer Experience Specialist",
     "empName": "William Clark",
-    "empDescription": "Focuses on enhancing customer satisfaction and loyalty at ClassNova, ensuring exceptional customer experiences. William implements strategies to address customer needs and foster long-term relationships."
+    "empDescription": "Focuses on enhancing customer satisfaction and loyalty at Spendio, ensuring exceptional customer experiences. William implements strategies to address customer needs and foster long-term relationships."
   }
 ]

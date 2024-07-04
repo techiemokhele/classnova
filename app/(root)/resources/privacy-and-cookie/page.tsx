@@ -56,7 +56,7 @@ const PrivacyAndCookiePage = () => {
           <p className="text-[10px] mb-4">
             <strong>Company</strong> (referred to as either &quot;the
             Company&quot;, &quot;We&quot;, &quot;Us&quot; or &quot;Our&quot; in
-            this Agreement) refers to ClassNova (Pty) Ltd., Cape Town, South
+            this Agreement) refers to Spendio (Pty) Ltd., Cape Town, South
             Africa.
           </p>
         </li>
@@ -116,14 +116,14 @@ const PrivacyAndCookiePage = () => {
         </li>
         <li>
           <p className="text-[10px] mb-4">
-            <strong>Website</strong> refers to ClassNova (Pty) Ltd., accessible
+            <strong>Website</strong> refers to Spendio (Pty) Ltd., accessible
             from{" "}
             <a
-              href="https://ClassNova.vercel.app"
+              href="https://Spendio.vercel.app"
               rel="external nofollow noopener"
               target="_blank"
             >
-              https://ClassNova.vercel.app
+              https://Spendio.vercel.app
             </a>
           </p>
         </li>
@@ -572,11 +572,11 @@ const PrivacyAndCookiePage = () => {
       <p className="text-[10px] mb-4">
         If you have any questions about this Privacy Policy, You can contact us:
         <a
-          href="https://ClassNova.vercel.app/contact-us"
+          href="https://Spendio.vercel.app/contact-us"
           rel="external nofollow noopener"
           target="_blank"
         >
-          https://ClassNova.vercel.app/contact-us
+          https://Spendio.vercel.app/contact-us
         </a>
       </p>
     </div>

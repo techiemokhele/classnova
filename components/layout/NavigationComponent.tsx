@@ -93,8 +93,8 @@ const NavigationComponent = () => {
           <Link href="/" passHref>
             <img
               className="flex-shrink-0 h-[40px] w-auto rounded-full absolute left-4 bottom-4"
-              src="/icons/logo-white-transparent.png"
-              alt="ClassNova-Logo"
+              src="/icons/logo-white-transparent.svg"
+              alt="Spendio-Logo"
             />
           </Link>
 
