@@ -199,7 +199,7 @@ const ContactUsPages = () => {
       </div>
 
       {/* be a member section */}
-      <div className="flex flex-row w-full p-6 justify-center items-center bg-gray-500 space-x-6">
+      <div className="flex flex-row w-full p-6 justify-center items-center bg-gray-700 space-x-6">
         <h1 className="text-3xl text-white font-bold">
           Become a member & Get 20% Off
         </h1>
