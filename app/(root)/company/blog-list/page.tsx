@@ -8,44 +8,64 @@ import {
   BlogListContentComponent,
   NoResultsFoundComponent,
 } from "@/components";
+import { BlogDataItemProps } from "@/types";
 
 const BlogHomePage = () => {
   const [search, setSearch] = useState<string>("");
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
-  const [filteredBlogs, setFilteredBlogs] = useState(blogData);
-  const [currentPage, setCurrentPage] = useState<number>(1);
-  const blogsPerPage = 6;
+  const [filteredBlogs, setFilteredBlogs] =
+    useState<BlogDataItemProps[]>(blogData);
 
   useEffect(() => {
     let filtered = blogData;
 
     if (search) {
-      filtered = filtered.filter((blog) =>
+      filtered = filtered.filter((blog: BlogDataItemProps) =>
         blog.blogTitle.toLowerCase().includes(search.toLowerCase())
       );
     }
 
     if (selectedCategory) {
-      filtered = filtered.filter((blog) =>
+      filtered = filtered.filter((blog: BlogDataItemProps) =>
         blog.blogCategory.includes(selectedCategory)
       );
     }
 
     if (selectedTag) {
-      filtered = filtered.filter((blog) => blog.blogTag.includes(selectedTag));
+      filtered = filtered.filter((blog: BlogDataItemProps) =>
+        blog.blogTag.includes(selectedTag)
+      );
     }
 
     setFilteredBlogs(filtered);
-    setCurrentPage(1);
   }, [search, selectedCategory, selectedTag]);
 
-  const indexOfLastBlog = currentPage * blogsPerPage;
-  const indexOfFirstBlog = indexOfLastBlog - blogsPerPage;
-  const currentBlogs = filteredBlogs.slice(indexOfFirstBlog, indexOfLastBlog);
-  const totalPages = Math.ceil(filteredBlogs.length / blogsPerPage);
+  const filterByAuthor = (author: string | null) => {
+    if (author === null) {
+      setFilteredBlogs(blogData);
+    } else {
+      const filteredByAuthor = blogData.filter(
+        (blog: BlogDataItemProps) =>
+          blog.author.toLowerCase() === author.toLowerCase()
+      );
+      setFilteredBlogs(filteredByAuthor);
+    }
+  };
 
-  const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
+  const sortByDateDescending = () => {
+    const sortedByDescendingDate = [...filteredBlogs].sort(
+      (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
+    );
+    setFilteredBlogs(sortedByDescendingDate);
+  };
+
+  const sortByDateAscending = () => {
+    const sortedByAscendingDate = [...filteredBlogs].sort(
+      (b, a) => new Date(a.createdAt) - new Date(b.createdAt)
+    );
+    setFilteredBlogs(sortedByAscendingDate);
+  };
 
   return (
     <div className="mx-auto container flex flex-col pt-16">
@@ -62,31 +82,15 @@ const BlogHomePage = () => {
             setSelectedCategory={setSelectedCategory}
             selectedTag={selectedTag}
             setSelectedTag={setSelectedTag}
+            filterByAuthor={filterByAuthor}
+            sortByDateDescending={sortByDateDescending}
+            sortByDateAscending={sortByDateAscending}
           />
         </div>
 
         <div className="w-full flex flex-col">
           {filteredBlogs.length > 0 ? (
-            <>
-              <BlogListContentComponent blogs={currentBlogs} />
-              {totalPages > 1 && (
-                <div className="flex justify-center mt-4">
-                  {Array.from({ length: totalPages }, (_, i) => (
-                    <button
-                      key={i}
-                      onClick={() => paginate(i + 1)}
-                      className={` text-white px-3 py-1 mx-1 rounded-md ${
-                        currentPage === i + 1
-                          ? "bg-teal-500"
-                          : "bg-gray-800"
-                      }`}
-                    >
-                      {i + 1}
-                    </button>
-                  ))}
-                </div>
-              )}
-            </>
+            <BlogListContentComponent blogs={filteredBlogs} />
           ) : (
             <NoResultsFoundComponent
               title="No blogs found"

@@ -168,6 +168,9 @@ export interface SidebarBlogProps {
   setSelectedCategory: (category: string | null) => void;
   selectedTag: string | null;
   setSelectedTag: (tag: string | null) => void;
+  filterByAuthor: (text: string | null) => void;
+  sortByDateDescending: () => void;
+  sortByDateAscending: () => void;
 }
 
 export interface BlogListContentProps {
