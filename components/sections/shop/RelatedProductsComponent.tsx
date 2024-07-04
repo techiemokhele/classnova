@@ -71,18 +71,21 @@ const RelatedProductsComponent = ({
           >
             <div className="bg-gray-800 rounded-xl pb-4 p-0">
               <Image
+                onClick={() =>
+                  product.slug && navigateToProductDetail(product.slug)
+                }
                 src={product.productImage}
                 alt={product.productName}
                 width={1000}
                 height={1000}
-                className="w-full h-[180px] object-cover rounded-md pb-2 px-0"
+                className="w-full h-[180px] object-cover rounded-md pb-2 px-0 cursor-pointer"
               />
 
-              <div className="flex justify-between items-end my-2 px-2">
-                <StarRatingComponent rating={product.productRating} />
-                <p className="text-white text-[12px] font-bold">
+              <div className="flex flex-col mb-2 px-2">
+                <p className="text-white text-[12px] font-bold pb-2">
                   R{formatDecimalNumber(product.productPrice)}
                 </p>
+                <StarRatingComponent rating={product.productRating} />
               </div>
 
               <h3
@@ -94,7 +97,7 @@ const RelatedProductsComponent = ({
                 {product.productName}
               </h3>
 
-              <p className="text-white text-[10px] font-thin px-2">
+              <p className="text-white text-[10px] font-thin px-2 line-clamp-1">
                 {product.productDescription}
               </p>
 

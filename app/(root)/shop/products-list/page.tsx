@@ -264,6 +264,9 @@ const ProductListPage = () => {
                 </div>
 
                 <div className="p-2 sm:p-3 md:p-4">
+                  <p className="text-[14px] text-white pb-1">
+                    R{formatDecimalNumber(product.productPrice)}
+                  </p>
                   <p
                     className="text-sm sm:text-base md:text-lg font-semibold text-white cursor-pointer truncate"
                     onClick={() =>
@@ -272,13 +275,10 @@ const ProductListPage = () => {
                   >
                     {product.productName}
                   </p>
-                  <p className="text-[8px] sm:text-[10px] md:text-[12px] font-thin text-white line-clamp-2">
+                  <p className="text-[10px] md:text-[12px] font-thin text-white line-clamp-1">
                     {product.productDescription}
                   </p>
-                  <div className="flex justify-between items-center mt-2 sm:mt-3 md:mt-4">
-                    <p className="text-[14px] text-white">
-                      R{formatDecimalNumber(product.productPrice)}
-                    </p>
+                  <div className="flex mt-3 sm:mt-3 md:mt-4">
                     <CustomButtonComponent
                       text="Add to Cart"
                       onClick={() => handleAddToCart(product)}

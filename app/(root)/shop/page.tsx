@@ -39,6 +39,7 @@ const ShopHomePage = () => {
           .reverse()}
         itemNumber={6}
       />
+
       <OrSeparatorComponent text="Shop by Category" bigText={true} />
       {/*shop banner*/}
       <ShopAdBannerComponent

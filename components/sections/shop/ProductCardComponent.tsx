@@ -63,8 +63,12 @@ const ProductCardComponent = ({ products, itemNumber }: Props) => {
             </div>
 
             <div className="py-4 px-2">
+              <p className="text-[12px] text-white pb-1">
+                R{formatDecimalNumber(product.productPrice)}
+              </p>
+
               <p
-                className="text-lg font-semibold text-white cursor-pointer"
+                className="text-lg font-semibold text-white cursor-pointer line-clamp-1"
                 onClick={() =>
                   product.slug && navigateToProductDetail(product.slug)
                 }
@@ -73,13 +77,10 @@ const ProductCardComponent = ({ products, itemNumber }: Props) => {
                   ? `🔥 ${product.productName}`
                   : product.productName}
               </p>
-              <p className="text-[10px] font-thin text-white">
+              <p className="text-[10px] md:text-[12px] font-thin text-white line-clamp-1">
                 {product.productDescription}
               </p>
               <div className="flex justify-between items-center mt-4">
-                <p className="text-[12px] text-white">
-                  R{formatDecimalNumber(product.productPrice)}
-                </p>
                 <CustomButtonComponent
                   text="Add to Cart"
                   onClick={() => handleAddToCart(product)}
