@@ -21,7 +21,7 @@ const AboutUSPage = () => {
       <BannerComponent
         backgroundImage="/images/web/aboutBanner.jpg"
         title="Empowering E-Commerce"
-        description="At ClassNova, we are passionate about offering consumers unique and high-quality products from their own neighborhoods."
+        description="At Spendio, we are passionate about offering consumers unique and high-quality products from their own neighborhoods."
         buttonText="Contact us"
         onClick={handleNavigation}
       />

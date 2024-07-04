@@ -34,7 +34,7 @@ const FooterComponent = () => {
           {/* Company synopsis */}
           <div className="hidden md:block flex-col space-y-3 items-start">
             <Image
-              src="/icons/logo-white-transparent.png"
+              src="/icons/logo-white-transparent.svg"
               alt="logo"
               width={1000}
               height={1000}
@@ -105,7 +105,7 @@ const FooterComponent = () => {
           {/* Company synopsis */}
           <div className="flex flex-col space-y-3">
             <Image
-              src="/icons/logo-white-transparent.png"
+              src="/icons/logo-white-transparent.svg"
               alt="logo"
               width={1000}
               height={1000}
@@ -173,7 +173,7 @@ const FooterComponent = () => {
       {/* Bottom footer */}
       <div className="bg-gray-700 py-4 text-center">
         <p className="text-gray-300 text-[10px]">
-          &copy; 2024 ClassNova (Pty) Ltd. All rights reserved
+          &copy; 2024 Spendio (Pty) Ltd. All rights reserved
         </p>
       </div>
     </footer>

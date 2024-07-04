@@ -9,7 +9,7 @@ import { FooterComponent, NavigationComponent } from "@/components";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "ClassNova (Pty) Ltd",
+  title: "Spendio (Pty) Ltd",
   description:
     "We are a forward-thinking technology company dedicated to providing innovative solutions to enhance business operations and streamline processes.",
   icons: {

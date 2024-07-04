@@ -45,11 +45,11 @@ const BlogPostBannerComponent = ({ params }: { params: BlogDataParams }) => {
               alt={blog.blogTitle}
               width={1000}
               height={1000}
-              className="w-[50px] h-[50px] object-cover rounded-full"
+              className="w-12 h-12 object-cover"
             />
             <div className="flex flex-col w-full">
               <p className="text-[12px] text-white font-bold">{blog.author}</p>
-              <p className="text-[8px] md:text-[10px] lg:text-[10px] text-white font-normal pt-1">
+              <p className="text-[8px] text-white font-normal pt-1">
                 {blog.createdAt} - {blog.blogReadTime} min Read
               </p>
             </div>

@@ -45,18 +45,20 @@ const OrderCustomerInfoComponent = ({
           <h1 className="text-white text-xl font-bold pb-2">Order Info</h1>
           <p className="text-gray-300 text-[10px] font-bold">
             Shipping:{" "}
-            <span className="text-white font-thin">ClassNova Transit</span>
+            <span className="text-white font-thin">Spendio Transit</span>
           </p>
           <p className="text-gray-300 text-[10px] font-bold py-[0.5px]">
             Payment via:{" "}
             <span className="text-white font-thin">Master Card</span>
           </p>
-          {selectedOrder && (<p className="text-gray-300 text-[10px] font-bold">
-            Status:{" "}
-            <span className="text-white font-thin">
-              {selectedOrder?.status}
-            </span>
-          </p>)}
+          {selectedOrder && (
+            <p className="text-gray-300 text-[10px] font-bold">
+              Status:{" "}
+              <span className="text-white font-thin">
+                {selectedOrder?.status}
+              </span>
+            </p>
+          )}
         </div>
       </div>
 

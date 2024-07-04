@@ -43,7 +43,7 @@ const CareersPage = () => {
     <div className="flex flex-col">
       <div className="flex">
         <BannerComponent
-          title="Join Our Team at ClassNova"
+          title="Join Our Team at Spendio"
           description="Unlock your potential and join our team of innovators and problem solvers."
           backgroundImage="/images/colleagues/team.jpg"
           onClick={() => {}}
@@ -58,10 +58,10 @@ const CareersPage = () => {
           <div className="flex flex-col justify-center items-center container pb-6">
             <h2 className="text-2xl font-bold text-white">Current Openings</h2>
             <p className="text-[12px] text-white text-center font-normal pb-6">
-              Join our team at ClassNova and unlock your potential with a group
-              of innovators and problem solvers. We're passionate about offering
+              Join our team at Spendio and unlock your potential with a group of
+              innovators and problem solvers. We're passionate about offering
               unique, high-quality products from local neighborhoods. Explore
-              our current openings and find your perfect fit at ClassNova!
+              our current openings and find your perfect fit at Spendio!
             </p>
 
             {/* search careerData */}

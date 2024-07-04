@@ -15,17 +15,17 @@ const CompanyOverviewComponent = () => {
       {/* intro section */}
       <div className="flex flex-col py-4">
         <h1 className="text-3xl font-bold text-white">
-          Welcome to ClassNova, where talent meets opportunity!
+          Welcome to Spendio, where talent meets opportunity!
         </h1>
 
         <p className="text-[12px] font-thin text-white py-6">
-          At ClassNova, we are passionate about offering consumers unique and
+          At Spendio, we are passionate about offering consumers unique and
           high-quality products from their own neighborhoods.
         </p>
 
         <div className="pt-3">
           <CustomButtonComponent
-            text="Why work at ClassNova"
+            text="Why work at Spendio"
             onClick={handleNavigation}
           />
         </div>
@@ -37,7 +37,7 @@ const CompanyOverviewComponent = () => {
           Innovation and Impactful Projects
         </p>
         <p className="text-[10px] font-thin text-white">
-          At ClassNova, innovation drives our mission to deliver unique,
+          At Spendio, innovation drives our mission to deliver unique,
           high-quality products sourced from local neighborhoods. Our impactful
           projects empower communities, foster creativity, and promote
           sustainable practices. Join our team of innovators and problem
@@ -63,7 +63,7 @@ const CompanyOverviewComponent = () => {
           Continuous Learning and Growth
         </p>
         <p className="text-[10px] font-thin text-white">
-          At ClassNova, we prioritise continuous learning and growth. We believe
+          At Spendio, we prioritise continuous learning and growth. We believe
           in empowering our team to unlock their full potential through ongoing
           education and professional development. Join us to be part of a
           culture that values innovation, fosters creativity, and supports
@@ -81,7 +81,7 @@ const CompanyOverviewComponent = () => {
           unlock their potential. Join our team of innovators and problem
           solvers dedicated to delivering unique, high-quality products from
           local neighborhoods. Embrace the opportunity to grow with us at
-          ClassNova, where your talent meets limitless possibilities.
+          Spendio, where your talent meets limitless possibilities.
         </p>
       </div>
     </section>

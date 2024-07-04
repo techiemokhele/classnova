@@ -91,7 +91,7 @@ const JoinPage = () => {
               Always Better To Be A Member
               <br />
               <span className="text-[14px] text-white font-thin pt-6">
-                Shop, Celebrate, and Benefit with the best of ClassNova.
+                Shop, Celebrate, and Benefit with the best of Spendio.
               </span>
             </h1>
 
