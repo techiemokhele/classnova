@@ -1,27 +1,22 @@
 "use client";
 
 import { useState, useEffect } from "react";
-
 import blogData from "../../../../assets/app/blogData.json";
 import {
   HeaderBlogBannerComponent,
   SidebarBlogComponent,
   BlogListContentComponent,
+  NoResultsFoundComponent,
 } from "@/components";
 
 const BlogHomePage = () => {
   const [search, setSearch] = useState<string>("");
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [selectedTag, setSelectedTag] = useState<string | null>(null);
   const [filteredBlogs, setFilteredBlogs] = useState(blogData);
 
   useEffect(() => {
     let filtered = blogData;
-
-    if (selectedCategory) {
-      filtered = filtered.filter((blog) =>
-        blog.blogCategory.includes(selectedCategory)
-      );
-    }
 
     if (search) {
       filtered = filtered.filter((blog) =>
@@ -29,8 +24,18 @@ const BlogHomePage = () => {
       );
     }
 
+    if (selectedCategory) {
+      filtered = filtered.filter((blog) =>
+        blog.blogCategory.includes(selectedCategory)
+      );
+    }
+
+    if (selectedTag) {
+      filtered = filtered.filter((blog) => blog.blogTag.includes(selectedTag));
+    }
+
     setFilteredBlogs(filtered);
-  }, [search, selectedCategory]);
+  }, [search, selectedCategory, selectedTag]);
 
   return (
     <div className="mx-auto container flex flex-col pt-16">
@@ -45,11 +50,20 @@ const BlogHomePage = () => {
             setSearch={setSearch}
             selectedCategory={selectedCategory}
             setSelectedCategory={setSelectedCategory}
+            selectedTag={selectedTag}
+            setSelectedTag={setSelectedTag}
           />
         </div>
 
         <div className="w-full flex flex-col">
-          <BlogListContentComponent blogs={filteredBlogs} />
+          {filteredBlogs.length > 0 ? (
+            <BlogListContentComponent blogs={filteredBlogs} />
+          ) : (
+            <NoResultsFoundComponent
+              title="No blogs found"
+              message="Try using different keywords or filtering methods for better results"
+            />
+          )}
         </div>
       </div>
     </div>

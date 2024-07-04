@@ -166,8 +166,9 @@ export interface SidebarBlogProps {
   setSearch: (text: string) => void;
   selectedCategory: string | null;
   setSelectedCategory: (category: string | null) => void;
+  selectedTag: string | null;
+  setSelectedTag: (tag: string | null) => void;
 }
-
 
 export interface BlogListContentProps {
   blogs: BlogDataItemProps[];

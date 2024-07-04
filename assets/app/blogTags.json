@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "tagName": "Art"
+  },
+  {
+    "id": 2,
+    "tagName": "Artisans"
+  },
+  {
+    "id": 3,
+    "tagName": "E-Commerce"
+  },
+  {
+    "id": 4,
+    "tagName": "Marketing"
+  },
+  {
+    "id": 5,
+    "tagName": "Platforms"
+  },
+  {
+    "id": 6,
+    "tagName": "Trends"
+  },
+  {
+    "id": 7,
+    "tagName": "Branding"
+  }
+]
