@@ -50,11 +50,11 @@ const ReviewsDisplayerComponent = ({
               <h3 className="text-white text-[14px] font-semibold">
                 {item.firstName} {item.lastName}
               </h3>
-              <p className="text-white text-[10px] font-thin">
+              <p className="text-white text-xs font-thin">
                 Current rating:{" "}
                 <span className="font-bold">{item.currentRating}</span>
               </p>
-              <p className="text-white text-[10px] font-thin">
+              <p className="text-white text-xs font-thin">
                 Total reviews:{" "}
                 <span className="font-bold">{item.totalRatings}</span>
               </p>
@@ -64,14 +64,12 @@ const ReviewsDisplayerComponent = ({
           <div className="flex flex-col w-full md:w-2/3 lg:w-2/3 mt-4 md:mt-0 lg:mt-0">
             <div className="flex flex-row space-x-2 items-center">
               <StarRatingComponent rating={item.currentRating.toString()} />
-              <p className="text-white text-[10px] font-thin">
+              <p className="text-white text-xs font-thin">
                 {formatDate(item.createdAt)}
               </p>
             </div>
 
-            <p className="text-white text-[10px] font-thin pt-4">
-              {item.review}
-            </p>
+            <p className="text-white text-xs font-thin pt-4">{item.review}</p>
           </div>
         </div>
       ))}

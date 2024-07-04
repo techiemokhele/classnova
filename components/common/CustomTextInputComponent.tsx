@@ -64,7 +64,7 @@ const CustomTextInputComponent = ({
           onFocus={handleFocus}
           onBlur={handleBlur}
           max={type === "number" ? 5 : undefined}
-       min={type === "number" ? 0.5 : undefined}
+          min={type === "number" ? 0.5 : undefined}
           step={type === "number" ? 0.5 : undefined}
           className={`w-full p-2 shadow-lg rounded-xl bg-gray-700 text-[12px] text-white border-2 ${
             isFocused ? "border-teal-500" : "border-transparent"
@@ -93,7 +93,7 @@ const CustomTextInputComponent = ({
         )}
       </div>
       {showError && (
-        <p className="text-red-500 text-[10px] mt-1">{getErrorMessage(type)}</p>
+        <p className="text-red-500 text-xs mt-1">{getErrorMessage(type)}</p>
       )}
     </div>
   );

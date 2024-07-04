@@ -6,7 +6,11 @@ import { useRouter } from "next/navigation";
 import { OrderProps } from "@/types";
 import myOrdersData from "@/assets/app/myOrdersData.json";
 import { formatDecimalNumber, generateSlug } from "@/libs/utils";
-import { CustomModalComponent, NoResultsFoundComponent, OrderCustomerInfoComponent } from "@/components";
+import {
+  CustomModalComponent,
+  NoResultsFoundComponent,
+  OrderCustomerInfoComponent,
+} from "@/components";
 
 const MyOrdersPage = () => {
   const router = useRouter();
@@ -45,8 +49,8 @@ const MyOrdersPage = () => {
 
   const navigateToProductDetail = (slug: string) => {
     router.push(`/shop/product/${slug}`);
-        setShowSuccessModal(false);
-        setSelectedOrder(null);
+    setShowSuccessModal(false);
+    setSelectedOrder(null);
   };
 
   const showOrderDetails = (order: OrderProps) => {
@@ -137,7 +141,7 @@ const MyOrdersPage = () => {
                           <div className="text-sm font-medium text-white">
                             {order.productName}
                           </div>
-                          <div className="text-[10px] text-gray-400 line-clamp-1">
+                          <div className="text-xs text-gray-400 line-clamp-1">
                             {order.productDescription}
                           </div>
                         </div>

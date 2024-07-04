@@ -76,12 +76,12 @@ const BlogRelatedStoriesComponent = ({
                   width={1000}
                   className="w-[20px] h-[20px] md:w-[10px] md:h-[10px] object-cover self-center rounded-full"
                 />
-                <p className="text-white text-[10px] font-thin">
+                <p className="text-white text-xs font-thin">
                   - {blog.author} - {blog.createdAt} - {blog.blogReadTime} min
                   Reads
                 </p>
               </div>
-              <p className="text-[10px] text-gray-300 line-clamp-1 md:line-clamp-1 lg:line-clamp-1">
+              <p className="text-xs text-gray-300 line-clamp-1 md:line-clamp-1 lg:line-clamp-1">
                 {blog.blogExcerpt}
               </p>
             </div>

@@ -83,7 +83,7 @@ const SignUpPage = () => {
         {/* -or- divider section */}
         <div className="relative flex py-3 px-6 items-center">
           <div className="flex-grow border-t border-gray-400"></div>
-          <span className="flex-shrink mx-4 text-gray-400 text-[10px]">or</span>
+          <span className="flex-shrink mx-4 text-gray-400 text-xs">or</span>
           <div className="flex-grow border-t border-gray-400"></div>
         </div>
 
@@ -94,36 +94,58 @@ const SignUpPage = () => {
             value={email}
             onChange={(text) => setEmail(text)}
             placeholder="username@company.com"
-            label="Email address"
+            label={
+              !emailError ? (
+                "Email address"
+              ) : (
+                <>
+                  {emailError && (
+                    <p className="text-red-500 text-[8px]">{emailError}</p>
+                  )}
+                </>
+              )
+            }
           />
-          {emailError && (
-            <p className="text-red-500 text-[10px]">{emailError}</p>
-          )}
 
           <CustomTextInputComponent
             type="password"
             value={password}
             onChange={(text) => setPassword(text)}
             placeholder="●●●●●●●●"
-            label="Password"
+            label={
+              !passwordError ? (
+                "Password"
+              ) : (
+                <>
+                  {passwordError && (
+                    <p className="text-red-500 text-[8px]">{passwordError}</p>
+                  )}
+                </>
+              )
+            }
           />
-          {passwordError && (
-            <p className="text-red-500 text-[10px]">{passwordError}</p>
-          )}
 
           <CustomTextInputComponent
             type="password"
             value={confirmPassword}
             onChange={(text) => setConfirmPassword(text)}
             placeholder="●●●●●●●●"
-            label="Confirm Password"
+            label={
+              !confirmPasswordError ? (
+                "Confirm password"
+              ) : (
+                <>
+                  {confirmPasswordError && (
+                    <p className="text-red-500 text-[8px]">
+                      {confirmPasswordError}
+                    </p>
+                  )}
+                </>
+              )
+            }
           />
-          {confirmPasswordError && (
-            <p className="text-red-500 text-[10px]">{confirmPasswordError}</p>
-          )}
-
           {!passwordsMatch && confirmPassword && (
-            <p className="text-red-500 text-[10px]">Passwords do not match</p>
+            <p className="text-red-500 text-xs">Passwords do not match</p>
           )}
         </div>
 

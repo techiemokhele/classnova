@@ -28,7 +28,7 @@ const DetailProductComponent = ({
             </div>
 
             <div className="flex flex-col items-end ">
-              <p className="text-white text-[10px] font-thin">
+              <p className="text-white text-xs font-thin">
                 Qty: {item.quantity}
               </p>
               <p className="text-white text-l font-bold">

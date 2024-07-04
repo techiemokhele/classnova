@@ -73,7 +73,7 @@ const ReviewsAnalyticsComponent = () => {
             <p className="text-white text-[20px] font-thin">
               {formatNumber(10000)}
             </p>
-            <p className="text-white text-[10px] font-thin">
+            <p className="text-white text-xs font-thin">
               Growth in reviews on this year
             </p>
           </div>
@@ -91,7 +91,7 @@ const ReviewsAnalyticsComponent = () => {
               <StarRatingComponent rating={4.5} />
             </span>
           </div>
-          <p className="text-white text-[10px] font-thin">
+          <p className="text-white text-xs font-thin">
             Average rating on this year
           </p>
         </div>
@@ -110,7 +110,7 @@ const ReviewsAnalyticsComponent = () => {
             <StarRatingComponent rating={5} />
           </span>
         </div>
-        <p className="text-white text-[10px] font-thin">
+        <p className="text-white text-xs font-thin">
           Average rating on this year
         </p>
       </div>

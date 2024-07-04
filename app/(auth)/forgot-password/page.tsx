@@ -53,9 +53,18 @@ const ForgotPasswordPage = () => {
             value={email}
             onChange={(text) => setEmail(text)}
             placeholder="username@company.com"
-            label="Email address"
+            label={
+              !error ? (
+                "Email address"
+              ) : (
+                <>
+                  {error && (
+                    <p className="text-red-500 text-[8px]">{error}</p>
+                  )}
+                </>
+              )
+            }
           />
-          {error && <p className="text-red-500 text-[10px]">{error}</p>}
         </div>
 
         {/* submit section */}

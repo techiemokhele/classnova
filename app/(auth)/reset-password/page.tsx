@@ -58,25 +58,40 @@ const ResetPasswordPage = () => {
             value={password}
             onChange={(text) => setPassword(text)}
             placeholder="●●●●●●●●"
-            label="New password"
+            label={
+              !passwordError ? (
+                "Password"
+              ) : (
+                <>
+                  {passwordError && (
+                    <p className="text-red-500 text-[8px]">{passwordError}</p>
+                  )}
+                </>
+              )
+            }
           />
-          {passwordError && (
-            <p className="text-red-500 text-[10px]">{passwordError}</p>
-          )}
 
           <CustomTextInputComponent
             type="password"
             value={confirmPassword}
             onChange={(text) => setConfirmPassword(text)}
             placeholder="●●●●●●●●"
-            label="Confirm Password"
+            label={
+              !confirmPasswordError ? (
+                "Confirm password"
+              ) : (
+                <>
+                  {confirmPasswordError && (
+                    <p className="text-red-500 text-[8px]">
+                      {confirmPasswordError}
+                    </p>
+                  )}
+                </>
+              )
+            }
           />
-          {confirmPasswordError && (
-            <p className="text-red-500 text-[10px]">{confirmPasswordError}</p>
-          )}
-
           {!passwordsMatch && confirmPassword && (
-            <p className="text-red-500 text-[10px]">Passwords do not match</p>
+            <p className="text-red-500 text-xs">Passwords do not match</p>
           )}
         </div>
 

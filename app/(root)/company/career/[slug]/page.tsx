@@ -15,8 +15,8 @@ import { formatDecimalNumber } from "@/libs/utils";
 
 const CareerSinglePage = ({ params }: { params: CareerItemParams }) => {
   const [career, setCareer] = useState<CareerItemProps | null>(null);
-    const [showApplyForm, setShowApplyForm] = useState<boolean>(false);
-      const [showSuccessModal, setShowSuccessModal] = useState<boolean>(false);
+  const [showApplyForm, setShowApplyForm] = useState<boolean>(false);
+  const [showSuccessModal, setShowSuccessModal] = useState<boolean>(false);
 
   useEffect(() => {
     const foundCareer = careerData.find(
@@ -27,11 +27,10 @@ const CareerSinglePage = ({ params }: { params: CareerItemParams }) => {
 
   const handleFormSubmit = (applicationData: any) => {
     console.log("Application submitted: ", applicationData);
-      setShowApplyForm(false);
-          setShowSuccessModal(true);
+    setShowApplyForm(false);
+    setShowSuccessModal(true);
   };
-    
-    
+
   const closeSuccessModal = () => {
     setShowSuccessModal(false);
   };
@@ -59,9 +58,7 @@ const CareerSinglePage = ({ params }: { params: CareerItemParams }) => {
 
       <div className="flex flex-col px-4 py-8 container mx-auto">
         <div className="w-16 h-5 mb-2 bg-teal-500 rounded-full flex flex-col items-center justify-center">
-          <p className="text-white font-semibold text-[10px]">
-            {career.location}
-          </p>
+          <p className="text-white font-semibold text-xs">{career.location}</p>
         </div>
 
         <h1 className="text-3xl font-bold text-white pb-4">

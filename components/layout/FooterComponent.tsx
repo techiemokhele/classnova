@@ -172,7 +172,7 @@ const FooterComponent = () => {
 
       {/* Bottom footer */}
       <div className="bg-gray-700 py-4 text-center">
-        <p className="text-gray-300 text-[10px]">
+        <p className="text-gray-300 text-xs">
           &copy; 2024 Spendio (Pty) Ltd. All rights reserved
         </p>
       </div>

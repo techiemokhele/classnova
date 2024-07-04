@@ -275,7 +275,7 @@ const ProductListPage = () => {
                   >
                     {product.productName}
                   </p>
-                  <p className="text-[10px] md:text-[12px] font-thin text-white line-clamp-1">
+                  <p className="text-xs md:text-[12px] font-thin text-white line-clamp-1">
                     {product.productDescription}
                   </p>
                   <div className="flex mt-3 sm:mt-3 md:mt-4">

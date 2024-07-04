@@ -136,7 +136,7 @@ const CheckoutFormComponent = ({ onContinueToPayment }: CheckoutFormProps) => {
               </p>
             </div>
             <div className="w-1/2 flex flex-row space-x-2 justify-end">
-              <p className="text-white text-[10px] font-thin">R20.00</p>
+              <p className="text-white text-xs font-thin">R20.00</p>
             </div>
           </div>
         </div>

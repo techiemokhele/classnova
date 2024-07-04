@@ -96,7 +96,7 @@ const ProductDetailPage = ({ params }: { params: { slug: string } }) => {
 
           <div className="flex flex-row pt-2 pb-6 space-x-2">
             <StarRatingComponent rating={product.productRating} />
-            <p className="text-white text-[10px] font-thin">
+            <p className="text-white text-xs font-thin">
               ({formatDecimalNumber(product.productReviews)} user reviews)
             </p>
           </div>
@@ -106,12 +106,12 @@ const ProductDetailPage = ({ params }: { params: { slug: string } }) => {
               R{formatDecimalNumber(product.productPrice)}
             </p>
 
-            <p className="text-white text-[10px] font-semibold px-2 rounded-none bg-teal-500 items-center flex uppercase">
+            <p className="text-white text-xs font-semibold px-2 rounded-none bg-teal-500 items-center flex uppercase">
               {product.productCategory}
             </p>
           </div>
 
-          <p className="text-white text-[10px] font-thin pb-2">
+          <p className="text-white text-xs font-thin pb-2">
             SKU: {product.productSku}
           </p>
 

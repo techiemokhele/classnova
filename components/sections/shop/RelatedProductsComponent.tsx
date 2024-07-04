@@ -97,7 +97,7 @@ const RelatedProductsComponent = ({
                 {product.productName}
               </h3>
 
-              <p className="text-white text-[10px] font-thin px-2 line-clamp-1">
+              <p className="text-white text-xs font-thin px-2 line-clamp-1">
                 {product.productDescription}
               </p>
 

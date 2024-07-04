@@ -19,15 +19,15 @@ const OrderCustomerInfoComponent = ({
 
         <div className="w-[85%] flex flex-col justify-start items-start">
           <h1 className="text-white text-xl font-bold pb-2">Customer</h1>
-          <p className="text-gray-300 text-[10px] font-bold">
+          <p className="text-gray-300 text-xs font-bold">
             Full name:{" "}
             <span className="text-white font-thin">Maria Aniston</span>
           </p>
-          <p className="text-gray-300 text-[10px] font-bold py-[0.5px]">
+          <p className="text-gray-300 text-xs font-bold py-[0.5px]">
             Email:{" "}
             <span className="text-white font-thin">m.aniston@yahoo.com</span>
           </p>
-          <p className="text-gray-300 text-[10px] font-bold">
+          <p className="text-gray-300 text-xs font-bold">
             Phone: <span className="text-white font-thin">+27 71 763 7483</span>
           </p>
         </div>
@@ -43,16 +43,16 @@ const OrderCustomerInfoComponent = ({
 
         <div className="w-[85%] flex flex-col justify-start items-start">
           <h1 className="text-white text-xl font-bold pb-2">Order Info</h1>
-          <p className="text-gray-300 text-[10px] font-bold">
+          <p className="text-gray-300 text-xs font-bold">
             Shipping:{" "}
             <span className="text-white font-thin">Spendio Transit</span>
           </p>
-          <p className="text-gray-300 text-[10px] font-bold py-[0.5px]">
+          <p className="text-gray-300 text-xs font-bold py-[0.5px]">
             Payment via:{" "}
             <span className="text-white font-thin">Master Card</span>
           </p>
           {selectedOrder && (
-            <p className="text-gray-300 text-[10px] font-bold">
+            <p className="text-gray-300 text-xs font-bold">
               Status:{" "}
               <span className="text-white font-thin">
                 {selectedOrder?.status}
@@ -72,15 +72,15 @@ const OrderCustomerInfoComponent = ({
 
         <div className="w-[85%] flex flex-col justify-start items-start">
           <h1 className="text-white text-xl font-bold pb-2">Payment Info</h1>
-          <p className="text-gray-300 text-[10px] font-bold">
+          <p className="text-gray-300 text-xs font-bold">
             Card No:{" "}
             <span className="text-white font-thin">**** **** 3463</span>
           </p>
-          <p className="text-gray-300 text-[10px] font-bold py-[0.5px]">
+          <p className="text-gray-300 text-xs font-bold py-[0.5px]">
             Full name:{" "}
             <span className="text-white font-thin">Maria Aniston</span>
           </p>
-          <p className="text-gray-300 text-[10px] font-bold">
+          <p className="text-gray-300 text-xs font-bold">
             Phone: <span className="text-white font-thin">+27 71 763 7483</span>
           </p>
         </div>

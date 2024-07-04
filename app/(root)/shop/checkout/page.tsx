@@ -54,7 +54,7 @@ const CheckoutPage = () => {
                   : "border-t-2 border-teal-700"
               } flex my-2 border-t-2`}
             >
-              <h3 className="text-white text-[10px] font-thin">
+              <h3 className="text-white text-xs font-thin">
                 Shipping Information
               </h3>
               <p className="text-white text-[8px] font-thin">
@@ -69,7 +69,7 @@ const CheckoutPage = () => {
                   : "border-t border-gray-400"
               } flex my-2`}
             >
-              <h3 className="text-white text-[10px] font-thin">Payment</h3>
+              <h3 className="text-white text-xs font-thin">Payment</h3>
               <p className="text-white text-[8px] font-thin">
                 Finish your order & choose your payment
               </p>
