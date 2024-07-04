@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description:
     "We are a forward-thinking technology company dedicated to providing innovative solutions to enhance business operations and streamline processes.",
   icons: {
-    icon: "/logo.svg",
+    icon: "/icons/favicon-black.png",
   },
 };
 
