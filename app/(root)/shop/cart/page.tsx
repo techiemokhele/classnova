@@ -4,7 +4,8 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 
-import { useCart, CartItem } from "@/context/CartContext";
+import { useCart } from "@/context/CartContext";
+import { CartItem } from "@/types";
 import {
   CustomButtonComponent,
   NoResultsFoundComponent,
@@ -16,7 +17,7 @@ import { formatDecimalNumber } from "@/libs/utils";
 const deliveryAmount = 20;
 
 const CartPage = () => {
-  const { cart, addToCart, removeFromCart, getTotal } = useCart<CartItem>();
+  const { cart, addToCart, removeFromCart, getTotal } = useCart();
   const router = useRouter();
 
   const [currentPage, setCurrentPage] = useState(0);
