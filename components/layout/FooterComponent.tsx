@@ -17,7 +17,6 @@ const links = {
     { href: "/help/shipping-delivery", label: "Shipping & delivery" },
     { href: "/help/returns", label: "Returns" },
     { href: "/help/contact-us", label: "Contact us" },
-    { href: "/help/add-review", label: "Add review" },
   ],
   company: [
     { href: "/company/about-us", label: "About us" },

@@ -86,9 +86,9 @@ const ReviewsAnalyticsComponent = () => {
 
           <h1 className="text-white font-bold text-[14px]">Average Rating</h1>
           <div className="flex flex-row items-center">
-            <p className="text-white text-[20px] font-thin mr-2">5.0/5</p>
+            <p className="text-white text-[20px] font-thin mr-2">4.5/5</p>
             <span>
-              <StarRatingComponent rating={5} />
+              <StarRatingComponent rating={4.5} />
             </span>
           </div>
           <p className="text-white text-[10px] font-thin">

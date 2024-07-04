@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+
 import feedbackData from "../../assets/app/feedbackData.json";
 import StarRatingComponent from "./StarRatingComponent";
 import { formatDate } from "@/libs/utils";
@@ -46,7 +47,7 @@ const ReviewsDisplayerComponent = ({
               loading="lazy"
             />
             <div className="flex flex-col">
-              <h3 className="text-white text-m font-bold">
+              <h3 className="text-white text-[14px] font-semibold">
                 {item.firstName} {item.lastName}
               </h3>
               <p className="text-white text-[10px] font-thin">
