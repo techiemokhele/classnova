@@ -16,6 +16,9 @@ const BlogHomePage = () => {
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
   const [filteredBlogs, setFilteredBlogs] =
     useState<BlogDataItemProps[]>(blogData);
+  const [seeAllAuthor, setSeeAllAuthor] = useState<boolean>(false);
+  const [seeAllCategory, setSeeAllCategory] = useState<boolean>(false);
+  const [seeAllTag, setSeeAllTag] = useState<boolean>(false);
 
   useEffect(() => {
     let filtered = blogData;
@@ -67,6 +70,10 @@ const BlogHomePage = () => {
     setFilteredBlogs(sortedByAscendingDate);
   };
 
+  const seeAllAuthors = () => [setSeeAllAuthor(!seeAllAuthor)];
+  const seeAllCategorys = () => [setSeeAllAuthor(!seeAllAuthor)];
+    const seeAllTags = () => [setSeeAllAuthor(!seeAllAuthor)];
+
   return (
     <div className="mx-auto container flex flex-col pt-16">
       <HeaderBlogBannerComponent />
@@ -83,6 +90,12 @@ const BlogHomePage = () => {
             selectedTag={selectedTag}
             setSelectedTag={setSelectedTag}
             filterByAuthor={filterByAuthor}
+            seeAllAuthor={seeAllAuthor}
+            setSeeAllAuthor={seeAllAuthors}
+            seeAllCategories={seeAllCategory}
+            setSeeAllCategories={seeAllCategorys}
+            seeAllTags={seeAllTag}
+            setSeeAllTags={seeAllTags}
             sortByDateDescending={sortByDateDescending}
             sortByDateAscending={sortByDateAscending}
           />

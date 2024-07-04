@@ -169,6 +169,12 @@ export interface SidebarBlogProps {
   selectedTag: string | null;
   setSelectedTag: (tag: string | null) => void;
   filterByAuthor: (text: string | null) => void;
+  seeAllAuthor: boolean;
+  setSeeAllAuthor: () => void;
+  seeAllCategories: boolean;
+  setSeeAllCategories: () => void;
+    seeAllTags: boolean;
+    setSeeAllTags: () => void;
   sortByDateDescending: () => void;
   sortByDateAscending: () => void;
 }
