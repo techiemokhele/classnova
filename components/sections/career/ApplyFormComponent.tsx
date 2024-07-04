@@ -40,12 +40,14 @@ const ApplyFormComponent = ({
       !attachment ||
       !coverLetter.trim()
     ) {
-      setFirstNameError(!firstName.trim() ? "This field is required" : "");
-      setLastNameError(!lastName.trim() ? "This field is required" : "");
-      setPhoneError(!phone.trim() ? "This field is required" : "");
-      setEmailError(!email.trim() ? "This field is required" : "");
-      setAttachmentError(!attachment ? "This field is required" : "");
-      setCoverLetterError(!coverLetter.trim() ? "This field is required" : "");
+      setFirstNameError(!firstName.trim() ? "This first name is required" : "");
+      setLastNameError(!lastName.trim() ? "This last name is required" : "");
+      setPhoneError(!phone.trim() ? "This phone number is required" : "");
+      setEmailError(!email.trim() ? "This email address is required" : "");
+      setAttachmentError(!attachment ? "This attachment is required" : "");
+      setCoverLetterError(
+        !coverLetter.trim() ? "This cover letter is required" : ""
+      );
       return;
     }
 
@@ -90,72 +92,102 @@ const ApplyFormComponent = ({
           </button>
         </div>
 
+        {/* form items */}
         <div className="flex flex-col space-y-4">
           <div className="flex flex-row justify-between items-center space-x-4">
-            <div className="flex flex-col w-1/2 space-y-1">
-              <CustomTextInputComponent
-                type="text"
-                value={firstName}
-                onChange={(text) => setFirstName(text)}
-                label="First name"
-                placeholder="Example"
-              />
-              {firstNameError && (
-                <p className="text-red-500 text-[10px]">{firstNameError}</p>
-              )}
-            </div>
-
-            <div className="flex flex-col w-1/2 space-y-1">
-              <CustomTextInputComponent
-                type="text"
-                value={lastName}
-                onChange={(text) => setLastName(text)}
-                label="Last name"
-                placeholder="Example"
-              />
-              {lastNameError && (
-                <p className="text-red-500 text-[10px]">{lastNameError}</p>
-              )}
-            </div>
-          </div>
-
-          <div className="flex flex-col space-y-1">
             <CustomTextInputComponent
-              type="email"
-              value={email}
-              onChange={(text) => setEmail(text)}
-              label="Email address"
-              placeholder="example@company.com"
+              type="text"
+              value={firstName}
+              onChange={(text) => setFirstName(text)}
+              label={
+                !firstNameError ? (
+                  "First name"
+                ) : (
+                  <>
+                    {firstNameError && (
+                      <p className="text-red-500 text-[8px]">
+                        {firstNameError}
+                      </p>
+                    )}
+                  </>
+                )
+              }
+              placeholder="Example"
             />
-            {emailError && (
-              <p className="text-red-500 text-[10px]">{emailError}</p>
-            )}
-          </div>
 
-          <div className="flex flex-col space-y-1">
             <CustomTextInputComponent
-              type="tel"
-              value={phone}
-              onChange={(text) => setPhone(text)}
-              label="Phone number"
-              placeholder="+27712345678"
+              type="text"
+              value={lastName}
+              onChange={(text) => setLastName(text)}
+              label={
+                !lastNameError ? (
+                  "Last name"
+                ) : (
+                  <>
+                    {lastNameError && (
+                      <p className="text-red-500 text-[8px]">{lastNameError}</p>
+                    )}
+                  </>
+                )
+              }
+              placeholder="Example"
             />
-            {phoneError && (
-              <p className="text-red-500 text-[10px]">{phoneError}</p>
-            )}
           </div>
 
-          <div className="flex flex-col space-y-0">
-            <CustomTextAreaInputComponent
-              value={coverLetter}
-              onChange={(text) => setCoverLetter(text)}
-              label="Cover letter"
-              placeholder="Say something to our hiring manager..."
-            />
-            {coverLetterError && (
-              <p className="text-red-500 text-[10px]">{coverLetterError}</p>
-            )}
-          </div>
+          <CustomTextInputComponent
+            type="email"
+            value={email}
+            onChange={(text) => setEmail(text)}
+            label={
+              !emailError ? (
+                "Email address"
+              ) : (
+                <>
+                  {emailError && (
+                    <p className="text-red-500 text-[8px]">{emailError}</p>
+                  )}
+                </>
+              )
+            }
+            placeholder="example@company.com"
+          />
+
+          <CustomTextInputComponent
+            type="tel"
+            value={phone}
+            onChange={(text) => setPhone(text)}
+            label={
+              !phoneError ? (
+                "Phone number"
+              ) : (
+                <>
+                  {phoneError && (
+                    <p className="text-red-500 text-[8px]">{phoneError}</p>
+                  )}
+                </>
+              )
+            }
+            placeholder="+27712345678"
+          />
+
+          <CustomTextAreaInputComponent
+            value={coverLetter}
+            onChange={(text) => setCoverLetter(text)}
+            label={
+              !coverLetterError ? (
+                "Cover letter"
+              ) : (
+                <>
+                  {coverLetterError && (
+                    <p className="text-red-500 text-[8px]">
+                      {coverLetterError}
+                    </p>
+                  )}
+                </>
+              )
+            }
+            placeholder="Say something to our hiring manager..."
+          />
 
           <div
             className={`flex flex-col space-y-1 p-2 rounded-md border-2 ${
