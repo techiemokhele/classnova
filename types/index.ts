@@ -175,7 +175,6 @@ export interface SidebarBlogProps {
   setSeeAllCategories: () => void;
     seeAllTags: boolean;
     setSeeAllTags: () => void;
-  sortByDateDescending: () => void;
 }
 
 export interface BlogListContentProps {

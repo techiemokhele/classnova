@@ -23,7 +23,6 @@ const SidebarBlogComponent = ({
   setSeeAllCategories,
   seeAllTags,
   setSeeAllTags,
-  sortByDateDescending,
 }: SidebarBlogProps) => {
   const handleCategorySelect = (category: string | null) => {
     setSelectedCategory(category);
@@ -44,32 +43,18 @@ const SidebarBlogComponent = ({
         search
       />
 
-      {/* sort by date section */}
-      <div className="flex flex-col">
-        <p className="text-white text-sm font-bold pb-2">Sort by Date</p>
-
-        <div
-          onClick={() => sortByDateDescending()}
-          className={`flex flex-row space-x-2 pb-2 cursor-pointer ${
-            selectedTag === null ? "text-teal-500" : "text-white"
-          }`}
-        >
-          <p className="text-[12px] font-semibold">Newest First</p>
-        </div>
+      <div
+        onClick={() => filterByAuthor(null)}
+        className={`flex flex-row space-x-2 pb-2 cursor-pointer ${
+          selectedTag === null ? "text-teal-500" : "text-white"
+        }`}
+      >
+        <p className="text-[12px] font-semibold">Clear Filter</p>
       </div>
 
       {/* filter by author section */}
       <div className="flex flex-col">
         <p className="text-white text-sm font-bold pb-2">Filter by Author</p>
-
-        <div
-          onClick={() => filterByAuthor(null)}
-          className={`flex flex-row space-x-2 pb-2 cursor-pointer ${
-            selectedTag === null ? "text-teal-500" : "text-white"
-          }`}
-        >
-          <p className="text-[12px] font-semibold">Clear Filter</p>
-        </div>
 
         <div className="flex flex-wrap">
           {authorData

@@ -65,18 +65,16 @@ const BlogHomePage = () => {
     }
   };
 
-  const sortByDateDescending = () => {
-    const sortedByDescendingDate = [...filteredBlogs].sort(
-      (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
-    );
-    setFilteredBlogs(sortedByDescendingDate);
-  };
-
   const seeAllAuthors = () => [setSeeAllAuthor(!seeAllAuthor)];
   const seeAllCategorys = () => [setSeeAllCategory(!seeAllCategory)];
   const seeAllTags = () => [setSeeAllTag(!seeAllTag)];
 
   const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [currentPage, selectedCategory, selectedTag]);
+
 
   return (
     <div className="mx-auto container flex flex-col pt-16">
@@ -89,7 +87,6 @@ const BlogHomePage = () => {
           <SidebarBlogComponent
             search={search}
             setSearch={setSearch}
-            sortByDateDescending={sortByDateDescending}
             filterByAuthor={filterByAuthor}
             seeAllAuthor={seeAllAuthor}
             setSeeAllAuthor={seeAllAuthors}
@@ -127,15 +124,17 @@ const BlogHomePage = () => {
 
               {totalPages > 1 && (
                 <div className="flex justify-center mt-4">
-                  {Array.from({ length: totalPages }, (_, i) => (
+                  {[...Array(totalPages)].map((_, index) => (
                     <button
-                      key={i}
-                      onClick={() => paginate(i + 1)}
-                      className={`px-3 py-1 mx-1 rounded-md text-white ${
-                        currentPage === i + 1 ? "bg-teal-500" : "bg-gray-500"
-                      }`}
+                      key={index}
+                      onClick={() => paginate(index + 1)}
+                      className={`mx-1 px-4 py-2 rounded-md text-white ${
+                        currentPage === index + 1
+                          ? "bg-teal-500"
+                          : "bg-gray-800"
+                      } hover:bg-gray-700 focus:outline-none focus:bg-gray-700`}
                     >
-                      {i + 1}
+                      {index + 1}
                     </button>
                   ))}
                 </div>
