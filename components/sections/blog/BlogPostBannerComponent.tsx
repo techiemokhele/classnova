@@ -45,7 +45,7 @@ const BlogPostBannerComponent = ({ params }: { params: BlogDataParams }) => {
               alt={blog.blogTitle}
               width={1000}
               height={1000}
-              className="w-[50px] h-[50px] object-cover rounded-full"
+              className="w-14 h-14 object-cover rounded-full"
             />
             <div className="flex flex-col w-full">
               <p className="text-[12px] text-white font-bold">{blog.author}</p>

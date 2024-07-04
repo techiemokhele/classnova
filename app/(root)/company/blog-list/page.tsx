@@ -14,6 +14,8 @@ const BlogHomePage = () => {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
   const [filteredBlogs, setFilteredBlogs] = useState(blogData);
+  const [currentPage, setCurrentPage] = useState<number>(1);
+  const blogsPerPage = 6;
 
   useEffect(() => {
     let filtered = blogData;
@@ -35,7 +37,15 @@ const BlogHomePage = () => {
     }
 
     setFilteredBlogs(filtered);
+    setCurrentPage(1);
   }, [search, selectedCategory, selectedTag]);
+
+  const indexOfLastBlog = currentPage * blogsPerPage;
+  const indexOfFirstBlog = indexOfLastBlog - blogsPerPage;
+  const currentBlogs = filteredBlogs.slice(indexOfFirstBlog, indexOfLastBlog);
+  const totalPages = Math.ceil(filteredBlogs.length / blogsPerPage);
+
+  const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
 
   return (
     <div className="mx-auto container flex flex-col pt-16">
@@ -57,7 +67,26 @@ const BlogHomePage = () => {
 
         <div className="w-full flex flex-col">
           {filteredBlogs.length > 0 ? (
-            <BlogListContentComponent blogs={filteredBlogs} />
+            <>
+              <BlogListContentComponent blogs={currentBlogs} />
+              {totalPages > 1 && (
+                <div className="flex justify-center mt-4">
+                  {Array.from({ length: totalPages }, (_, i) => (
+                    <button
+                      key={i}
+                      onClick={() => paginate(i + 1)}
+                      className={` text-white px-3 py-1 mx-1 rounded-md ${
+                        currentPage === i + 1
+                          ? "bg-teal-500"
+                          : "bg-gray-800"
+                      }`}
+                    >
+                      {i + 1}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </>
           ) : (
             <NoResultsFoundComponent
               title="No blogs found"
