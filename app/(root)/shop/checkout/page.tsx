@@ -24,8 +24,8 @@ const CheckoutPage = () => {
   };
 
   const handleNavigation = () => {
-    router.push("/shop/cart")
-  }
+    router.push("/shop/cart");
+  };
 
   return (
     <div className="container mx-auto pt-16 pb-6">
@@ -36,12 +36,10 @@ const CheckoutPage = () => {
               <div onClick={() => setIsPaymentStep(false)}>
                 <IoArrowBackCircle className="text-teal-500 size-8 mr-2" />
               </div>
-            ) : !isPaymentStep ? (
+            ) : (
               <div onClick={handleNavigation}>
                 <IoArrowBackCircle className="text-teal-500 size-8 mr-2" />
               </div>
-            ) : (
-              ""
             )}
             Checkout
           </h1>
@@ -85,9 +83,7 @@ const CheckoutPage = () => {
           {!isPaymentStep ? (
             <CheckoutFormComponent onContinueToPayment={handleToPayment} />
           ) : (
-            <>
-              <PaymentFormComponent />
-            </>
+            <PaymentFormComponent />
           )}
         </div>
 

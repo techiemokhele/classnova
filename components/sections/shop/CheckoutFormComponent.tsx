@@ -1,10 +1,11 @@
 "use client";
 
+import { useState } from "react";
 import CustomTextInputComponent from "@/components/common/CustomTextInputComponent";
 import CustomButtonComponent from "@/components/common/CustomButtonComponent";
-import { useState } from "react";
+import { CheckoutFormProps } from "@/types";
 
-const CheckoutFormComponent = ({ onContinueToPayment }) => {
+const CheckoutFormComponent = ({ onContinueToPayment }: CheckoutFormProps) => {
   const [email, setEmail] = useState<string>("");
   const [firstName, setFirstName] = useState<string>("");
   const [lastName, setLastName] = useState<string>("");

@@ -93,6 +93,10 @@ export interface CartContextType {
   getTotalQuantity: () => number;
 }
 
+export interface CheckoutFormProps {
+  onContinueToPayment: () => void;
+}
+
 export interface ProductItemProp {
   itemNumber: number;
   filterByCategory?: string;
