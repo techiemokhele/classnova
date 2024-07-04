@@ -49,7 +49,9 @@ const FeedbackPages = () => {
     }
 
     if (!currentRating) {
-      setCurrentRatingError("Current rating is required and must be between 0 and 5");
+      setCurrentRatingError(
+        "Current rating is required and must be between 0 and 5"
+      );
       valid = false;
     } else {
       setCurrentRatingError("");
@@ -83,10 +85,10 @@ const FeedbackPages = () => {
           Reviews
         </h1>
         <p className="text-[12px] text-white text-center lg:text-start font-thin py-4">
-          At ClassNova, we strive to provide the best services and benefits to
-          our members, and your feedback is crucial in helping us achieve that
-          goal. Read on to see what others are saying about their journey with
-          ClassNova, and feel free to share your own experiences. Your voice
+          At Spendio, we strive to provide the best services and benefits to our
+          members, and your feedback is crucial in helping us achieve that goal.
+          Read on to see what others are saying about their journey with
+          Spendio, and feel free to share your own experiences. Your voice
           matters to us!
         </p>
       </div>

@@ -19,13 +19,13 @@ const AboutOurStoryComponent = () => {
         <div className="w-full md:w-1/2 p-4">
           <h1 className="text-2xl text-white font-bold pb-4">Our Mission</h1>
           <p className="text-[12px] text-white font-thin">
-            At ClassNova, our mission is to redefine online shopping by curating
-            a diverse selection of high-quality products that inspire and
-            delight our customers. We aim to provide a seamless shopping
-            experience that prioritises customer satisfaction, innovation, and
-            community support. Through our platform, we strive to empower small
-            businesses and local artisans, fostering economic growth and
-            promoting sustainable consumer choices.
+            At Spendio, our mission is to redefine online shopping by curating a
+            diverse selection of high-quality products that inspire and delight
+            our customers. We aim to provide a seamless shopping experience that
+            prioritises customer satisfaction, innovation, and community
+            support. Through our platform, we strive to empower small businesses
+            and local artisans, fostering economic growth and promoting
+            sustainable consumer choices.
           </p>
         </div>
 
@@ -60,8 +60,8 @@ const AboutOurStoryComponent = () => {
         <div className="w-full md:w-1/2 p-4">
           <h1 className="text-2xl text-white font-bold pb-4">Our Vision</h1>
           <p className="text-[12px] text-white font-thin">
-            Our vision at ClassNova is to become a leading e-commerce
-            destination known for its commitment to quality, authenticity, and
+            Our vision at Spendio is to become a leading e-commerce destination
+            known for its commitment to quality, authenticity, and
             customer-centricity. We envision a future where every shopper can
             discover unique products that reflect their personal style and
             values, all while supporting local economies and reducing
@@ -72,15 +72,15 @@ const AboutOurStoryComponent = () => {
         </div>
       </div>
 
-      {/* Why Choose ClassNova section */}
+      {/* Why Choose Spendio section */}
       <div className="flex flex-col-reverse md:flex-row lg:flex-row items-center justify-between">
         {/* text section */}
         <div className="w-full md:w-1/2 p-4">
           <h1 className="text-2xl text-white font-bold pb-4">
-            Why Choose ClassNova?
+            Why Choose Spendio?
           </h1>
           <p className="text-[12px] text-white font-thin">
-            Choose ClassNova for a shopping experience that combines convenience
+            Choose Spendio for a shopping experience that combines convenience
             with conscientiousness. We prioritise quality, authenticity, and
             customer satisfaction, ensuring that every purchase supports local
             businesses and promotes sustainable practices. With our curated
@@ -121,13 +121,13 @@ const AboutOurStoryComponent = () => {
         <div className="w-full md:w-1/2 p-4">
           <h1 className="text-2xl text-white font-bold pb-4">Join Us</h1>
           <p className="text-[12px] text-white font-thin pb-4">
-            Join ClassNova and be part of a team dedicated to reshaping the
-            future of e-commerce. Whether you're a vendor looking to showcase
-            your products or a passionate shopper seeking unique finds,
-            ClassNova offers a dynamic and supportive environment where
-            creativity thrives and connections flourish. Together, we can build
-            a better shopping experience that celebrates diversity,
-            sustainability, and community empowerment.
+            Join Spendio and be part of a team dedicated to reshaping the future
+            of e-commerce. Whether you're a vendor looking to showcase your
+            products or a passionate shopper seeking unique finds, Spendio
+            offers a dynamic and supportive environment where creativity thrives
+            and connections flourish. Together, we can build a better shopping
+            experience that celebrates diversity, sustainability, and community
+            empowerment.
           </p>
 
           <CustomButtonComponent text="Join now" onClick={handleJoining} />

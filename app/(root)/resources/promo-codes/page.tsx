@@ -17,18 +17,18 @@ const PromoCodePages = () => {
           Promo & Discount Codes
         </h1>
         <p className="text-[12px] text-white font-thin py-4">
-          Use real ClassNova coupon codes to save a ton of money on your
+          Use real Spendio coupon codes to save a ton of money on your
           favorites. Look through our specials and offers to get the equipment
           you need to step up your game.
         </p>
 
         <p className="text-[12px] text-white font-thin">
-          You can only access exclusive deals and ClassNova discount codes as a{" "}
+          You can only access exclusive deals and Spendio discount codes as a{" "}
           <span
             onClick={handleNavigator}
             className="underline cursor-pointer font-bold"
           >
-            ClassNova Member
+            Spendio Member
           </span>
           .
         </p>
@@ -68,24 +68,24 @@ const PromoCodePages = () => {
             onClick={handleNavigator}
             className="underline cursor-pointer font-bold"
           >
-            ClassNova Member
+            Spendio Member
           </span>
           , you may take advantage of numerous advantages, such as exclusive
           discount codes that can be used on our website.
         </p>
 
         <p className="text-[12px] text-white font-bold py-2">
-          Does ClassNova offer seasonal promotions?
+          Does Spendio offer seasonal promotions?
         </p>
 
         <p className="text-[12px] text-white font-thin">
           Indeed, our end-of-season specials provide discounts on a number of
-          your favorite ClassNova items. As a{" "}
+          your favorite Spendio items. As a{" "}
           <span
             onClick={handleNavigator}
             className="underline cursor-pointer font-bold"
           >
-            ClassNova Member
+            Spendio Member
           </span>{" "}
           subscribe to our newsletter to ensure you never miss another deal or
           sale. Check out all the other advantages of{" "}
@@ -93,7 +93,7 @@ const PromoCodePages = () => {
             onClick={handleNavigator}
             className="underline cursor-pointer font-bold"
           >
-            ClassNova Membership
+            Spendio Membership
           </span>
           .
         </p>

@@ -20,7 +20,9 @@ const TermsOfServicePage = () => {
         in plural.
       </p>
       <h3 className="mb-4 font-bold text-[20px]">Definitions</h3>
-      <p className="text-[10px] mb-4">For the purposes of these Terms and Conditions:</p>
+      <p className="text-[10px] mb-4">
+        For the purposes of these Terms and Conditions:
+      </p>
       <ul className="list-disc px-8 mb-4">
         <li>
           <p className="text-[10px] mb-4">
@@ -40,7 +42,7 @@ const TermsOfServicePage = () => {
           <p className="text-[10px] mb-4">
             <strong>Company</strong> (referred to as either &quot;the
             Company&quot;, &quot;We&quot;, &quot;Us&quot; or &quot;Our&quot; in
-            this Agreement) refers to ClassNova (Pty) Ltd., Cape Town, South
+            this Agreement) refers to Spendio (Pty) Ltd., Cape Town, South
             Africa.
           </p>
         </li>
@@ -81,14 +83,14 @@ const TermsOfServicePage = () => {
         </li>
         <li>
           <p className="text-[10px] mb-4">
-            <strong>Website</strong> refers to ClassNova (Pty) Ltd., accessible
+            <strong>Website</strong> refers to Spendio (Pty) Ltd., accessible
             from{" "}
             <a
-              href="https://ClassNova.vercel.app"
+              href="https://Spendio.vercel.app"
               rel="external nofollow noopener"
               target="_blank"
             >
-              https://ClassNova.vercel.app
+              https://Spendio.vercel.app
             </a>
           </p>
         </li>
@@ -308,11 +310,11 @@ const TermsOfServicePage = () => {
         <li>
           By visiting this page on our website:{" "}
           <a
-            href="https://ClassNova.vercel.app/contact-us"
+            href="https://Spendio.vercel.app/contact-us"
             rel="external nofollow noopener"
             target="_blank"
           >
-            https://ClassNova.vercel.app/contact-us
+            https://Spendio.vercel.app/contact-us
           </a>
         </li>
       </ul>

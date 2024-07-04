@@ -68,7 +68,7 @@ const ContactUsPages = () => {
           Contact us - We're here to help
         </h1>
         <p className="text-white text-s text-center font-thin w-[90%] self-center">
-          At ClassNova, we value your feedback, questions, and concerns. Whether
+          At Spendio, we value your feedback, questions, and concerns. Whether
           you need assistance with our services, have a query about your
           account, or just want to learn more about what we do, our team is here
           to support you. Feel free to reach out to us through any of the
@@ -161,7 +161,7 @@ const ContactUsPages = () => {
             <p className="text-white text-[10px] font-thin">
               For general inquiries, please email us at{" "}
               <span className="text-teal-500 cursor-pointer">
-                <a href="mailto:info@classnova.com">info@classnova.com</a>
+                <a href="mailto:info@Spendio.com">info@Spendio.com</a>
               </span>
               .
             </p>
@@ -186,7 +186,7 @@ const ContactUsPages = () => {
               Our Address
             </h4>
             <p className="text-white text-[10px] font-thin text-end">
-              ClassNova Headquarters
+              Spendio Headquarters
               <br />
               123 Innovation Drive Tech City,
               <br />

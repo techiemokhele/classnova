@@ -6,7 +6,7 @@ const ShippingDeliveryPage = () => {
       </h1>
       <p className="text-[10px] mb-4">Last updated: July 03, 2024</p>
       <p className="text-[10px] mb-4">
-        At ClassNova, our mission is to redefine online shopping by curating a
+        At Spendio, our mission is to redefine online shopping by curating a
         diverse selection of high-quality products that inspire and delight our
         customers. We aim to provide a seamless shopping experience that
         prioritizes customer satisfaction, innovation, and community support.
@@ -85,7 +85,7 @@ const ShippingDeliveryPage = () => {
         please contact us:
       </p>
       <p className="text-[10px] mb-4">
-        <span className="font-bold">Email:</span> support@classnova.com
+        <span className="font-bold">Email:</span> support@Spendio.com
       </p>
       <p className="text-[10px] mb-4">
         <span className="font-bold">Phone:</span> +1 (123) 456-7890
