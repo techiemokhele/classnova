@@ -19,6 +19,9 @@ const BlogHomePage = () => {
   const [seeAllAuthor, setSeeAllAuthor] = useState<boolean>(false);
   const [seeAllCategory, setSeeAllCategory] = useState<boolean>(false);
   const [seeAllTag, setSeeAllTag] = useState<boolean>(false);
+  const [currentPage, setCurrentPage] = useState<number>(1);
+
+  const blogsPerPage = 6;
 
   useEffect(() => {
     let filtered = blogData;
@@ -42,7 +45,13 @@ const BlogHomePage = () => {
     }
 
     setFilteredBlogs(filtered);
+    setCurrentPage(1);
   }, [search, selectedCategory, selectedTag]);
+
+  const indexOfLastBlog = currentPage * blogsPerPage;
+  const indexOfFirstBlog = indexOfLastBlog - blogsPerPage;
+  const currentBlogs = filteredBlogs.slice(indexOfFirstBlog, indexOfLastBlog);
+  const totalPages = Math.ceil(filteredBlogs.length / blogsPerPage);
 
   const filterByAuthor = (author: string | null) => {
     if (author === null) {
@@ -63,16 +72,11 @@ const BlogHomePage = () => {
     setFilteredBlogs(sortedByDescendingDate);
   };
 
-  const sortByDateAscending = () => {
-    const sortedByAscendingDate = [...filteredBlogs].sort(
-      (b, a) => new Date(a.createdAt) - new Date(b.createdAt)
-    );
-    setFilteredBlogs(sortedByAscendingDate);
-  };
-
   const seeAllAuthors = () => [setSeeAllAuthor(!seeAllAuthor)];
-  const seeAllCategorys = () => [setSeeAllAuthor(!seeAllAuthor)];
-    const seeAllTags = () => [setSeeAllAuthor(!seeAllAuthor)];
+  const seeAllCategorys = () => [setSeeAllCategory(!seeAllCategory)];
+  const seeAllTags = () => [setSeeAllTag(!seeAllTag)];
+
+  const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
 
   return (
     <div className="mx-auto container flex flex-col pt-16">
@@ -85,25 +89,58 @@ const BlogHomePage = () => {
           <SidebarBlogComponent
             search={search}
             setSearch={setSearch}
+            sortByDateDescending={sortByDateDescending}
+            filterByAuthor={filterByAuthor}
+            seeAllAuthor={seeAllAuthor}
+            setSeeAllAuthor={seeAllAuthors}
             selectedCategory={selectedCategory}
             setSelectedCategory={setSelectedCategory}
             selectedTag={selectedTag}
             setSelectedTag={setSelectedTag}
-            filterByAuthor={filterByAuthor}
-            seeAllAuthor={seeAllAuthor}
-            setSeeAllAuthor={seeAllAuthors}
             seeAllCategories={seeAllCategory}
             setSeeAllCategories={seeAllCategorys}
             seeAllTags={seeAllTag}
             setSeeAllTags={seeAllTags}
-            sortByDateDescending={sortByDateDescending}
-            sortByDateAscending={sortByDateAscending}
           />
         </div>
 
         <div className="w-full flex flex-col">
           {filteredBlogs.length > 0 ? (
-            <BlogListContentComponent blogs={filteredBlogs} />
+            <>
+              {currentPage > 1 && (
+                <div className="flex justify-center mt-0 pb-4">
+                  {Array.from({ length: totalPages }, (_, i) => (
+                    <button
+                      key={i}
+                      onClick={() => paginate(i + 1)}
+                      className={`px-3 py-1 mx-1 rounded-md text-white ${
+                        currentPage === i + 1 ? "bg-teal-500" : "bg-gray-500"
+                      }`}
+                    >
+                      {i + 1}
+                    </button>
+                  ))}
+                </div>
+              )}
+
+              <BlogListContentComponent blogs={currentBlogs} />
+
+              {totalPages > 1 && (
+                <div className="flex justify-center mt-4">
+                  {Array.from({ length: totalPages }, (_, i) => (
+                    <button
+                      key={i}
+                      onClick={() => paginate(i + 1)}
+                      className={`px-3 py-1 mx-1 rounded-md text-white ${
+                        currentPage === i + 1 ? "bg-teal-500" : "bg-gray-500"
+                      }`}
+                    >
+                      {i + 1}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </>
           ) : (
             <NoResultsFoundComponent
               title="No blogs found"

@@ -24,7 +24,6 @@ const SidebarBlogComponent = ({
   seeAllTags,
   setSeeAllTags,
   sortByDateDescending,
-  sortByDateAscending,
 }: SidebarBlogProps) => {
   const handleCategorySelect = (category: string | null) => {
     setSelectedCategory(category);
@@ -35,30 +34,7 @@ const SidebarBlogComponent = ({
   };
 
   return (
-    <section className="flex flex-col space-y-8">
-      {/* sort by date section */}
-      <div className="flex flex-col">
-        <p className="text-white text-sm font-bold pb-4">Sort by Date</p>
-
-        <div
-          onClick={() => sortByDateDescending()}
-          className={`flex flex-row space-x-2 pb-4 cursor-pointer ${
-            selectedTag === null ? "text-teal-500" : "text-white"
-          }`}
-        >
-          <p className="text-[12px] font-semibold">Newest First</p>
-        </div>
-
-        <div
-          onClick={() => sortByDateAscending()}
-          className={`flex flex-row space-x-2 cursor-pointer ${
-            selectedTag === null ? "text-teal-500" : "text-white"
-          }`}
-        >
-          <p className="text-[12px] font-semibold">Oldest First</p>
-        </div>
-      </div>
-
+    <section className="flex flex-col space-y-6">
       <CustomTextInputComponent
         value={search}
         onChange={(text) => setSearch(text)}
@@ -68,13 +44,27 @@ const SidebarBlogComponent = ({
         search
       />
 
+      {/* sort by date section */}
+      <div className="flex flex-col">
+        <p className="text-white text-sm font-bold pb-2">Sort by Date</p>
+
+        <div
+          onClick={() => sortByDateDescending()}
+          className={`flex flex-row space-x-2 pb-2 cursor-pointer ${
+            selectedTag === null ? "text-teal-500" : "text-white"
+          }`}
+        >
+          <p className="text-[12px] font-semibold">Newest First</p>
+        </div>
+      </div>
+
       {/* filter by author section */}
       <div className="flex flex-col">
-        <p className="text-white text-sm font-bold pb-4">Filter by Author</p>
+        <p className="text-white text-sm font-bold pb-2">Filter by Author</p>
 
         <div
           onClick={() => filterByAuthor(null)}
-          className={`flex flex-row space-x-2 pb-4 cursor-pointer ${
+          className={`flex flex-row space-x-2 pb-2 cursor-pointer ${
             selectedTag === null ? "text-teal-500" : "text-white"
           }`}
         >
@@ -125,11 +115,11 @@ const SidebarBlogComponent = ({
 
       {/* category section */}
       <div className="flex flex-col">
-        <p className="text-white text-sm font-bold pb-4">Category</p>
+        <p className="text-white text-sm font-bold pb-2">Category</p>
 
         <div
           onClick={() => handleCategorySelect(null)}
-          className={`flex flex-row space-x-2 pb-4 cursor-pointer ${
+          className={`flex flex-row space-x-2 pb-2 cursor-pointer ${
             selectedCategory === null ? "text-teal-500" : "text-white"
           }`}
         >
@@ -143,7 +133,7 @@ const SidebarBlogComponent = ({
 
         <div className="flex flex-wrap">
           {categoryData
-            .slice(0, seeAllCategories ? authorData.length : 3)
+            .slice(0, seeAllCategories ? categoryData.length : 3)
             .map((item) => (
               <div
                 key={item.id}
@@ -179,11 +169,11 @@ const SidebarBlogComponent = ({
 
       {/* tags section */}
       <div className="flex flex-col">
-        <p className="text-white text-sm font-bold pb-4">Tags</p>
+        <p className="text-white text-sm font-bold pb-2">Tags</p>
 
         <div
           onClick={() => handleTagSelect(null)}
-          className={`flex flex-row space-x-2 pb-4 cursor-pointer ${
+          className={`flex flex-row space-x-2 pb-2 cursor-pointer ${
             selectedTag === null ? "text-teal-500" : "text-white"
           }`}
         >
@@ -196,7 +186,7 @@ const SidebarBlogComponent = ({
         </div>
 
         <div className="flex flex-wrap">
-          {tagData.slice(0, seeAllTags ? authorData.length : 3).map((item) => (
+          {tagData.slice(0, seeAllTags ? tagData.length : 3).map((item) => (
             <div
               key={item.id}
               onClick={() => handleTagSelect(item.tagName)}

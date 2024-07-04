@@ -85,7 +85,7 @@ const BlogListContentComponent = ({ blogs }: BlogListContentProps) => {
                   key={category}
                   className="flex justify-center items-center px-3 border-2 border-teal-500 hover:bg-teal-500 rounded-full"
                 >
-                  <p className="text-white text-[10px] font-semibold">
+                  <p className="text-white text-[8px] font-semibold">
                     {category}
                   </p>
                 </div>
@@ -93,7 +93,7 @@ const BlogListContentComponent = ({ blogs }: BlogListContentProps) => {
             </div>
           </div>
         </div>
-      ))}
+      )).reverse()}
     </div>
   );
 };
