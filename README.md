@@ -35,16 +35,21 @@ Open http://localhost:3000 in your browser to view the project.
 ![Screenshot 2024-06-26 at 16 01 52](https://github.com/techiemokhele/classnova/assets/67394147/b0c426ee-166c-4611-819e-3e974beced3c)
 
 ## Shop page
-![Screenshot 2024-06-26 at 16 02 04](https://github.com/techiemokhele/classnova/assets/67394147/19b51625-5ecc-428c-9174-188fca747fcc)
+![Screenshot 2024-07-04 at 14 06 37](https://github.com/techiemokhele/classnova/assets/67394147/96982f20-8876-4503-8c3b-8eb29e374339)
 
 ## Products page
-![Screenshot 2024-06-26 at 16 02 23](https://github.com/techiemokhele/classnova/assets/67394147/1b3198b9-fa5e-4a49-8270-a27b388d2d18)
+![Screenshot 2024-07-04 at 14 07 41](https://github.com/techiemokhele/classnova/assets/67394147/311ff5d3-7ce9-46f0-91b6-da26ddf737c3)
 
 ## Single product
-![Screenshot 2024-06-26 at 16 02 48](https://github.com/techiemokhele/classnova/assets/67394147/0dc6370c-d43a-410b-bf22-54bd95f0ed83)
+![Screenshot 2024-07-04 at 14 08 36](https://github.com/techiemokhele/classnova/assets/67394147/b51e33d8-9f86-400d-a27d-9d5c1a3f6203)
 
 ## Cart page
-![Screenshot 2024-06-26 at 16 03 01](https://github.com/techiemokhele/classnova/assets/67394147/98114ea0-2dc2-41c7-8c70-9d2933f3fb02)
+![Screenshot 2024-07-04 at 14 09 16](https://github.com/techiemokhele/classnova/assets/67394147/00191043-a8a1-49da-babf-f1ae689fa486)
 
 ## Checkout page
-![Screenshot 2024-06-26 at 16 03 19](https://github.com/techiemokhele/classnova/assets/67394147/4127f6d4-9a15-4133-8bb8-63782c47a754)
+![Screenshot 2024-07-04 at 14 09 53](https://github.com/techiemokhele/classnova/assets/67394147/81b2e587-dcc3-452d-930c-cc1da0657178)
+
+## About us page
+![Screenshot 2024-07-04 at 14 11 01](https://github.com/techiemokhele/classnova/assets/67394147/6f2ed005-4d6b-44ed-afb0-384efeffd06c)
+
+
