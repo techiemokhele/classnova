@@ -56,7 +56,7 @@ const BlogPostBannerComponent = ({ params }: { params: BlogDataParams }) => {
           </div>
 
           <div className="flex flex-col w-full justify-center items-center">
-            <p className="text-xs text-white font-thin">Share this post</p>
+            <p className="text-xs text-white font-normal">Share this post</p>
             <div className="flex flex-row space-x-3 justify-center items-start pt-2">
               <a href="#">
                 <FaXTwitter className="text-white size-3" />

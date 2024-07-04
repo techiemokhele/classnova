@@ -58,7 +58,7 @@ const SignInPage = () => {
         {/* title section */}
         <div className="flex flex-col mb-6">
           <h1 className="text-white font-bold text-3xl">Welcome back.</h1>
-          <p className="text-white font-thin text-xs">
+          <p className="text-white font-normal text-xs">
             Ready to explore the best shopping experience again.
           </p>
         </div>
@@ -143,7 +143,7 @@ const SignInPage = () => {
         {/* submit section */}
         <div className="w-full flex flex-col mt-6">
           <CustomButtonComponent onClick={handleSubmit} text="Sign In" />
-          <p className="text-[12px] text-white font-thin pt-2 self-center">
+          <p className="text-[12px] text-white font-normal pt-2 self-center">
             Don't have an account?{" "}
             <span
               onClick={() => router.push("/sign-up")}

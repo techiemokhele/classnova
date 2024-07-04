@@ -66,7 +66,7 @@ const ProductDetailPage = ({ params }: { params: { slug: string } }) => {
   };
 
   return (
-    <div className="container mx-auto pt-20 pb-6 flex flex-col  w-full">
+    <div className="pt-20 pb-6 flex flex-col  w-full">
       <ShopAdBannerComponent
         discountText="Welcome20"
         extraText="Get 20% off using this promo code"
@@ -77,7 +77,7 @@ const ProductDetailPage = ({ params }: { params: { slug: string } }) => {
         bigBanner={false}
       />
 
-      <div className="pt-6 flex flex-col md:flex-row lg:flex-row justify-between space-y-4 md:space-y-0 lg:space-y-0 space-x-0 md:space-x-4 lg:space-x-4">
+      <div className="container mx-auto pt-6 flex flex-col md:flex-row lg:flex-row justify-between space-y-4 md:space-y-0 lg:space-y-0 space-x-0 md:space-x-4 lg:space-x-4">
         <div className="w-full md:w-1/2 lg:w-1/2 h-[300px]  md:h-[450px] lg:h-[450px] overflow-hidden">
           <Image
             priority
@@ -96,7 +96,7 @@ const ProductDetailPage = ({ params }: { params: { slug: string } }) => {
 
           <div className="flex flex-row pt-2 pb-6 space-x-2">
             <StarRatingComponent rating={product.productRating} />
-            <p className="text-white text-xs font-thin">
+            <p className="text-white text-xs font-normal">
               ({formatDecimalNumber(product.productReviews)} user reviews)
             </p>
           </div>
@@ -111,7 +111,7 @@ const ProductDetailPage = ({ params }: { params: { slug: string } }) => {
             </p>
           </div>
 
-          <p className="text-white text-xs font-thin pb-2">
+          <p className="text-white text-xs font-normal pb-2">
             SKU: {product.productSku}
           </p>
 
@@ -119,7 +119,7 @@ const ProductDetailPage = ({ params }: { params: { slug: string } }) => {
             {product.productDescription}
           </p>
 
-          <p className="text-white text-[12px] font-thin">
+          <p className="text-white text-[12px] font-normal">
             Culpa ex dolore incididunt nulla adipisicing in pariatur ea commodo
             non. Voluptate ut cillum aute aliquip anim mollit. Labore culpa
             veniam velit exercitation aliqua eu anim cupidatat ipsum fugiat amet

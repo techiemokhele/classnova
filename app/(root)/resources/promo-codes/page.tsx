@@ -16,13 +16,13 @@ const PromoCodePages = () => {
         <h1 className="text-3xl text-white font-bold">
           Promo & Discount Codes
         </h1>
-        <p className="text-[12px] text-white font-thin py-4">
+        <p className="text-[12px] text-white font-normal py-4">
           Use real Spendio coupon codes to save a ton of money on your
           favorites. Look through our specials and offers to get the equipment
           you need to step up your game.
         </p>
 
-        <p className="text-[12px] text-white font-thin">
+        <p className="text-[12px] text-white font-normal">
           You can only access exclusive deals and Spendio discount codes as a{" "}
           <span
             onClick={handleNavigator}
@@ -46,7 +46,7 @@ const PromoCodePages = () => {
         <div className="absolute top-0 left-0 px-8 w-full h-full flex justify-start items-center bg-black bg-opacity-50">
           <h2 className="text-2xl text-white font-bold">
             Welcome Promo Code: SAVE20 <br />
-            <span className="text-[14px] text-white font-thin pt-6">
+            <span className="text-[14px] text-white font-normal pt-6">
               Save Up To <span className="font-bold">20%</span> on all purchases
             </span>
           </h2>
@@ -62,7 +62,7 @@ const PromoCodePages = () => {
           Can I obtain a discount as an existing Member?
         </p>
 
-        <p className="text-[12px] text-white font-thin py-4">
+        <p className="text-[12px] text-white font-normal py-4">
           Indeed. As a{" "}
           <span
             onClick={handleNavigator}
@@ -78,7 +78,7 @@ const PromoCodePages = () => {
           Does Spendio offer seasonal promotions?
         </p>
 
-        <p className="text-[12px] text-white font-thin">
+        <p className="text-[12px] text-white font-normal">
           Indeed, our end-of-season specials provide discounts on a number of
           your favorite Spendio items. As a{" "}
           <span

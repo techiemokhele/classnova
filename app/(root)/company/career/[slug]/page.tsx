@@ -65,7 +65,7 @@ const CareerSinglePage = ({ params }: { params: CareerItemParams }) => {
           {career.jobTitle}
         </h1>
 
-        <p className="text-[12px] text-white font-thin pb-8">
+        <p className="text-[12px] text-white font-normal pb-8">
           {career.jobDescription}
         </p>
 
@@ -73,7 +73,7 @@ const CareerSinglePage = ({ params }: { params: CareerItemParams }) => {
         <div className="flex flex-col space-y-4 pb-6">
           <h4 className="text-[l] text-white font-semibold">Job overview</h4>
 
-          <p className="text-[12px] text-white font-thin">
+          <p className="text-[12px] text-white font-normal">
             Eu adipisicing minim cupidatat labore incididunt ullamco ad. Nostrud
             qui qui irure duis irure eiusmod nisi eiusmod sit. Reprehenderit
             laboris nostrud excepteur enim minim incididunt Lorem aute ex amet
@@ -84,7 +84,7 @@ const CareerSinglePage = ({ params }: { params: CareerItemParams }) => {
 
           {career.jobOverview.map((item) => (
             <ul key={item} className="container list-disc leading-tight">
-              <li className="text-white text-[12px] font-thin">{item}</li>
+              <li className="text-white text-[12px] font-normal">{item}</li>
             </ul>
           ))}
         </div>
@@ -95,7 +95,7 @@ const CareerSinglePage = ({ params }: { params: CareerItemParams }) => {
             Responsibilities
           </h4>
 
-          <p className="text-[12px] text-white font-thin">
+          <p className="text-[12px] text-white font-normal">
             Lorem labore occaecat sint est mollit officia. Veniam consequat id
             ex ea. Commodo sint duis irure id ullamco quis incididunt magna
             deserunt aliqua. Nulla et et occaecat sunt velit reprehenderit
@@ -104,7 +104,7 @@ const CareerSinglePage = ({ params }: { params: CareerItemParams }) => {
 
           {career.responsibilities.map((item) => (
             <ul key={item} className="container list-disc leading-tight">
-              <li className="text-white text-[12px] font-thin">{item}</li>
+              <li className="text-white text-[12px] font-normal">{item}</li>
             </ul>
           ))}
         </div>
@@ -113,7 +113,7 @@ const CareerSinglePage = ({ params }: { params: CareerItemParams }) => {
         <div className="flex flex-col space-y-4 pb-6">
           <h4 className="text-[l] text-white font-semibold">Requirements</h4>
 
-          <p className="text-[12px] text-white font-thin">
+          <p className="text-[12px] text-white font-normal">
             Amet laboris aute excepteur Lorem labore occaecat sint est mollit
             officia. Veniam consequat id ex ea. Commodo sint duis irure id
             ullamco quis incididunt magna deserunt aliqua. Nulla et et occaecat
@@ -122,7 +122,7 @@ const CareerSinglePage = ({ params }: { params: CareerItemParams }) => {
 
           {career.requirements.map((item) => (
             <ul key={item} className="container list-disc leading-tight">
-              <li className="text-white text-[12px] font-thin">{item}</li>
+              <li className="text-white text-[12px] font-normal">{item}</li>
             </ul>
           ))}
         </div>
@@ -132,16 +132,16 @@ const CareerSinglePage = ({ params }: { params: CareerItemParams }) => {
           <h4 className="text-[l] text-white font-semibold">Benefits</h4>
 
           <ul className="container list-disc leading-tight">
-            <li className="text-white text-[12px] font-thin">
+            <li className="text-white text-[12px] font-normal">
               Mostrud qui dolore commodo.
             </li>
-            <li className="text-white text-[12px] font-thin">
+            <li className="text-white text-[12px] font-normal">
               Sunt velit reprehenderit
             </li>
-            <li className="text-white text-[12px] font-thin">
+            <li className="text-white text-[12px] font-normal">
               Tus veniam consequat
             </li>
-            <li className="text-white text-[12px] font-thin">
+            <li className="text-white text-[12px] font-normal">
               Excepteur Lorem labore
             </li>
           </ul>
@@ -151,7 +151,7 @@ const CareerSinglePage = ({ params }: { params: CareerItemParams }) => {
         <div className="flex flex-col space-y-4 pb-6">
           <h4 className="text-[l] text-white font-semibold">Salary</h4>
 
-          <p className="text-[12px] text-white font-thin">
+          <p className="text-[12px] text-white font-normal">
             R{formatDecimalNumber(career.salary)} / {career.paymentRecurrence}
           </p>
         </div>

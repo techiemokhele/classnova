@@ -70,10 +70,10 @@ const ReviewsAnalyticsComponent = () => {
             </div>
 
             <h1 className="text-white font-bold text-[14px]">Total Feedback</h1>
-            <p className="text-white text-[20px] font-thin">
+            <p className="text-white text-[20px] font-normal">
               {formatNumber(10000)}
             </p>
-            <p className="text-white text-xs font-thin">
+            <p className="text-white text-xs font-normal">
               Growth in reviews on this year
             </p>
           </div>
@@ -86,12 +86,12 @@ const ReviewsAnalyticsComponent = () => {
 
           <h1 className="text-white font-bold text-[14px]">Average Rating</h1>
           <div className="flex flex-row items-center">
-            <p className="text-white text-[20px] font-thin mr-2">4.5/5</p>
+            <p className="text-white text-[20px] font-normal mr-2">4.5/5</p>
             <span>
               <StarRatingComponent rating={4.5} />
             </span>
           </div>
-          <p className="text-white text-xs font-thin">
+          <p className="text-white text-xs font-normal">
             Average rating on this year
           </p>
         </div>
@@ -105,19 +105,19 @@ const ReviewsAnalyticsComponent = () => {
 
         <h1 className="text-white font-bold text-[14px]">Average Rating</h1>
         <div className="flex flex-row items-center">
-          <p className="text-white text-[20px] font-thin mr-2">5.0/5</p>
+          <p className="text-white text-[20px] font-normal mr-2">5.0/5</p>
           <span>
             <StarRatingComponent rating={5} />
           </span>
         </div>
-        <p className="text-white text-xs font-thin">
+        <p className="text-white text-xs font-normal">
           Average rating on this year
         </p>
       </div>
 
       <div className="flex flex-col items-center space-y-2">
         <h1 className="text-white font-bold text-[14px]">Overall Stats</h1>
-        <p className="text-white text-[12px] font-thin">
+        <p className="text-white text-[12px] font-normal">
           {formatNumber(10000)}
         </p>
         <div className="mt-4">

@@ -85,10 +85,10 @@ const CartPage = () => {
                 </div>
 
                 <div>
-                  <p className="text-white text-xs font-thin pb-2">
+                  <p className="text-white text-xs font-normal pb-2">
                     SKU: {item.productSku}
                   </p>
-                  <p className="text-white font-thin text-xs">
+                  <p className="text-white font-normal text-xs">
                     {item.productCategory} category
                   </p>
                 </div>
@@ -110,7 +110,7 @@ const CartPage = () => {
                     {item.productDescription}
                   </p>
 
-                  <p className="text-white text-xs font-thin pt-2">
+                  <p className="text-white text-xs font-normal pt-2">
                     Enim exercitation pariatur dolor duis. Adipisicing anim duis
                     consectetur id. Duis nisi adipisicing ullamco exercitation
                     deserunt amet. Nostrud et proident enim exercitation duis.
@@ -156,11 +156,11 @@ const CartPage = () => {
           {cart.map((item) => (
             <div key={item.id} className="flex flex-row justify-between pb-2">
               <div className="flex items-center">
-                <p className="text-white text-xs font-thin">
+                <p className="text-white text-xs font-normal">
                   {item.productName}
                 </p>
               </div>
-              <p className="text-white text-[12px] font-thin">
+              <p className="text-white text-[12px] font-normal">
                 R{formatDecimalNumber(item.productPrice)}
               </p>
             </div>
@@ -170,9 +170,9 @@ const CartPage = () => {
 
           <div className="flex flex-row justify-between pb-2">
             <div className="flex items-center">
-              <p className="text-white text-xs font-thin">Delivery free</p>
+              <p className="text-white text-xs font-normal">Delivery free</p>
             </div>
-            <p className="text-white text-[12px] font-thin">
+            <p className="text-white text-[12px] font-normal">
               R{deliveryAmount}
             </p>
           </div>
@@ -180,14 +180,14 @@ const CartPage = () => {
           <div className="flex flex-col leading-none">
             <div className="flex flex-row justify-between pb-2">
               <div className="flex items-center">
-                <p className="text-white text-xs font-thin">Delivery via:</p>
+                <p className="text-white text-xs font-normal">Delivery via:</p>
               </div>
               <p className="text-white text-xs">Transit Team</p>
             </div>
 
             <div className="flex flex-row justify-between pb-2">
               <div className="flex items-center">
-                <p className="text-white text-xs font-thin">Delivery to</p>
+                <p className="text-white text-xs font-normal">Delivery to</p>
               </div>
               <p className="text-white text-xs">Simphiwe Khumalo</p>
             </div>
@@ -206,7 +206,7 @@ const CartPage = () => {
 
           <Image
             priority
-            src={"/images/web/shop/payment.png"}
+            src={"/images/web/shop/payment.webp"}
             alt="payment-icons"
             width={1300}
             height={1300}

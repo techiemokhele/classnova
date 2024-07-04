@@ -66,7 +66,7 @@ const SignUpPage = () => {
         {/* title section */}
         <div className="flex flex-col mb-6">
           <h1 className="text-white font-bold text-3xl">Get started.</h1>
-          <p className="text-white font-thin text-xs">
+          <p className="text-white font-normal text-xs">
             Explore the best shopping experience on
           </p>
         </div>
@@ -174,7 +174,7 @@ const SignUpPage = () => {
         {/* submit section */}
         <div className="w-full flex flex-col mt-6">
           <CustomButtonComponent onClick={handleSubmit} text="Sign Up" />
-          <p className="text-[12px] text-white font-thin pt-2 self-center">
+          <p className="text-[12px] text-white font-normal pt-2 self-center">
             Already have an account?{" "}
             <span
               onClick={() => router.push("/sign-in")}

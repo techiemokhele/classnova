@@ -64,7 +64,7 @@ const ContactUsPages = () => {
     <div className="flex flex-col pt-20">
       {/* top title section */}
       <div className="mx-auto container flex flex-col pb-6">
-        <p className="text-white text-s text-center font-thin w-[90%] self-center">
+        <p className="text-white text-s text-center font-normal w-[90%] self-center">
           At Spendio, we value your feedback, questions, and concerns. Whether
           you need assistance with our services, have a query about your
           account, or just want to learn more about what we do, our team is here
@@ -188,7 +188,7 @@ const ContactUsPages = () => {
             <h4 className="text-white text-l font-semibold pb-4">
               Email Address
             </h4>
-            <p className="text-white text-xs font-thin">
+            <p className="text-white text-xs font-normal">
               For general inquiries, please email us at{" "}
               <span className="text-teal-500 cursor-pointer">
                 <a href="mailto:info@Spendio.com">info@Spendio.com</a>
@@ -201,7 +201,7 @@ const ContactUsPages = () => {
             <h4 className="text-white text-l text-center font-semibold pb-4">
               Tel Number
             </h4>
-            <p className="text-white text-xs text-center font-thin">
+            <p className="text-white text-xs text-center font-normal">
               You can call us at{" "}
               <span className="text-teal-500 cursor-pointer">
                 <a href="tel:+123-456-7890">+123-456-7890</a>
@@ -215,7 +215,7 @@ const ContactUsPages = () => {
             <h4 className="text-white text-l font-semibold pb-4">
               Our Address
             </h4>
-            <p className="text-white text-xs font-thin text-end">
+            <p className="text-white text-xs font-normal text-end">
               Spendio Headquarters
               <br />
               123 Innovation Drive Tech City,

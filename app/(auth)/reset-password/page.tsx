@@ -46,7 +46,7 @@ const ResetPasswordPage = () => {
         {/* title section */}
         <div className="flex flex-col mb-6">
           <h1 className="text-white font-bold text-3xl">Change password.</h1>
-          <p className="text-white font-thin text-xs">
+          <p className="text-white font-normal text-xs">
             This password will be used next time you login.
           </p>
         </div>
