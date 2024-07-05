@@ -35,7 +35,7 @@ const BlogPostBannerComponent = ({ params }: { params: BlogDataParams }) => {
         <h1 className="text-white text-3xl leading-none font-semibold pb-4">
           {blog.blogTitle}
         </h1>
-        <p className="text-white text-[10px]">{blog.blogExcerpt}</p>
+        <p className="text-white text-xs">{blog.blogExcerpt}</p>
 
         <div className="flex flex-row w-full justify-between pt-6 md:pt-10 lg:pt-10">
           <div className="flex flex-row w-full space-x-4 justify-center items-center">
@@ -56,7 +56,7 @@ const BlogPostBannerComponent = ({ params }: { params: BlogDataParams }) => {
           </div>
 
           <div className="flex flex-col w-full justify-center items-center">
-            <p className="text-[10px] text-white font-thin">Share this post</p>
+            <p className="text-xs text-white font-normal">Share this post</p>
             <div className="flex flex-row space-x-3 justify-center items-start pt-2">
               <a href="#">
                 <FaXTwitter className="text-white size-3" />

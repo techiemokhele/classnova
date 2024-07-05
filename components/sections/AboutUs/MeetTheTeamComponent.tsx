@@ -8,7 +8,7 @@ const MeetTheTeamComponent = () => {
       <h1 className="text-white text-3xl font-bold pb-6 self-center">
         Meet the team
       </h1>
-      <p className="text-[12px] text-white text-center font-thin pb-6 px-10">
+      <p className="text-[12px] text-white text-center font-normal pb-6 px-10">
         Each member brings a wealth of experience and passion to their role,
         contributing to our shared vision of transforming local commerce and
         creating meaningful connections.
@@ -37,7 +37,7 @@ const MeetTheTeamComponent = () => {
             </div>
 
             <div className="flex justify-center items-center px-2">
-              <p className="text-[12px] text-white text-center font-thin">
+              <p className="text-[12px] text-white text-center font-normal">
                 {item.empDescription}
               </p>
             </div>

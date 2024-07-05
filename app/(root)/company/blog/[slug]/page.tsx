@@ -21,7 +21,7 @@ const BlogSinglePage = ({ params }: { params: Params }) => {
 
           {/* mobile view */}
           <div className="md:hidden lg:hidden px-4 py-2 mt-4 bg-gray-800 rounded-md">
-            <p className="text-white text-[16px] font-bold pb-4">
+            <p className="text-white text-base font-bold pb-4">
               Related stories
             </p>
             <BlogRelatedStoriesComponent params={params} />

@@ -22,7 +22,7 @@ const PdfPickerComponent = ({ onFileSelect }: PdfPickerComponentProps) => {
       <label className="block text-[12px] font-medium text-white justify-center items-start space-x-4">
         Attachment{" "}
         {selectedFile && (
-          <span className="text-[10px] text-gray-400">{selectedFile.name}</span>
+          <span className="text-xs text-gray-400">{selectedFile.name}</span>
         )}
       </label>
       <input

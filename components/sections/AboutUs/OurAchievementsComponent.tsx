@@ -36,7 +36,7 @@ const OurAchievementsComponent = () => {
             <h1 className="text-white font-bold text-center text-m md:text-2xl lg:text-2xl py-2">
               {item.company}
             </h1>
-            <p className="text-white font-medium text-[8px] lg:text-[10px] text-center px-2">
+            <p className="text-white font-medium text-[8px] lg:text-xs text-center px-2">
               {item.achievement}
             </p>
           </div>

@@ -55,7 +55,7 @@ const BannerComponent = ({
           )}
 
           <h1 className="text-4xl font-bold my-4">{title}</h1>
-          <p className="text-lg mb-6 font-thin text-[14px]">{description}</p>
+          <p className="text-lg mb-6 font-normal text-[14px]">{description}</p>
 
           {buttonText && (
             <CustomButtonComponent

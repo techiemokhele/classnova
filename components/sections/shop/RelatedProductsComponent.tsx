@@ -59,10 +59,10 @@ const RelatedProductsComponent = ({
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full pb-4">
       <div className="flex-grow border-t border-gray-400 flex my-4"></div>
 
-      <h2 className="text-2xl text-white font-bold my-2">{text}</h2>
+      <h2 className="text-2xl text-white font-bold my-6">{text}</h2>
       <div className="flex flex-wrap">
         {relatedProducts.slice(0, 3).map((product, index) => (
           <div
@@ -97,7 +97,7 @@ const RelatedProductsComponent = ({
                 {product.productName}
               </h3>
 
-              <p className="text-white text-[10px] font-thin px-2 line-clamp-1">
+              <p className="text-white text-xs font-normal px-2 line-clamp-1">
                 {product.productDescription}
               </p>
 

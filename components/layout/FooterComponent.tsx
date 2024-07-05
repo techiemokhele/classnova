@@ -42,7 +42,7 @@ const FooterComponent = () => {
               loading="lazy"
             />
 
-            <p className="text-[12px] text-white font-thin">
+            <p className="text-[12px] text-white font-normal">
               We believe in the potential of community-driven commerce and are
               committed to building a platform that benefits local businesses
               and encourages meaningful connections.
@@ -56,7 +56,7 @@ const FooterComponent = () => {
               {links.resources.map((link) => (
                 <li key={link.href}>
                   <Link href={link.href}>
-                    <span className="text-gray-300 hover:text-white font-thin text-[12px]">
+                    <span className="text-gray-300 hover:text-white font-normal text-[12px]">
                       {link.label}
                     </span>
                   </Link>
@@ -72,7 +72,7 @@ const FooterComponent = () => {
               {links.help.map((link) => (
                 <li key={link.href}>
                   <Link href={link.href}>
-                    <span className="text-gray-300 hover:text-white font-thin text-[12px]">
+                    <span className="text-gray-300 hover:text-white font-normal text-[12px]">
                       {link.label}
                     </span>
                   </Link>
@@ -88,7 +88,7 @@ const FooterComponent = () => {
               {links.company.map((link) => (
                 <li key={link.href}>
                   <Link href={link.href}>
-                    <span className="text-gray-300 hover:text-white font-thin text-[12px]">
+                    <span className="text-gray-300 hover:text-white font-normal text-[12px]">
                       {link.label}
                     </span>
                   </Link>
@@ -113,7 +113,7 @@ const FooterComponent = () => {
               loading="lazy"
             />
 
-            <p className="text-[12px] text-white font-thin text-start">
+            <p className="text-[12px] text-white font-normal text-start">
               We believe in the potential of community-driven commerce and are
               committed to building a platform that benefits consumers and
               encourages meaningful connections.
@@ -127,7 +127,7 @@ const FooterComponent = () => {
               {links.resources.map((link) => (
                 <li key={link.href}>
                   <Link href={link.href}>
-                    <span className="text-gray-300 hover:text-white font-thin text-[12px]">
+                    <span className="text-gray-300 hover:text-white font-normal text-[12px]">
                       {link.label}
                     </span>
                   </Link>
@@ -143,7 +143,7 @@ const FooterComponent = () => {
               {links.help.map((link) => (
                 <li key={link.href}>
                   <Link href={link.href}>
-                    <span className="text-gray-300 hover:text-white font-thin text-[12px]">
+                    <span className="text-gray-300 hover:text-white font-normal text-[12px]">
                       {link.label}
                     </span>
                   </Link>
@@ -159,7 +159,7 @@ const FooterComponent = () => {
               {links.company.map((link) => (
                 <li key={link.href}>
                   <Link href={link.href}>
-                    <span className="text-gray-300 hover:text-white font-thin text-[12px]">
+                    <span className="text-gray-300 hover:text-white font-normal text-[12px]">
                       {link.label}
                     </span>
                   </Link>
@@ -172,7 +172,7 @@ const FooterComponent = () => {
 
       {/* Bottom footer */}
       <div className="bg-gray-700 py-4 text-center">
-        <p className="text-gray-300 text-[10px]">
+        <p className="text-gray-300 text-xs">
           &copy; 2024 Spendio (Pty) Ltd. All rights reserved
         </p>
       </div>

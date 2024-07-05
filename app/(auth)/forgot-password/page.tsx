@@ -41,7 +41,7 @@ const ForgotPasswordPage = () => {
           <h1 className="text-white font-bold text-3xl">
             Forgot your password?
           </h1>
-          <p className="text-white font-thin text-xs">
+          <p className="text-white font-normal text-xs">
             Do not worry, it happens to the best of us.
           </p>
         </div>
@@ -53,15 +53,22 @@ const ForgotPasswordPage = () => {
             value={email}
             onChange={(text) => setEmail(text)}
             placeholder="username@company.com"
-            label="Email address"
+            label={
+              !error ? (
+                "Email address"
+              ) : (
+                <>
+                  {error && <p className="text-red-500 text-[8px]">{error}</p>}
+                </>
+              )
+            }
           />
-          {error && <p className="text-red-500 text-[10px]">{error}</p>}
         </div>
 
         {/* submit section */}
         <div className="w-full flex flex-col mt-6">
           <CustomButtonComponent onClick={handleSubmit} text="Reset Password" />
-          <p className="text-[12px] text-white font-thin pt-2 self-center">
+          <p className="text-[12px] text-white font-normal pt-2 self-center">
             Do you remember your password?{" "}
             <span
               onClick={() => router.push("/sign-in")}

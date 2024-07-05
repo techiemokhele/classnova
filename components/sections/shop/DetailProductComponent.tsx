@@ -28,7 +28,7 @@ const DetailProductComponent = ({
             </div>
 
             <div className="flex flex-col items-end ">
-              <p className="text-white text-[10px] font-thin">
+              <p className="text-white text-xs font-normal">
                 Qty: {item.quantity}
               </p>
               <p className="text-white text-l font-bold">
@@ -41,7 +41,7 @@ const DetailProductComponent = ({
 
       <div className="flex flex-col">
         <div className="flex flex-row justify-between">
-          <h4 className="text-white text-[12px] font-thin">Subtotal</h4>
+          <h4 className="text-white text-[12px] font-normal">Subtotal</h4>
           <p className="text-white text-s d font-bold">
             R{formatDecimalNumber(subtotal)}
           </p>
@@ -50,7 +50,7 @@ const DetailProductComponent = ({
 
       <div className="flex flex-col">
         <div className="flex flex-row justify-between">
-          <h4 className="text-white text-[12px] font-thin">Delivery Fee</h4>
+          <h4 className="text-white text-[12px] font-normal">Delivery Fee</h4>
           <p className="text-white text-s font-bold">
             R{formatDecimalNumber(deliveryAmount)}.00
           </p>
@@ -59,7 +59,7 @@ const DetailProductComponent = ({
 
       <div className="flex flex-col">
         <div className="flex flex-row justify-between">
-          <h4 className="text-white text-[12px] font-thin">Total</h4>
+          <h4 className="text-white text-[12px] font-normal">Total</h4>
           <p className="text-teal-500 text-s font-bold">
             R{formatDecimalNumber(total)}
           </p>

@@ -30,7 +30,7 @@ const NoResultsFoundComponent = ({
         />
       </div>
 
-      <h4 className="text-s md:text-xl lg:text-xl text-white text-center font-thin pb-8">
+      <h4 className="text-s md:text-xl lg:text-xl text-white text-center font-normal pb-8">
         {message}
       </h4>
 

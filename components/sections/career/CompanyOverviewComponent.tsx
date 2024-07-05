@@ -18,7 +18,7 @@ const CompanyOverviewComponent = () => {
           Welcome to Spendio, where talent meets opportunity!
         </h1>
 
-        <p className="text-[12px] font-thin text-white py-6">
+        <p className="text-[12px] font-normal text-white py-6">
           At Spendio, we are passionate about offering consumers unique and
           high-quality products from their own neighborhoods.
         </p>
@@ -36,7 +36,7 @@ const CompanyOverviewComponent = () => {
         <p className="text-[18px] font-bold text-white">
           Innovation and Impactful Projects
         </p>
-        <p className="text-[10px] font-thin text-white">
+        <p className="text-xs font-normal text-white">
           At Spendio, innovation drives our mission to deliver unique,
           high-quality products sourced from local neighborhoods. Our impactful
           projects empower communities, foster creativity, and promote
@@ -49,7 +49,7 @@ const CompanyOverviewComponent = () => {
         <p className="text-[18px] font-bold text-white">
           Supportive Environment
         </p>
-        <p className="text-[10px] font-thin text-white">
+        <p className="text-xs font-normal text-white">
           We foster a supportive environment where every team member can thrive.
           Our inclusive culture encourages collaboration, creativity, and
           innovation, allowing you to unlock your potential. Join us and be part
@@ -62,7 +62,7 @@ const CompanyOverviewComponent = () => {
         <p className="text-[18px] font-bold text-white">
           Continuous Learning and Growth
         </p>
-        <p className="text-[10px] font-thin text-white">
+        <p className="text-xs font-normal text-white">
           At Spendio, we prioritise continuous learning and growth. We believe
           in empowering our team to unlock their full potential through ongoing
           education and professional development. Join us to be part of a
@@ -76,7 +76,7 @@ const CompanyOverviewComponent = () => {
         <p className="text-[18px] font-bold text-white">
           Challenging and Rewarding Work
         </p>
-        <p className="text-[10px] font-thin text-white">
+        <p className="text-xs font-normal text-white">
           We provide challenging and rewarding work, encouraging team members to
           unlock their potential. Join our team of innovators and problem
           solvers dedicated to delivering unique, high-quality products from

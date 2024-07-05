@@ -46,7 +46,7 @@ const TestimonialAuthComponent = () => {
             </div>
 
             <p className="text-[12px] text-white font-bold">{user.username}</p>
-            <p className="text-[10px] text-white font-medium opacity-50">
+            <p className="text-xs text-white font-medium opacity-50">
               {user.position}
             </p>
           </div>

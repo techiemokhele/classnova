@@ -17,13 +17,13 @@ const ProductDescriptionComponent = () => {
   };
 
   return (
-    <div className="flex flex-col w-full py-8 space-y-4">
+    <div className="flex flex-col w-full py-8 space-y-4 container mx-auto ">
       <div className="flex flex-row space-x-4 ">
         <h4
           className={`text-lg uppercase cursor-pointer ${
             descriptionActive
               ? "text-teal-500 font-bold "
-              : "text-white font-thin"
+              : "text-white font-normal"
           }`}
           onClick={handleDescriptionClick}
         >
@@ -34,7 +34,7 @@ const ProductDescriptionComponent = () => {
           className={`text-lg uppercase cursor-pointer ${
             shippingActive
               ? "text-teal-500 font-bold "
-              : "text-white  font-thin"
+              : "text-white  font-normal"
           }`}
           onClick={handleShippingClick}
         >
@@ -44,7 +44,7 @@ const ProductDescriptionComponent = () => {
 
       <div className="flex flex-col space-y-2">
         {descriptionActive && (
-          <p className="text-white text-[12px] font-thin">
+          <p className="text-white text-[12px] font-normal">
             Your ultimate destination for quality and style. Each product in our
             collection is carefully curated to ensure exceptional craftsmanship
             and innovative design. From elegant apparel to cutting-edge
@@ -59,7 +59,7 @@ const ProductDescriptionComponent = () => {
         )}
 
         {shippingActive && (
-          <p className="text-white text-[12px] font-thin">
+          <p className="text-white text-[12px] font-normal">
             We prioritise getting your purchases to you swiftly and securely. We
             offer multiple shipping methods to suit your needs, including
             standard, expedited, and express shipping. Standard shipping is
