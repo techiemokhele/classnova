@@ -48,12 +48,12 @@ const BlogListContentComponent = ({ blogs }: BlogListContentProps) => {
                   {item.author}
                 </p>
 
-                <p className="md:hidden lg:hidden text-white text-[12px] md:text-[12px] lg:text-[12px] font-thin">
+                <p className="md:hidden lg:hidden text-white text-[12px] md:text-[12px] lg:text-[12px] font-normal">
                   {item.createdAt}
                 </p>
               </div>
 
-              <p className="hidden md:block lg:block text-white text-[12px] md:text-[12px] lg:text-[12px] font-thin">
+              <p className="hidden md:block lg:block text-white text-[12px] md:text-[12px] lg:text-[12px] font-normal">
                 {item.createdAt}
               </p>
 
@@ -73,7 +73,7 @@ const BlogListContentComponent = ({ blogs }: BlogListContentProps) => {
                 </div>
               </div>
 
-              <p className="text-[14px] text-white font-thin line-clamp-3">
+              <p className="text-[14px] text-white font-normal line-clamp-3">
                 {item.blogExcerpt}
               </p>
             </div>

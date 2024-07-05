@@ -152,7 +152,7 @@ const ProductListPage = () => {
           <div className="flex flex-wrap justify-center pt-6 space-y-1">
             <button
               key="all"
-              className={`mx-1 px-2 py-1 rounded-md text-[8px] md:text-[12px] lg:text-[12px] font-thin ${
+              className={`mx-1 px-2 py-1 rounded-md text-[8px] md:text-[12px] lg:text-[12px] font-normal ${
                 selectedCategory === null
                   ? "bg-teal-500 text-white"
                   : "bg-gray-800 text-white"
@@ -164,7 +164,7 @@ const ProductListPage = () => {
             {uniqueCategories.map((category, index) => (
               <button
                 key={index}
-                className={`mx-1 px-2 py-1 rounded-md text-[8px] md:text-[12px] lg:text-[12px] font-thin ${
+                className={`mx-1 px-2 py-1 rounded-md text-[8px] md:text-[12px] lg:text-[12px] font-normal ${
                   category === selectedCategory
                     ? "bg-teal-500 text-white"
                     : "bg-gray-800 text-white"
@@ -191,7 +191,7 @@ const ProductListPage = () => {
           <div className="space-x-1 md:space-x-4 lg:space-x-4">
             <button
               onClick={() => handleSort("price-asc")}
-              className={`px-2 py-1 rounded-md text-[8px] md:text-[12px] lg:text-[12px] font-thin ${
+              className={`px-2 py-1 rounded-md text-[8px] md:text-[12px] lg:text-[12px] font-normal ${
                 sortOption === "price-asc"
                   ? "bg-teal-500 text-white"
                   : "bg-gray-800 text-white"
@@ -202,7 +202,7 @@ const ProductListPage = () => {
 
             <button
               onClick={() => handleSort("price-desc")}
-              className={`px-2 py-1 rounded-md text-[8px] md:text-[12px] lg:text-[12px] font-thin ${
+              className={`px-2 py-1 rounded-md text-[8px] md:text-[12px] lg:text-[12px] font-normal ${
                 sortOption === "price-desc"
                   ? "bg-teal-500 text-white"
                   : "bg-gray-800 text-white"
@@ -213,7 +213,7 @@ const ProductListPage = () => {
 
             <button
               onClick={() => handleSort("a-z")}
-              className={`px-2 py-1 rounded-md text-[8px] md:text-[12px] lg:text-[12px] font-thin ${
+              className={`px-2 py-1 rounded-md text-[8px] md:text-[12px] lg:text-[12px] font-normal ${
                 sortOption === "a-z"
                   ? "bg-teal-500 text-white"
                   : "bg-gray-800 text-white"
@@ -224,7 +224,7 @@ const ProductListPage = () => {
 
             <button
               onClick={() => handleSort("z-a")}
-              className={`px-2 py-1 rounded-md text-[8px] md:text-[12px] lg:text-[12px] font-thin ${
+              className={`px-2 py-1 rounded-md text-[8px] md:text-[12px] lg:text-[12px] font-normal ${
                 sortOption === "z-a"
                   ? "bg-teal-500 text-white"
                   : "bg-gray-800 text-white"
@@ -275,7 +275,7 @@ const ProductListPage = () => {
                   >
                     {product.productName}
                   </p>
-                  <p className="text-[10px] md:text-[12px] font-thin text-white line-clamp-1">
+                  <p className="text-xs md:text-[12px] font-normal text-white line-clamp-1">
                     {product.productDescription}
                   </p>
                   <div className="flex mt-3 sm:mt-3 md:mt-4">

@@ -90,7 +90,7 @@ const JoinPage = () => {
             <h1 className="text-3xl text-white font-bold">
               Always Better To Be A Member
               <br />
-              <span className="text-[14px] text-white font-thin pt-6">
+              <span className="text-[14px] text-white font-normal pt-6">
                 Shop, Celebrate, and Benefit with the best of Spendio.
               </span>
             </h1>

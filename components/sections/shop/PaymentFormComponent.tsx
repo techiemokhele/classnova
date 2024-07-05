@@ -52,14 +52,14 @@ const PaymentFormComponent = () => {
 
       <CustomButtonComponent text="Pay Now" onClick={handlePayment} />
 
-                    <Image
-            priority
-            src={"/images/web/shop/payment.png"}
-            alt="payment-icons"
-            width={1300}
-            height={1300}
-            className="w-full h-[40px] object-contain transition-transform duration-300 ease-in-out transform hover:scale-110"
-          />
+      <Image
+        priority
+        src={"/images/web/shop/payment.webp"}
+        alt="payment-icons"
+        width={1300}
+        height={1300}
+        className="w-full h-[40px] object-contain transition-transform duration-300 ease-in-out transform hover:scale-110"
+      />
     </div>
   );
 };

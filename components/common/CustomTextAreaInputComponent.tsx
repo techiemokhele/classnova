@@ -6,9 +6,9 @@ import { TextAreaProps } from "@/types";
 const CustomTextAreaComponent = ({
   value = "",
   onChange,
-  placeholder ="",
+  placeholder = "",
   label,
-  type ="text",
+  type = "text",
   rows = 5,
 }: TextAreaProps) => {
   const [isFocused, setIsFocused] = useState(false);
@@ -51,7 +51,7 @@ const CustomTextAreaComponent = ({
         ></textarea>
       </div>
       {showError && type && (
-        <p className="text-red-500 text-[10px] mt-1">{getErrorMessage(type)}</p>
+        <p className="text-red-500 text-xs mt-1">{getErrorMessage(type)}</p>
       )}
     </div>
   );

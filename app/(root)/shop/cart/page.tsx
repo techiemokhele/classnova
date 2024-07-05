@@ -85,10 +85,10 @@ const CartPage = () => {
                 </div>
 
                 <div>
-                  <p className="text-white text-[10px] font-thin pb-2">
+                  <p className="text-white text-xs font-normal pb-2">
                     SKU: {item.productSku}
                   </p>
-                  <p className="text-white font-thin text-[10px]">
+                  <p className="text-white font-normal text-xs">
                     {item.productCategory} category
                   </p>
                 </div>
@@ -106,11 +106,11 @@ const CartPage = () => {
                 </div>
 
                 <div className="w-[78%] justify-start items-center px-2">
-                  <p className="text-white text-[10px] font-semibold">
+                  <p className="text-white text-xs font-semibold">
                     {item.productDescription}
                   </p>
 
-                  <p className="text-white text-[10px] font-thin pt-2">
+                  <p className="text-white text-xs font-normal pt-2">
                     Enim exercitation pariatur dolor duis. Adipisicing anim duis
                     consectetur id. Duis nisi adipisicing ullamco exercitation
                     deserunt amet. Nostrud et proident enim exercitation duis.
@@ -130,9 +130,7 @@ const CartPage = () => {
                       >
                         -
                       </button>
-                      <p className="mx-2 text-white text-[10px]">
-                        {item.quantity}
-                      </p>
+                      <p className="mx-2 text-white text-xs">{item.quantity}</p>
                       <button
                         onClick={() => addToCart(item)}
                         className="w-6 h-6 flex justify-center items-center bg-green-500 text-white rounded"
@@ -158,11 +156,11 @@ const CartPage = () => {
           {cart.map((item) => (
             <div key={item.id} className="flex flex-row justify-between pb-2">
               <div className="flex items-center">
-                <p className="text-white text-[10px] font-thin">
+                <p className="text-white text-xs font-normal">
                   {item.productName}
                 </p>
               </div>
-              <p className="text-white text-[12px] font-thin">
+              <p className="text-white text-[12px] font-normal">
                 R{formatDecimalNumber(item.productPrice)}
               </p>
             </div>
@@ -172,9 +170,9 @@ const CartPage = () => {
 
           <div className="flex flex-row justify-between pb-2">
             <div className="flex items-center">
-              <p className="text-white text-[10px] font-thin">Delivery free</p>
+              <p className="text-white text-xs font-normal">Delivery free</p>
             </div>
-            <p className="text-white text-[12px] font-thin">
+            <p className="text-white text-[12px] font-normal">
               R{deliveryAmount}
             </p>
           </div>
@@ -182,18 +180,16 @@ const CartPage = () => {
           <div className="flex flex-col leading-none">
             <div className="flex flex-row justify-between pb-2">
               <div className="flex items-center">
-                <p className="text-white text-[10px] font-thin">
-                  Delivery via:
-                </p>
+                <p className="text-white text-xs font-normal">Delivery via:</p>
               </div>
-              <p className="text-white text-[10px]">Transit Team</p>
+              <p className="text-white text-xs">Transit Team</p>
             </div>
 
             <div className="flex flex-row justify-between pb-2">
               <div className="flex items-center">
-                <p className="text-white text-[10px] font-thin">Delivery to</p>
+                <p className="text-white text-xs font-normal">Delivery to</p>
               </div>
-              <p className="text-white text-[10px]">Simphiwe Khumalo</p>
+              <p className="text-white text-xs">Simphiwe Khumalo</p>
             </div>
           </div>
 
@@ -201,7 +197,7 @@ const CartPage = () => {
 
           <div className="flex flex-row justify-between pb-2">
             <div className="flex items-center">
-              <p className="text-white text-[10px] font-bold">Amount</p>
+              <p className="text-white text-xs font-bold">Amount</p>
             </div>
             <p className="text-white text-[12px] font-bold">
               R{formatDecimalNumber(overallTotal)}
@@ -210,7 +206,7 @@ const CartPage = () => {
 
           <Image
             priority
-            src={"/images/web/shop/payment.png"}
+            src={"/images/web/shop/payment.webp"}
             alt="payment-icons"
             width={1300}
             height={1300}

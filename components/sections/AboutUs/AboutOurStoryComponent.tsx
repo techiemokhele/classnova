@@ -18,7 +18,7 @@ const AboutOurStoryComponent = () => {
         {/* text section */}
         <div className="w-full md:w-1/2 p-4">
           <h1 className="text-2xl text-white font-bold pb-4">Our Mission</h1>
-          <p className="text-[12px] text-white font-thin">
+          <p className="text-[12px] text-white font-normal">
             At Spendio, our mission is to redefine online shopping by curating a
             diverse selection of high-quality products that inspire and delight
             our customers. We aim to provide a seamless shopping experience that
@@ -59,7 +59,7 @@ const AboutOurStoryComponent = () => {
         {/* text section */}
         <div className="w-full md:w-1/2 p-4">
           <h1 className="text-2xl text-white font-bold pb-4">Our Vision</h1>
-          <p className="text-[12px] text-white font-thin">
+          <p className="text-[12px] text-white font-normal">
             Our vision at Spendio is to become a leading e-commerce destination
             known for its commitment to quality, authenticity, and
             customer-centricity. We envision a future where every shopper can
@@ -79,7 +79,7 @@ const AboutOurStoryComponent = () => {
           <h1 className="text-2xl text-white font-bold pb-4">
             Why Choose Spendio?
           </h1>
-          <p className="text-[12px] text-white font-thin">
+          <p className="text-[12px] text-white font-normal">
             Choose Spendio for a shopping experience that combines convenience
             with conscientiousness. We prioritise quality, authenticity, and
             customer satisfaction, ensuring that every purchase supports local
@@ -120,7 +120,7 @@ const AboutOurStoryComponent = () => {
         {/* text section */}
         <div className="w-full md:w-1/2 p-4">
           <h1 className="text-2xl text-white font-bold pb-4">Join Us</h1>
-          <p className="text-[12px] text-white font-thin pb-4">
+          <p className="text-[12px] text-white font-normal pb-4">
             Join Spendio and be part of a team dedicated to reshaping the future
             of e-commerce. Whether you're a vendor looking to showcase your
             products or a passionate shopper seeking unique finds, Spendio

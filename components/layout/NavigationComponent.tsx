@@ -59,7 +59,7 @@ const NavigationComponent = () => {
             {links.map((link) => (
               <Link key={link.href} href={link.href} passHref>
                 <span
-                  className={`px-3 py-2 rounded-md text-sm font-thin text-white cursor-pointer ${
+                  className={`px-3 py-2 rounded-md text-sm font-normal text-white cursor-pointer ${
                     isActive(link.href)
                       ? "border-b-4 border-gradient-to-r from-teal-400 to-orange-400"
                       : ""
@@ -83,7 +83,7 @@ const NavigationComponent = () => {
             </Link>
             <span className="text-white">|</span>
             <Link href="/sign-in" passHref>
-              <span className="text-sm font-thin text-white cursor-pointer">
+              <span className="text-sm font-normal text-white cursor-pointer">
                 Sign In
               </span>
             </Link>
@@ -166,7 +166,7 @@ const NavigationComponent = () => {
               passHref
             >
               <span
-                className={`block px-3 py-3 rounded-md text-base font-thin text-white cursor-pointer ${
+                className={`block px-3 py-3 rounded-md text-base font-normal text-white cursor-pointer ${
                   isActive(link.href)
                     ? "border-b-4 border-gradient-to-r from-teal-400 to-orange-400"
                     : ""

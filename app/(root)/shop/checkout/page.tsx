@@ -24,8 +24,8 @@ const CheckoutPage = () => {
   };
 
   const handleNavigation = () => {
-    router.push("/shop/cart")
-  }
+    router.push("/shop/cart");
+  };
 
   return (
     <div className="container mx-auto pt-16 pb-6">
@@ -36,12 +36,10 @@ const CheckoutPage = () => {
               <div onClick={() => setIsPaymentStep(false)}>
                 <IoArrowBackCircle className="text-teal-500 size-8 mr-2" />
               </div>
-            ) : !isPaymentStep ? (
+            ) : (
               <div onClick={handleNavigation}>
                 <IoArrowBackCircle className="text-teal-500 size-8 mr-2" />
               </div>
-            ) : (
-              ""
             )}
             Checkout
           </h1>
@@ -56,10 +54,10 @@ const CheckoutPage = () => {
                   : "border-t-2 border-teal-700"
               } flex my-2 border-t-2`}
             >
-              <h3 className="text-white text-[10px] font-thin">
+              <h3 className="text-white text-xs font-normal">
                 Shipping Information
               </h3>
-              <p className="text-white text-[8px] font-thin">
+              <p className="text-white text-[8px] font-normal">
                 Provide your shipping detail information
               </p>
             </div>
@@ -71,8 +69,8 @@ const CheckoutPage = () => {
                   : "border-t border-gray-400"
               } flex my-2`}
             >
-              <h3 className="text-white text-[10px] font-thin">Payment</h3>
-              <p className="text-white text-[8px] font-thin">
+              <h3 className="text-white text-xs font-normal">Payment</h3>
+              <p className="text-white text-[8px] font-normal">
                 Finish your order & choose your payment
               </p>
             </div>
@@ -85,9 +83,7 @@ const CheckoutPage = () => {
           {!isPaymentStep ? (
             <CheckoutFormComponent onContinueToPayment={handleToPayment} />
           ) : (
-            <>
-              <PaymentFormComponent />
-            </>
+            <PaymentFormComponent />
           )}
         </div>
 

@@ -84,7 +84,7 @@ const FeedbackPages = () => {
         <h1 className="text-3xl text-white font-bold lg:self-start self-center">
           Reviews
         </h1>
-        <p className="text-[12px] text-white text-center lg:text-start font-thin py-4">
+        <p className="text-[12px] text-white text-center lg:text-start font-normal py-4">
           At Spendio, we strive to provide the best services and benefits to our
           members, and your feedback is crucial in helping us achieve that goal.
           Read on to see what others are saying about their journey with

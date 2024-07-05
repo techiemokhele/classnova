@@ -1,10 +1,11 @@
 "use client";
 
+import { useState } from "react";
 import CustomTextInputComponent from "@/components/common/CustomTextInputComponent";
 import CustomButtonComponent from "@/components/common/CustomButtonComponent";
-import { useState } from "react";
+import { CheckoutFormProps } from "@/types";
 
-const CheckoutFormComponent = ({ onContinueToPayment }) => {
+const CheckoutFormComponent = ({ onContinueToPayment }: CheckoutFormProps) => {
   const [email, setEmail] = useState<string>("");
   const [firstName, setFirstName] = useState<string>("");
   const [lastName, setLastName] = useState<string>("");
@@ -130,12 +131,12 @@ const CheckoutFormComponent = ({ onContinueToPayment }) => {
               <h1 className="text-white text-[20px] font-semibold">
                 Transit Team
               </h1>
-              <p className="text-white text-[8px] font-thin">
+              <p className="text-white text-[8px] font-normal">
                 Your shipment will arrive within 2-3 days
               </p>
             </div>
             <div className="w-1/2 flex flex-row space-x-2 justify-end">
-              <p className="text-white text-[10px] font-thin">R20.00</p>
+              <p className="text-white text-xs font-normal">R20.00</p>
             </div>
           </div>
         </div>

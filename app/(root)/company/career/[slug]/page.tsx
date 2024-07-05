@@ -15,8 +15,8 @@ import { formatDecimalNumber } from "@/libs/utils";
 
 const CareerSinglePage = ({ params }: { params: CareerItemParams }) => {
   const [career, setCareer] = useState<CareerItemProps | null>(null);
-    const [showApplyForm, setShowApplyForm] = useState<boolean>(false);
-      const [showSuccessModal, setShowSuccessModal] = useState<boolean>(false);
+  const [showApplyForm, setShowApplyForm] = useState<boolean>(false);
+  const [showSuccessModal, setShowSuccessModal] = useState<boolean>(false);
 
   useEffect(() => {
     const foundCareer = careerData.find(
@@ -27,11 +27,10 @@ const CareerSinglePage = ({ params }: { params: CareerItemParams }) => {
 
   const handleFormSubmit = (applicationData: any) => {
     console.log("Application submitted: ", applicationData);
-      setShowApplyForm(false);
-          setShowSuccessModal(true);
+    setShowApplyForm(false);
+    setShowSuccessModal(true);
   };
-    
-    
+
   const closeSuccessModal = () => {
     setShowSuccessModal(false);
   };
@@ -59,16 +58,14 @@ const CareerSinglePage = ({ params }: { params: CareerItemParams }) => {
 
       <div className="flex flex-col px-4 py-8 container mx-auto">
         <div className="w-16 h-5 mb-2 bg-teal-500 rounded-full flex flex-col items-center justify-center">
-          <p className="text-white font-semibold text-[10px]">
-            {career.location}
-          </p>
+          <p className="text-white font-semibold text-xs">{career.location}</p>
         </div>
 
         <h1 className="text-3xl font-bold text-white pb-4">
           {career.jobTitle}
         </h1>
 
-        <p className="text-[12px] text-white font-thin pb-8">
+        <p className="text-[12px] text-white font-normal pb-8">
           {career.jobDescription}
         </p>
 
@@ -76,7 +73,7 @@ const CareerSinglePage = ({ params }: { params: CareerItemParams }) => {
         <div className="flex flex-col space-y-4 pb-6">
           <h4 className="text-[l] text-white font-semibold">Job overview</h4>
 
-          <p className="text-[12px] text-white font-thin">
+          <p className="text-[12px] text-white font-normal">
             Eu adipisicing minim cupidatat labore incididunt ullamco ad. Nostrud
             qui qui irure duis irure eiusmod nisi eiusmod sit. Reprehenderit
             laboris nostrud excepteur enim minim incididunt Lorem aute ex amet
@@ -87,7 +84,7 @@ const CareerSinglePage = ({ params }: { params: CareerItemParams }) => {
 
           {career.jobOverview.map((item) => (
             <ul key={item} className="container list-disc leading-tight">
-              <li className="text-white text-[12px] font-thin">{item}</li>
+              <li className="text-white text-[12px] font-normal">{item}</li>
             </ul>
           ))}
         </div>
@@ -98,7 +95,7 @@ const CareerSinglePage = ({ params }: { params: CareerItemParams }) => {
             Responsibilities
           </h4>
 
-          <p className="text-[12px] text-white font-thin">
+          <p className="text-[12px] text-white font-normal">
             Lorem labore occaecat sint est mollit officia. Veniam consequat id
             ex ea. Commodo sint duis irure id ullamco quis incididunt magna
             deserunt aliqua. Nulla et et occaecat sunt velit reprehenderit
@@ -107,7 +104,7 @@ const CareerSinglePage = ({ params }: { params: CareerItemParams }) => {
 
           {career.responsibilities.map((item) => (
             <ul key={item} className="container list-disc leading-tight">
-              <li className="text-white text-[12px] font-thin">{item}</li>
+              <li className="text-white text-[12px] font-normal">{item}</li>
             </ul>
           ))}
         </div>
@@ -116,7 +113,7 @@ const CareerSinglePage = ({ params }: { params: CareerItemParams }) => {
         <div className="flex flex-col space-y-4 pb-6">
           <h4 className="text-[l] text-white font-semibold">Requirements</h4>
 
-          <p className="text-[12px] text-white font-thin">
+          <p className="text-[12px] text-white font-normal">
             Amet laboris aute excepteur Lorem labore occaecat sint est mollit
             officia. Veniam consequat id ex ea. Commodo sint duis irure id
             ullamco quis incididunt magna deserunt aliqua. Nulla et et occaecat
@@ -125,7 +122,7 @@ const CareerSinglePage = ({ params }: { params: CareerItemParams }) => {
 
           {career.requirements.map((item) => (
             <ul key={item} className="container list-disc leading-tight">
-              <li className="text-white text-[12px] font-thin">{item}</li>
+              <li className="text-white text-[12px] font-normal">{item}</li>
             </ul>
           ))}
         </div>
@@ -135,16 +132,16 @@ const CareerSinglePage = ({ params }: { params: CareerItemParams }) => {
           <h4 className="text-[l] text-white font-semibold">Benefits</h4>
 
           <ul className="container list-disc leading-tight">
-            <li className="text-white text-[12px] font-thin">
+            <li className="text-white text-[12px] font-normal">
               Mostrud qui dolore commodo.
             </li>
-            <li className="text-white text-[12px] font-thin">
+            <li className="text-white text-[12px] font-normal">
               Sunt velit reprehenderit
             </li>
-            <li className="text-white text-[12px] font-thin">
+            <li className="text-white text-[12px] font-normal">
               Tus veniam consequat
             </li>
-            <li className="text-white text-[12px] font-thin">
+            <li className="text-white text-[12px] font-normal">
               Excepteur Lorem labore
             </li>
           </ul>
@@ -154,7 +151,7 @@ const CareerSinglePage = ({ params }: { params: CareerItemParams }) => {
         <div className="flex flex-col space-y-4 pb-6">
           <h4 className="text-[l] text-white font-semibold">Salary</h4>
 
-          <p className="text-[12px] text-white font-thin">
+          <p className="text-[12px] text-white font-normal">
             R{formatDecimalNumber(career.salary)} / {career.paymentRecurrence}
           </p>
         </div>

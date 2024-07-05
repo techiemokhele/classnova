@@ -104,7 +104,7 @@ const CareersPage = () => {
 
                   <p
                     onClick={() => handleViewNavigation(item.slug)}
-                    className="text-white text-[10px] font-thin line-clamp-2 cursor-pointer"
+                    className="text-white text-xs font-normal line-clamp-2 cursor-pointer"
                   >
                     {item.jobDescription}
                   </p>

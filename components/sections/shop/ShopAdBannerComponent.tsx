@@ -39,7 +39,7 @@ const ShopAdBannerComponent = ({
       >
         <div className="flex flex-col items-start justify-start text-center text-white w-full  p-1">
           <h1 className="text-4xl font-bold my-4">{discountText}</h1>
-          <p className="text-lg mb-6 font-thin text-[12px]">{extraText}</p>
+          <p className="text-lg mb-6 font-normal text-[12px]">{extraText}</p>
         </div>
       </div>
     </section>
