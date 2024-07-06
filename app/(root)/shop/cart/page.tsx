@@ -206,7 +206,7 @@ const CartPage = () => {
 
           <Image
             priority
-            src={"/images/web/shop/payment.webp"}
+            src={"/images/web/shop/payment.png"}
             alt="payment-icons"
             width={1300}
             height={1300}
