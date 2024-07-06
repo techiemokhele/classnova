@@ -27,8 +27,12 @@ const BlogHomePage = () => {
     let filtered = blogData;
 
     if (search) {
-      filtered = filtered.filter((blog: BlogDataItemProps) =>
-        blog.blogTitle.toLowerCase().includes(search.toLowerCase())
+      filtered = filtered.filter(
+        (blog: BlogDataItemProps) =>
+          blog.blogTitle.toLowerCase().includes(search.toLowerCase()) ||
+          blog.blogExcerpt.toLowerCase().includes(search.toLowerCase()) ||
+          blog.author.toLowerCase().includes(search.toLowerCase()) ||
+          blog.createdAt.toLowerCase().includes(search.toLowerCase())
       );
     }
 
@@ -74,7 +78,6 @@ const BlogHomePage = () => {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [currentPage, selectedCategory, selectedTag]);
-
 
   return (
     <div className="mx-auto container flex flex-col pt-16">
